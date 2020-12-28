@@ -1,0 +1,20 @@
+.lr-pair{
+
+    display: flex;
+
+    & .left{
+        flex-grow: 1;
+    }
+}
+
+.icon{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+
+    &.cart{background: url(/img/Cart.svg) center center no-repeat;}
+    &.person{background: url(/img/Person.svg) center center no-repeat;}
+    &.refresh{background: url(/img/Refresh.svg) center center no-repeat;}
+    &.whatsapp{background: url(/img/Whatsapp.svg) center center no-repeat;}
+    &.telegram{background: url(/img/Telegram.svg) center center no-repeat;}
+}

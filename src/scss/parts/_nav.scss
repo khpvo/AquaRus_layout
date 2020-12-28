@@ -1,0 +1,87 @@
+header{
+    background-color: $primary;
+    
+    & div, & span, & a{
+        color: #fff;
+    }
+    
+    & .container{
+        
+        & .top{
+
+            display: flex;
+            border-bottom: 1px solid darken($primary, 10);
+
+            & .left{
+
+                display: flex;
+
+                & .logo-wrapper{
+    
+                    & .logo{
+                        display: block;
+                        width: 180px;
+                        height: 100%;
+                        background: url(/img/logo.svg) center center no-repeat;
+                    }
+                }
+
+                & .branch-selector-wrapper{
+
+                    position: relative;
+
+                    & .current{
+                        line-height: 90px;
+                        padding: 0 20px;
+                    }
+
+                    & .popup{
+                        border: 1px solid orange;
+                        position: absolute;
+                        display: none;
+                    }
+                }
+
+            }
+            & .separator{
+                flex-grow: 1;
+            }
+            & > .right{
+
+                width: 435px;
+                display: flex;
+                padding: 15px 0;
+
+                & .app-stores{
+
+                    width: 210px;
+
+                    & .app-store{
+                        display: inline-block;
+                        width: 95px;
+                        height: 32px;
+                        transform: translateY(5px);
+
+                        &.gplay{
+                            background: url(/img/gplay.png) center center no-repeat;
+                        }
+                        
+                        &.appstore{
+                            background: url(/img/appstore.png) center center no-repeat;
+                        }
+                    }
+                }
+
+                & .lr-pair{
+
+                    height: 30px;
+
+                    & .right{
+                        padding-left: 20px;
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
