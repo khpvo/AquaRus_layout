@@ -17,6 +17,8 @@ header{
                 display: flex;
 
                 & .logo-wrapper{
+
+                    padding: 0 10px;
     
                     & .logo{
                         display: block;
@@ -48,7 +50,7 @@ header{
             }
             & > .right{
 
-                width: 435px;
+                width: 445px;
                 display: flex;
                 padding: 15px 0;
 
@@ -80,8 +82,128 @@ header{
                         padding-left: 20px;
                         display: flex;
                     }
+
+                    &.phones{
+
+                        & .left{
+                            border-right: 1px solid darken($primary, 5);
+                            padding-right: 20px;
+                        }
+                    }
+
+                    &.cart{
+
+                        & .left{
+
+                            & a{
+                                margin-right: 10px;
+                            }
+                        }
+
+                        & .right{
+
+                            & span{
+                                line-height: 26px;
+                            }
+                        }
+                    }
                 }
             }
+        }
+
+        & .bottom{
+
+            display: flex;
+
+            & .left{
+                flex-grow: 1;
+
+                & ul{
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    
+                    & > li{
+                        
+                        position: relative;
+
+                        &.folder{
+
+                            & > a{
+                                
+                                padding-right: 30px;
+
+                                &:after{
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    top: 16px;
+                                    right: 10px;
+                                    width: 10px;
+                                    height: 10px;
+                                    background: url(../img/Dropdown_chevron.svg) center center no-repeat;
+                                }
+                            }
+
+                            &:hover ul{
+                                opacity: 1;
+                                transform: none;
+                                pointer-events: all;
+                            }
+                        }
+
+                        & a{
+                            line-height: 40px;
+                            padding: 0 10px;
+                            display: block;
+
+                            &:hover{
+                                background:darken($primary, 10);
+                            }
+                        }
+
+                        & ul{
+                            background: #fff;
+                            opacity: 1;
+                            position: absolute;
+                            flex-direction: column;
+                            top: 100%;
+                            left: 0;
+                            border-radius: 4px;
+                            box-shadow: 0 2px 6px rgba(black, .4);
+                            pointer-events: none;
+                            transition: transform .3s, opacity .3s;
+                            transform: translateY(-6px);
+                            opacity: 0;
+                            
+                            & li{
+
+                                & a{
+                                    color: black;
+                                    white-space: nowrap;
+
+                                    &:hover{
+                                        background: #eeeeee;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .right{
+
+                & a{
+                    line-height: 40px;
+                }
+
+                & .icon{
+                    transform: translateY(6px);
+                }
+            }
+
         }
     }
 }
