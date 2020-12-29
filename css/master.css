@@ -3545,3 +3545,35 @@ header {
       line-height: 40px; }
     header .container .bottom .right .icon {
       transform: translateY(6px); }
+
+footer {
+  padding: 15px 0;
+  background: #3970C2;
+  color: #fff; }
+  footer .navigation-blocks-wrapper {
+    display: flex; }
+    footer .navigation-blocks-wrapper .separator {
+      flex-grow: 1; }
+    footer .navigation-blocks-wrapper .navigation-block.nb-left {
+      padding-right: 20px; }
+    footer .navigation-blocks-wrapper .navigation-block.nb-right {
+      padding-left: 20px; }
+    footer .navigation-blocks-wrapper .navigation-block .header {
+      font-weight: 500;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 6px;
+      margin-bottom: 6px; }
+    footer .navigation-blocks-wrapper .navigation-block .links {
+      display: flex;
+      flex-direction: column; }
+      footer .navigation-blocks-wrapper .navigation-block .links a, footer .navigation-blocks-wrapper .navigation-block .links div {
+        color: #fff;
+        line-height: 26px; }
+    footer .navigation-blocks-wrapper .navigation-block#delivery-times .subheader {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(255, 255, 255, 0.5);
+      text-decoration-style: dotted;
+      text-decoration-thickness: 1px; }
+    footer .navigation-blocks-wrapper .navigation-block#delivery-times .left {
+      padding-right: 20px; }

@@ -1,0 +1,59 @@
+footer{
+
+    padding: 15px 0;
+    background: $primary;
+    color: #fff;
+
+    & .navigation-blocks-wrapper{
+
+        display: flex;
+
+        & .separator{
+            flex-grow: 1;
+        }
+
+        & .navigation-block{
+
+            &.nb-left{
+                padding-right: 20px;
+            }
+
+            &.nb-right{
+                padding-left: 20px;
+            }
+
+            & .header{
+                font-weight: 500;
+                border-bottom: 1px solid #fff;
+                padding-bottom: 6px;
+                margin-bottom: 6px;
+            }
+
+            & .links{
+                display: flex;
+                flex-direction: column;
+
+                & a, div{
+                    color: #fff;
+                    line-height: 26px;
+                }
+            }
+
+            &#delivery-times{
+
+                & .subheader{
+                    text-decoration: underline;
+                    text-underline-offset: 3px;
+                    text-decoration-color: rgba(#fff, .5);
+                    text-decoration-style: dotted;
+                    text-decoration-thickness: 1px;
+                }
+
+                & .left{
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+
+}
