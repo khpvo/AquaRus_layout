@@ -1,0 +1,125 @@
+#main{
+
+    & #hero-slider{
+
+        width: 100%;
+        
+        & .hero-slide{
+            width: 100%;
+            min-height: 34vw;
+        }
+    }
+
+    & #delivery{
+
+        & .categories-wrapper{
+    
+            & .category{
+                height: 310px;
+                padding: 10px;
+                box-sizing: border-box;
+                border-radius: 4px;
+                background: #fff;
+                box-shadow: 0 4px 4px rgba(black, .4);
+                display: flex;
+    
+                margin-top: 30px;
+                background: url(../img/categories/cart_normal.svg) bottom -2px left no-repeat;
+                transition: background-image .4s;
+                
+                &:hover{
+                    background: url(../img/categories/cart_hover.svg) bottom -2px left no-repeat;
+                }
+    
+                & .category-image-wrapper{
+                    
+                    flex-shrink: 0;
+                    width: 45%;
+                    padding-right: 10px;
+    
+                    & .category-image{
+                        height: calc(100% + 30px);
+                        position: relative;
+                        bottom: 30px;
+                    }
+                }
+    
+                & .category-content{
+    
+                    & .left{
+                        padding-right: 20px;
+                    }
+    
+                    & ul{
+                        padding: 0;
+                        list-style: none;
+    
+                        & li{
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+    
+                    & .name{
+                        color: #888;
+                        font-size: 32px;
+                        font-weight: 500;
+                        margin: 15px 0;
+                    }
+    
+                    & .subcategories{
+    
+                        & a{
+                            display: block;
+                            color: $text;
+                            line-height: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & #how-to{
+        background: $primary;
+        color: #fff;
+        padding: 20px 0;
+        margin: 20px 0;
+
+        & .h2-wrapper{
+            border-bottom-color: #fff;
+        }
+
+        & h2{
+            color:#fff;
+
+        }
+
+        & .how-content{
+            padding: 20px 0;
+
+            & .how-icon{
+                width: 80px;
+                height: 80px;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+    
+            & .how-header{
+                font-size: 18px;
+                text-transform: uppercase;
+                text-align: center;
+                max-width: 200px;
+                margin: auto;
+            }
+
+            & .graph-header{
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+}

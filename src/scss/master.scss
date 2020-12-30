@@ -13,6 +13,7 @@
 @import './framework/waves';
 @import './framework/cards';
 @import './framework/buttons';
+@import './framework/swiper_bundle';
 
 // Own variables ============================
 @import './parts/vars';
@@ -21,3 +22,7 @@
 @import './parts/helpers';
 @import './parts/nav';
 @import './parts/footer';
+@import './parts/product-card';
+
+// Entire pages==============================
+@import './pages/main';
