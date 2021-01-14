@@ -1,22 +1,40 @@
 .product-card{
     margin: 10px;
-
+    
     & .card-content{
 
+        & .header{
+            font-size: 16px;
+            font-weight: 500;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        
         & .product-image{
-            width: 140px;
-            height: 180px;
+            width: 120px;
+            padding-top: 152%;
+            background-color: #fff;
             background-size: auto 90%;
+            background-position: left center;
         }
 
         & > .lr-pair{
 
-            & > .right{
-                padding-left: 20px;
+            @media(max-width: 400px){
+                flex-direction: column;
 
-                & .header{
-                    font-size: 16px;
-                    font-weight: 300;
+                & .product-image{
+                    width: 100%;
+                    background-position: center center;
+                    padding-top: 100%;
+                }
+            }
+
+            & > .right{
+
+                @media(min-width: 600px){
+                    padding-left: 20px;
                 }
 
                 & .sub-header{
@@ -25,7 +43,7 @@
 
                 & .table-header{
                     font-size: 10px;
-                    font-weight: bold;
+                    font-weight: 500;
                     text-transform: uppercase;
                     margin-top: 10px;
                     color: #909090;
@@ -40,7 +58,7 @@
                 
                 & .price{
                     font-size: 18px;
-                    font-weight: bold;
+                    font-weight: 500;
                     line-height: 24px;
                     padding-top: 10px;
                 }
@@ -66,7 +84,6 @@
         }
 
         & .add-cart{
-
             display: flex;
         }
     }

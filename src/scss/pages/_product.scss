@@ -1,0 +1,135 @@
+#product{
+
+    & .page-product-image{
+        padding-top: 100%;
+        background-size: contain;
+        margin-bottom: 50px;
+    }
+
+    & .price.head{
+        font-size: 2em;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        line-height: 40px;
+        
+        &.left{
+            font-size: 12px;
+        }
+    }
+
+    & .add-cart{
+
+        &.inline{
+            margin: 30px 0;
+        }
+    }
+}
+
+#product-water{
+    
+    & .page-product-image{
+        padding-top: 70%;
+        background-size: contain;
+        position: relative;
+        display: block;
+        width: 100%;
+
+        & .lake-info{
+            border: 1px solid red;
+            position: absolute;
+            bottom: 4.5vw;
+            right: 4.5vw;
+            width: 11vw;
+            height: 11vw;
+            display: block;
+
+            @media(max-width: 700px){
+                width: 17vw;
+                height: 17vw;
+                bottom: 8vw;
+                right: 8vw;
+            }
+        }
+    }
+
+    & .add-cart{
+
+        &.inline{
+            margin: 30px 0;
+        }
+    }
+
+    & .lake-char{
+
+        &:first-of-type{
+            margin-top: 50px;
+        }
+    
+        @media(max-width: 600px){
+
+            & .left{
+                width: 100%;
+            }
+        }
+
+        & .left{
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #888;
+            line-height: 30px;
+            padding-right: 20px;
+        }
+
+        & .right{
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        & + .substitute{
+            border-top: 1px solid #888;
+            padding-top: 10px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+    }
+
+    & .lake-info{
+
+        cursor: pointer;
+
+        &:hover{
+            opacity: .7;
+        }
+    }
+
+}
+.modal#lake-info{
+
+    // width: 40vw;
+    overflow: hidden;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    @media(max-width: 400px){
+        width: 100%;
+    }
+
+    & .modal-header{
+        height: 240px;
+        background-size: cover;
+    }
+
+    & .modal-content{
+        box-sizing: border-box;
+        padding: 0;
+
+        & .modal-text{
+            padding: 20px;
+        }
+    }
+
+    & .modal-footer{
+        box-sizing: border-box;
+    }
+}

@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+
 body{
     background: $paper;
+    font-family: 'Roboto';
+}
+
+*{
+    -webkit-tap-highlight-color: transparent;
 }
 
 .lr-pair{
@@ -16,6 +23,55 @@ body{
             border-bottom: 1px dotted;
         }
     }
+
+    &.chars{
+        flex-wrap: wrap;
+        line-height: 30px;
+        
+        &.nowrap{
+            flex-wrap:nowrap !important;
+        }
+
+        & .left, & .right{
+
+            &.head{
+                border-bottom: 1px solid #888;
+
+                &.small{
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #888;
+                }
+            }
+        }
+
+        & .left{
+            color: #888;
+            font-size: 12px;
+            text-transform: uppercase;
+            width: 40%;
+        }
+
+        & .right{
+            width: 60%;
+            font-weight: 500;
+        }
+
+        & .left, & .right{
+
+            &.fit{
+                width: fit-content;
+            }
+        }
+    }
+}
+
+p{
+    text-align: justify;
+}
+
+.right-align{
+    text-align: right;
 }
 
 .icon{
@@ -23,11 +79,85 @@ body{
     width: 26px;
     height: 26px;
 
-    &.cart{background: url(/img/Cart.svg) center center no-repeat;}
-    &.person{background: url(/img/Person.svg) center center no-repeat;}
-    &.refresh{background: url(/img/Refresh.svg) center center no-repeat;}
-    &.whatsapp{background: url(/img/Whatsapp.svg) center center no-repeat;}
-    &.telegram{background: url(/img/Telegram.svg) center center no-repeat;}
+    &.cart{background: url(/img/Cart.svg) center center no-repeat; background-size: 80% auto;}
+    &.person{background: url(/img/Person.svg) center center no-repeat; background-size: 80% auto;}
+    &.refresh{background: url(/img/Refresh.svg) center center no-repeat; background-size: 80% auto;}
+    &.whatsapp{background: url(/img/Whatsapp.svg) center center no-repeat; background-size: 80% auto;}
+    &.telegram{background: url(/img/Telegram.svg) center center no-repeat; background-size: 80% auto;}
+    &.phone{background: url(/img/Phone.svg) center center no-repeat; background-size: 80% auto;}
+    &.remove{background: url(/img/remove.svg) center center no-repeat;}
+    &.reroute{background: url(/img/reroute.svg) center center no-repeat;}
+    &.reciept{background: url(/img/reciept.svg) center center no-repeat;}
+    &.repay{background: url(/img/repay.svg) center center no-repeat;}
+    &.repeat{background: url(/img/repeat.svg) center center no-repeat;}
+    &.decline{background: url(/img/decline.svg) center center no-repeat;}
+}
+
+.disabled{
+    filter: grayscale(1);
+    opacity: .5;
+    pointer-events: none;
+}
+
+.substitute{
+    color: #888;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.add-cart{
+    display: flex;
+
+    &.inline{
+
+        flex-wrap: wrap;
+    
+        & a:not(.btn), & .input{
+            line-height: 36px;
+            padding: 0 6px;
+        }
+    
+        & .buy-wrapper{
+            margin-left: 30px;
+        }
+       
+        @media(max-width: 400px){
+
+            justify-content: center !important;
+
+            & .oneclick-wrapper{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }  
+    }
+
+    &.right{
+        justify-content: flex-end;
+    }
+
+    & a:not(.btn){
+
+        border-radius: 4px;
+        transition: background-color .2s;
+
+        &:hover{
+            background-color: rgba(#888, .1);
+        }
+    }
+}
+
+.float-right{
+    float: right;
+}
+
+.slider-header{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #888;
 }
 
 .lazy-image{
@@ -58,16 +188,53 @@ main{
     min-height: calc(100vh - 352px);
 }
 
-.h2-wrapper{
-    border-bottom: 1px solid $text;
+.underline-wrapper{
+    border-bottom: 1px solid #888;
+    margin-bottom: 20px;
 
     & h2{
         color: $text;
-        font-size: 36px;
-        text-transform: uppercase;
         margin: 10px 0;
         font-weight: 500;
+        text-transform: uppercase;
+
+        @media (max-width: 600px){
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
+}
+
+.right-align{
+    text-align: right !important;
+}
+
+.center-align{
+    text-align: center !important;
+}
+
+.response{
+    height: 100%;
+    background: url(/img/response.svg) center center no-repeat;
+    background-size: 18px auto;
+}
+
+h1{
+    font-size: 36px;
+    color: $primary;
+
+    @media(max-width: 600px){
+        font-size: 28px;
+    }
+}
+
+h2{
+    font-size: 26px;
+}
+
+h3{
+    font-size: 22px;
+    margin-top: 0;
 }
 
 a{
@@ -76,7 +243,9 @@ a{
     width: fit-content;
     position: relative;
 
-    &:not(.btn){
+    &.underlined{
+
+        line-height: 30px;
 
         &:after{
             content: '';
@@ -100,4 +269,69 @@ a{
 
 *:focus{
     outline: none;
+}
+
+.crumbs-wrapper{
+    
+    & .crumb-separator{
+        color: #ccc;
+    }
+
+    & .crumb{
+
+        &:last-of-type{
+            color: #ccc;
+        }
+    }
+}
+
+.pagination-wrapper{
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    & a{
+
+        &.page{
+
+            &:hover{
+                box-shadow: 0 0 0 3px $secondary inset;
+            }
+        }
+    }
+
+    & .page{
+        box-shadow: 0 0 0 1px #ccc inset;
+        line-height: 30px;
+        padding: 0 10px;
+        margin: 0 3px;
+        
+        &.current{
+            box-shadow: 0 0 0 1px $secondary inset;
+            background: $secondary;
+            color: #fff;
+        }
+        
+        &.dots{
+            color: #ccc;
+            background: lighten(#ccc, 15);
+        }
+    }
+}
+
+@for $i from 1 to 10 {
+    .columns-#{$i}{
+        column-count: #{$i};
+
+        @media(max-width: 800px){
+            column-count: 1;
+        }
+    }
+}
+
+@for $i from 1 to 10 {
+    .column-gap-#{$i}{
+        column-gap: #{$i * 10px};
+    }
 }

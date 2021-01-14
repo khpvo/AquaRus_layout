@@ -4,6 +4,12 @@
   width: 90%;
 }
 
+@media #{$medium-and-down}{
+  .container{
+    width: 100%;
+  }
+}
+
 @media #{$medium-and-up} {
   .container {
     width: 95%;

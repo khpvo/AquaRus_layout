@@ -13,16 +13,23 @@
 @import './framework/waves';
 @import './framework/cards';
 @import './framework/buttons';
+@import './framework/modal';
 @import './framework/swiper_bundle';
 
 // Own variables ============================
 @import './parts/vars';
 
-// Own parts=================================
+// // Own parts=================================
 @import './parts/helpers';
 @import './parts/nav';
 @import './parts/footer';
 @import './parts/product-card';
+@import './parts/sidenav';
+@import './parts/table';
+@import './parts/inputs';
 
 // Entire pages==============================
 @import './pages/main';
+@import './pages/product';
+@import './pages/profile';
+@import './pages/checkout';

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Акватория | Главная</title>
     <link rel="stylesheet" href="/css/master.css">
 </head>
 <body>
@@ -14,8 +14,8 @@
                     <div class="logo-wrapper">
                         <a href="" class="logo"></a>
                     </div>
-                    <div class="branch-selector-wrapper">
-                        <div class="branch-selector">
+                    <div class="dropdown-wrapper">
+                        <div class="dropdown">
                             <div class="current">Краснодар</div>
                             <div class="popup">
                                 <a href="">Краснодар</a>
@@ -38,15 +38,23 @@
                         </div>
                         <div class="lr-pair cart">
                             <div class="left">
+                                <a href="" class="icon phone"></a>
                                 <a href="" class="icon telegram"></a>
                                 <a href="" class="icon whatsapp"></a>
                             </div>
                             <div class="separator"></div>
                             <div class="right">
                                 <span>1/1200₽</span>
-                                <a href="" class="icon cart"></a>
+                                <a href="/checkout.html" class="icon cart"></a>
                             </div>
                         </div>
+                    </div>
+                    <div class="burger-wrapper sidenav-trigger" data-target="mobile-nav">
+                        <a href="" class="burger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -54,30 +62,30 @@
                 <div class="left">
                     <ul>
                         <li class="folder">
-                            <a href="">Каталог</a>
+                            <a href="/products.html">Каталог</a>
                             <ul>
-                                <li><a href="">Вода</a></li>
-                                <li><a href="">Акции</a></li>
-                                <li><a href="">Кулеры</a></li>
-                                <li><a href="">Помпы</a></li>
-                                <li><a href="">Фильтры</a></li>
-                                <li><a href="">Пурифайеры</a></li>
-                                <li><a href="">Сопутствующие товары</a></li>
+                                <li><a href="/products.html" class="waves-effect">Вода</a></li>
+                                <li><a href="/products.html" class="waves-effect">Акции</a></li>
+                                <li><a href="/products.html" class="waves-effect">Кулеры</a></li>
+                                <li><a href="/products.html" class="waves-effect">Помпы</a></li>
+                                <li><a href="/products.html" class="waves-effect">Фильтры</a></li>
+                                <li><a href="/products.html" class="waves-effect">Пурифайеры</a></li>
+                                <li><a href="/products.html" class="waves-effect">Сопутствующие товары</a></li>
                             </ul>
                         </li>
-                        <li><a href="">Акции</a></li>
-                        <li><a href="">Аренда кулеров</a></li>
-                        <li><a href="">Оплата и доставка</a></li>
-                        <li><a href="">Магазины</a></li>
-                        <li><a href="">Сервисный центр</a></li>
+                        <li><a href="/events.html">Акции</a></li>
+                        <li><a href="/rent.html">Аренда кулеров</a></li>
+                        <li><a href="/payment-delivery.html">Оплата и доставка</a></li>
+                        <li><a href="/shops.html">Магазины</a></li>
+                        <li><a href="/service.html">Сервисный центр</a></li>
                     </ul>
                 </div>
                 <div class="right">
-                    <a href="">
+                    <a href="" class="repeat">
                         <span class="icon refresh"></span>
                         <span>Повторить последний заказ</span>
                     </a>
-                    <a href="">
+                    <a href="/profile.html">
                         <span class="icon person"></span>
                         <span>MasterKadaj</span>
                     </a>
@@ -85,6 +93,62 @@
             </nav>
         </div>
     </header>
+    <div class="sidenav" id="mobile-nav">
+        <div class="user-view lazy-image" data-src="/img/userview_bgr.svg">
+            <div class="lr-pair">
+                <div class="left">
+                    <a href="/checkout.html" class="avatar lazy-img" data-src="/img/avatar_logo.svg"></a>
+                </div>
+                <div class="right">
+                    <a href="/profile.html" class="username">MasterKadaj</a>
+                    <a href="/checkout.html" class="cart">В корзине N товаров <br> на сумму 1440 ₽</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown-wrapper">
+            <div class="dropdown">
+                <div class="current">Краснодар</div>
+                <div class="popup">
+                    <a href="">Краснодар</a>
+                    <a href="">Анапа</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-catalog">
+            <ul class="main-catalog-scroller">
+                <li>
+                    <a href="/products.html" class="folder">Каталог</a>
+                    <ul>
+                        <li><a href="" class="waves-effect back">Назад</a></li>
+                        <li><a href="" class="waves-effect">Весь каталог</a></li>
+                        <li><a href="/products.html" class="waves-effect">Вода</a></li>
+                        <li><a href="/products.html" class="waves-effect">Акции</a></li>
+                        <li><a href="/products.html" class="waves-effect">Кулеры</a></li>
+                        <li><a href="/products.html" class="waves-effect">Помпы</a></li>
+                        <li><a href="/products.html" class="waves-effect">Фильтры</a></li>
+                        <li><a href="/products.html" class="waves-effect">Пурифайеры</a></li>
+                        <li><a href="/products.html" class="waves-effect">Сопутствующие товары</a></li>
+                    </ul>
+                </li>
+                <li><a href="/events.html">Акции</a></li>
+                <li><a href="/rent.html">Аренда кулеров</a></li>
+                <li><a href="/payment-delivery.html">Оплата и доставка</a></li>
+                <li><a href="/shops.html">Магазины</a></li>
+                <li><a href="/service.html">Сервисный центр</a></li>
+            </ul>
+        </div>
+        <div class="more-data">
+            <div class="app-stores">
+                <a href="" class="app-store gplay"></a>
+                <a href="" class="app-store appstore"></a>
+            </div>
+            <div class="lr-pair phones">
+                <div class="left">204-44-44</div>
+                <div class="separator"></div>
+                <div class="right">8 (988) 333-444-3</div>
+            </div>
+        </div>
+    </div>
     <main>
         <div class="global-wrapper" id="main">
             <div id="hero-slider" class="swiper-container">
@@ -94,11 +158,18 @@
                     <div class="hero-slide swiper-slide lazy-image contain top" data-src="/img/hero/credit.png" id="credit"></div>
                 </div>
             </div>
+            <div id="hero-slider-mobile" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="hero-slide-mobile swiper-slide lazy-image contain top" data-src="/img/hero/quick_start1_mobile.png" id="light-start1"></div>
+                    <div class="hero-slide-mobile swiper-slide lazy-image contain top" data-src="/img/hero/quick_start2_mobile.png" id="light-start2"></div>
+                    <div class="hero-slide-mobile swiper-slide lazy-image contain top" data-src="/img/hero/credit_mobile.png" id="credit"></div>
+                </div>
+            </div>
             <section id="delivery">
                 <div class="container">
                     <div class="row">
                         <div class="col s12">                            
-                            <div class="h2-wrapper">
+                            <div class="underline-wrapper">
                                 <h2>Доставка воды в Краснодаре</h2>
                             </div>
                         </div>
@@ -112,45 +183,45 @@
                     </div>
                     <div class="categories-wrapper">
                         <div class="row">
-                            <div class="col xl4 l6 m12 s12">
+                            <div class="col xl4 l6 m6 s12">
                                 <div class="category">
-                                    <div class="category-image-wrapper hide-on-small-and-down">
+                                    <div class="category-image-wrapper">
                                         <div class="category-image lazy-image contain" data-src="/img/categories/cooler.png"></div>
                                     </div>
                                     <div class="category-content">
                                         <div class="name">Кулеры</div>
                                         <div class="subcategories">
-                                            <a href="">Напольные</a>
-                                            <a href="">Настольные</a>
-                                            <a href="">Компрессорные</a>
-                                            <a href="">Электронные</a>
-                                            <a href="">Со шкафчиком</a>
-                                            <a href="">С холодильником</a>
-                                            <a href="">С нижней загрузкой</a>
+                                            <a class="underlined" href="">Напольные</a>
+                                            <a class="underlined" href="">Настольные</a>
+                                            <a class="underlined" href="">Компрессорные</a>
+                                            <a class="underlined" href="">Электронные</a>
+                                            <a class="underlined" href="">Со шкафчиком</a>
+                                            <a class="underlined" href="">С холодильником</a>
+                                            <a class="underlined" href="">С нижней загрузкой</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col xl4 l6 m12 s12">
+                            <div class="col xl4 l6 m6 s12">
                                 <div class="category">
-                                    <div class="category-image-wrapper hide-on-small-and-down">
+                                    <div class="category-image-wrapper">
                                         <div class="category-image lazy-image contain" data-src="/img/categories/pomp.png"></div>
                                     </div>
                                     <div class="category-content">
                                         <div class="name">Аксессуары</div>
                                         <div class="subcategories">
-                                            <a href="">Стаканодержатели</a>
-                                            <a href="">Помпы</a>
-                                            <a href="">Фильтры-кувшины</a>
-                                            <a href="">Картриджи для кувшинов</a>
-                                            <a href="">Фильтры под мойку</a>
+                                            <a class="underlined" href="">Стаканодержатели</a>
+                                            <a class="underlined" href="">Помпы</a>
+                                            <a class="underlined" href="">Фильтры-кувшины</a>
+                                            <a class="underlined" href="">Картриджи для кувшинов</a>
+                                            <a class="underlined" href="">Фильтры под мойку</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col xl4 l6 m12 s12">
+                            <div class="col xl4 l6 m6 s12">
                                 <div class="category">
-                                    <div class="category-image-wrapper  hide-on-small-and-down">
+                                    <div class="category-image-wrapper">
                                         <div class="category-image lazy-image contain" data-src="/img/categories/coffee.png"></div>
                                     </div>
                                     <div class="category-content">
@@ -160,18 +231,18 @@
                                                 <div class="left">
                                                     <ul>
                                                         <li class="header">Чай:</li>
-                                                        <li><a href="">• Черный</a></li>
-                                                        <li><a href="">• Зеленый</a></li>
-                                                        <li><a href="">• Пакетированый</a></li>
-                                                        <li><a href="">• Листовой</a></li>
+                                                        <li><a class="underlined" href="">• Черный</a></li>
+                                                        <li><a class="underlined" href="">• Зеленый</a></li>
+                                                        <li><a class="underlined" href="">• Пакетированый</a></li>
+                                                        <li><a class="underlined" href="">• Листовой</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="right">
                                                     <ul>
                                                         <li class="header">Кофе:</li>
-                                                        <li><a href="">• Зерновой</a></li>
-                                                        <li><a href="">• Молотый</a></li>
-                                                        <li><a href="">• Нерастворимый</a></li>
+                                                        <li><a class="underlined" href="">• Зерновой</a></li>
+                                                        <li><a class="underlined" href="">• Молотый</a></li>
+                                                        <li><a class="underlined" href="">• Нерастворимый</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -181,49 +252,49 @@
                             </div>
                             <div class="col xl4 l6 m6 s12">
                                 <div class="category">
-                                    <div class="category-image-wrapper hide-on-small-and-down">
+                                    <div class="category-image-wrapper">
                                         <div class="category-image lazy-image contain" data-src="/img/categories/babies.png"></div>
                                     </div>
                                     <div class="category-content">
                                         <div class="name">Детские товары</div>
                                         <div class="subcategories">
-                                            <a href="">Вода для детей</a>
-                                            <a href="">Кулеры для детей</a>
-                                            <a href="">Трусики и памперсы</a>
-                                            <a href="">Влажные салфетки</a>
-                                            <a href="">Зубная паста и щетки</a>
+                                            <a href="" class="underlined">Вода для детей</a>
+                                            <a href="" class="underlined">Кулеры для детей</a>
+                                            <a href="" class="underlined">Трусики и памперсы</a>
+                                            <a href="" class="underlined">Влажные салфетки</a>
+                                            <a href="" class="underlined">Зубная паста и щетки</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col xl4 l6 m6 s12">
                                 <div class="category">
-                                    <div class="category-image-wrapper hide-on-small-and-down">
+                                    <div class="category-image-wrapper">
                                         <div class="category-image lazy-image contain" data-src="/img/categories/soap.png"></div>
                                     </div>
                                     <div class="category-content">
                                         <div class="name">Средства гигиены</div>
                                         <div class="subcategories">
-                                            <a href="">Мыло</a>
-                                            <a href="">Туалетная бумага</a>
-                                            <a href="">Бумажные полотенца</a>
-                                            <a href="">Бумажные салфетки</a>
-                                            <a href="">Влажные салфетки</a>
-                                            <a href="">Зубная паста и щетки</a>
+                                            <a class="underlined" href="">Мыло</a>
+                                            <a class="underlined" href="">Туалетная бумага</a>
+                                            <a class="underlined" href="">Бумажные полотенца</a>
+                                            <a class="underlined" href="">Бумажные салфетки</a>
+                                            <a class="underlined" href="">Влажные салфетки</a>
+                                            <a class="underlined" href="">Зубная паста и щетки</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col xl4 l6 m6 s12">
                                 <div class="category">
-                                    <div class="category-image-wrapper hide-on-small-and-down">
+                                    <div class="category-image-wrapper">
                                         <div class="category-image lazy-image contain" data-src="/img/categories/pet_food.png"></div>
                                     </div>
                                     <div class="category-content">
                                         <div class="name">Товары для&nbsp;животных</div>
                                         <div class="subcategories">
-                                            <a href="">Наполнитель для туалета</a>
-                                            <a href="">Консервы, влажный корм</a>
+                                            <a class="underlined" href="">Наполнитель для туалета</a>
+                                            <a class="underlined" href="">Консервы, влажный корм</a>
                                         </div>
                                     </div>
                                 </div>
@@ -236,13 +307,13 @@
             <section id="how-to">
                 <div class="container">
                     <div class="row">
-                        <div class="col l9">
-                            <div class="h2-wrapper">
+                        <div class="col l9 m12">
+                            <div class="underline-wrapper">
                                 <h2>Как заказать</h2>
                             </div>
                             <div class="how-content">
                                 <div class="row">
-                                    <div class="col l4">
+                                    <div class="col l4 m6 s12">
                                         <div class="how-icon lazy-image" data-src="/img/phone_white.svg"></div>
                                         <div class="how-header">По телефону</div>
                                         <p>
@@ -252,26 +323,44 @@
                                             Ночные заявки обрабатываются и подтверждаются менеджером утром следующего дня.
                                         </p>
                                     </div>
-                                    <div class="col l4">
+                                    <div class="col l4 m6 s12">
                                         <div class="how-icon lazy-image" data-src="/img/desktop_white.svg"></div>
                                         <div class="how-header">Через сайт</div>
                                         <p>
                                             Заказывайте воду с доставкой на нашем сайте, с возможностью on-line оплаты. Воспользуйтесь всеми функциями нашего полноценного интернет-магазина.
                                         </p>
-                                        <p><a href="">Ссылка для оплаты заказа</a></p>
+                                        <p><a href="" class="underlined">Ссылка для оплаты заказа</a></p>
                                     </div>
-                                    <div class="col l4">
+                                    <div class="col l4 m6 s12">
                                         <div class="how-icon lazy-image" data-src="/img/mobile_white.svg"></div>
                                         <div class="how-header">Через мобильное приложение</div>
                                         <p>
                                             Мы не стоим на месте, а идем в ногу со временем и создали приложение для мобильных устройств с возможностью on-line оплаты заказов.
                                         </p>
                                     </div>
+                                    <div class="col l4 m6 s12 hide-on-large-only">
+                                        <div class="underline-wrapper">
+                                            <h2>График доставки</h2>
+                                        </div>
+                                        <div class="how-content">
+                                            <div class="graph-header">Будние</div>
+                                            <p>
+                                                с 9:00 до 15:00</br>
+                                                с 12:00 до 17:00</br>
+                                                с 18:00 до 22:00</br>
+                                            </p>
+                                            <div class="graph-header">Праздничные и выходные</div>
+                                            <p>
+                                                с 11:00 до 16:00<br>
+                                                с 18:00 до 22:00
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col l3">
-                            <div class="h2-wrapper">
+                        <div class="col l3 m12 hide-on-med-and-down">
+                            <div class="underline-wrapper">
                                 <h2>График доставки</h2>
                             </div>
                             <div class="how-content">
@@ -292,40 +381,103 @@
                 </div>
             </section>
             <section id="news">
-                
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="underline-wrapper">
+                                <h2>Новости компании</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col l3 m6 s12">
+                            <div class="news-img lazy-image" data-src="/img/news/pomp.png"></div>
+                            <div class="news-header">В нашем ассортименте появились новейшие электрические помпы</div>
+                            <div class="news-intro">
+                                <p>Электрические помпы работают быстро и эффективно - скорость насоса такой помпы составляется 1.5 литра в минуту. Включение и выключение помпы производится простым нажатием одной кнопки, а это значит, что теперь и ваши дети смогут без каких-либо затруднений пользоваться данным девайсом. Больше не нужно качать воду вручную.</p>
+                            </div>
+                            <div class="news-footer lr-pair">
+                                <div class="left">12 августа 2020</div>
+                                <div class="right"><a href="" class="btn btn-flat waves-effect waves-dark">Читать далее</a></div>
+                            </div>
+                        </div>
+                        <div class="col l3 m6 s12">
+                            <div class="news-img lazy-image" data-src="/img/news/delivery.png"></div>
+                            <div class="news-header">За 4 месяца мы доставили 46 683 литров воды нашим медикам</div>
+                            <div class="news-intro">
+                                <p>Несмотря на то, что коронавирус нанес мощный удар по человечеству, медицинские работники отважно делали и продолжают делать всё, что в их силах, чтобы вылечить заболевших и противостоять дальнейшему распространению вируса. </p>
+                                <p>Мы не остались в стороне и решили участвовать в этом нелёгком деле теми ресурсами, которыми мы действительно можем помочь.</p>
+                            </div>
+                            <div class="news-footer lr-pair">
+                                <div class="left">12 августа 2020</div>
+                                <div class="right"><a href="" class="btn btn-flat waves-effect waves-dark">Читать далее</a></div>
+                            </div>
+                        </div>
+                        <div class="col l3 m6 s12">
+                            <div class="news-img lazy-image" data-src="/img/news/light_start.png"></div>
+                            <div class="news-header">ДВА выгодных предложения для новых клиентов! Акции «Лёгкий старт»!</div>
+                            <div class="news-intro">
+                                <p>1. Две бутылки воды «Мирабель» + две тары + помпа механическая = 700 руб. (экономия 370 руб.);</p>
+                                <p>2. Две бутылки воды «Горный воздух» + две тары + кулер компрессорный 09L= 7 990 руб. (экономия 1600 руб.).</p>
+                                <p>Если вы новый клиент «Единой службы доставки питьевой воды», то оставьте заявку на акцию «Лёгкий старт» по телефонам: </p>
+                            </div>
+                            <div class="news-footer lr-pair">
+                                <div class="left">12 августа 2020</div>
+                                <div class="right"><a href="" class="btn btn-flat waves-effect waves-dark">Читать далее</a></div>
+                            </div>
+                        </div>
+                        <div class="col l3 m6 s12">
+                            <div class="news-img lazy-image" data-src="/img/news/our_deposit.png"></div>
+                            <div class="news-header">Мы бесплатно доставили больше 700 бутылей воды во все больницы Краснодара</div>
+                            <div class="news-intro">
+                                <p>Первые меры по снятию карантина начались 23 мая. За эти два с лишним месяца мы бесплатно доставили больше 700 бутылей питьевой воды во все больницы Краснодара. Больше 70 дней наши врачи и медработники боролись с болезнью, которая захлестнула не только наш город, но и весь мир. Мы рады, что смогли хоть каким-то способом помочь тем людям, которые до сих пор стоят на страже…</p>
+                            </div>
+                            <div class="news-footer lr-pair">
+                                <div class="left">12 августа 2020</div>
+                                <div class="right"><a href="" class="btn btn-flat waves-effect waves-dark">Читать далее</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col s12 center-align"><a href="" class="btn btn-flat waves-effect waves-dark">Смотреть все новости</a></div>
+                </div>
             </section>
         </div>
     </main>
+    <div class="fixed-action-btn">
+        <a class="btn-floating green hoverable" href="/support.html">
+          <i class="response"></i>
+        </a>
+    </div>
     <footer>
         <div class="container">
             <div class="navigation-blocks-wrapper">
                 <div class="navigation-block nb-left">
                     <div class="header">О компании</div>
                     <div class="links">
-                        <a href="">Адреса магазинов</a>
-                        <a href="">Контакты</a>
-                        <a href="">Вакансии</a>
-                        <a href="">Реквизиты</a>
+                        <a href="" class="underlined">Адреса магазинов</a>
+                        <a href="" class="underlined">Контакты</a>
+                        <a href="" class="underlined">Вакансии</a>
+                        <a href="" class="underlined">Реквизиты</a>
                     </div>
                 </div>
                 <div class="navigation-block nb-left">
                     <div class="header">Покупателям</div>
                     <div class="links">
-                        <a href="">Доставка и оплата</a>
-                        <a href="">График работ</a>
-                        <a href="">Как заказать</a>
-                        <a href="">Наши партнеры</a>
+                        <a href="" class="underlined">Доставка и оплата</a>
+                        <a href="" class="underlined">График работ</a>
+                        <a href="" class="underlined">Как заказать</a>
+                        <a href="" class="underlined">Наши партнеры</a>
                     </div>
                 </div>
                 <div class="navigation-block nb-left">
                     <div class="header">Каталог</div>
                     <div class="links">
-                        <a href="">Вода</a>
-                        <a href="">Кулеры</a>
-                        <a href="">Помпы</a>
-                        <a href="">Фильтры</a>
-                        <a href="">Пурифайеры</a>
-                        <a href="">Сопутствующие товары</a>
+                        <a href="" class="underlined">Вода</a>
+                        <a href="" class="underlined">Кулеры</a>
+                        <a href="" class="underlined">Помпы</a>
+                        <a href="" class="underlined">Фильтры</a>
+                        <a href="" class="underlined">Пурифайеры</a>
+                        <a href="" class="underlined">Сопутствующие товары</a>
                     </div>
                 </div>
                 <div class="navigation-block nb-left" id="delivery-times">
@@ -351,22 +503,34 @@
                 <div class="navigation-block nb-right">
                     <div class="header">Новороссийск</div>
                     <div class="links">
-                        <a href="">8 (8617) 211-731</a>
-                        <a href="">8 (988) 769-77-44</a>
+                        <a href="tel:+78617211731" class="underlined">8 (8617) 211-731</a>
+                        <a href="tel:+79887697744" class="underlined">8 (988) 769-77-44</a>
                     </div>
                 </div>
                 <div class="navigation-block nb-right">
                     <div class="header">Анапа</div>
                     <div class="links">
-                        <a href="">8 (8613) 324-333</a>
-                        <a href="">8 (918) 33-33-222</a>                        
+                        <a href="+78613324333" class="underlined">8 (8613) 324-333</a>
+                        <a href="+79183333222" class="underlined">8 (918) 33-33-222</a>                        
                     </div>
                 </div>
                 <div class="navigation-block nb-right">
                     <div class="header">Краснодар</div>
                     <div class="links">
-                        <a href="">204-44-44</a>
-                        <a href="">8(988) 333-444-3</a>
+                        <a class="underlined" href="tel:+78622044444">204-44-44</a>
+                        <a class="underlined" href="tel:+79883334443">8 (988) 333-444-3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="lr-pair">
+                    <div class="left">
+                        © Акватория, 2021
+                    </div>
+                    <div class="right">
+                        Все права защищены
                     </div>
                 </div>
             </div>
@@ -378,6 +542,6 @@
     <script src="/js/swiper-bundle.js"></script>
     <script src="/js/data_loader.js"></script>
     <script src="/js/master.js"></script>
-    <!-- <script src="/js/brand.js"></script> -->
+    <script src="/js/brand.js"></script>
 </body>
 </html>

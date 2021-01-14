@@ -1,0 +1,184 @@
+.sidenav{
+
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    & .user-view{
+
+        position: sticky;
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding-bottom: 5px;
+
+        & a{
+            color: #fff;
+        }
+
+        & .lr-pair{
+
+            & .left{
+
+                padding-right: 10px;
+
+                & .avatar{
+                    padding-top: 100%;
+                    width: 64px;
+                    border-radius: 50%;
+                    background: #fff url(/img/avatar_logo.svg) center center no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            & .right{
+
+                & .username{
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                & .cart{
+                    font-size: 13px;
+                }
+
+                & a{
+                    line-height: 20px;
+                }
+            }
+        }
+
+    }
+
+    & .dropdown-wrapper{
+
+        background: $primary;
+        padding: 10px;
+
+        & .dropdown{
+
+            & .current{
+                background-color: darken($primary, 10);
+                line-height: 30px;
+                color: #fff;
+
+                &:after{
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+
+            & .popup{
+
+                margin: 0 10px;
+                width: calc(100% - 20px);
+                max-width: calc(100% - 20px);
+                min-width: unset;
+                top: calc(100% - 10px);
+
+                & a{
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+
+    & .main-catalog{
+
+        position: relative;
+        
+        & > .main-catalog-scroller{
+            position: relative;
+            padding: 0;
+            margin: 0;
+            height: calc(100vh - 240px);
+            overflow-x: hidden;
+
+            & li{
+
+                list-style: none;
+
+                & a{
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+
+                    &.folder{
+                        background-image: url(/img/forward.svg);
+                        background-position: right 20px center;
+                        background-repeat: no-repeat;
+                    }
+
+                    &.back{
+                        padding-left: 50px;
+                        background-image: url(/img/back.svg);
+                        background-position: left 32px center;
+                        background-repeat: no-repeat;
+                    }
+                }
+
+                & ul{
+                    padding: 0;
+                    position: absolute;
+                    top: 0px;
+                    left: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    pointer-events: none;
+                    padding-bottom: 20px;
+
+                    &.visible{
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+            }
+        }
+       
+        &:before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            z-index: 2;
+            background: linear-gradient(to bottom, transparent, #fff 80%);
+            pointer-events: none;
+        }
+    }
+
+    & .more-data{
+        flex-grow: 1;
+        
+        & .app-stores{
+            
+            text-align: center;
+            
+            & .app-store{
+                display: inline-block;
+                width: 95px;
+                height: 32px;
+                transform: translateY(5px);
+                
+                &.gplay{
+                    background: url(/img/gplay.png) center center no-repeat;
+                }
+                
+                &.appstore{
+                    background: url(/img/appstore.png) center center no-repeat;
+                }
+            }
+        }
+        
+        & .phones{
+                        
+            & .left, & .right{
+                flex-grow: 1;
+                text-align: center;
+                line-height: 40px;
+                color: $text !important;
+            }
+        }
+    }
+}

@@ -1,5 +1,23 @@
 header{
     background-color: $primary;
+
+    @media(max-width: 1200px){
+        position: relative;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            top: 100%;
+            left: 0;
+            position: absolute;
+            background: linear-gradient(to bottom, rgba(black, .2), transparent);
+        }
+    }
     
     & div, & span, & a{
         color: #fff;
@@ -10,7 +28,10 @@ header{
         & .top{
 
             display: flex;
-            border-bottom: 1px solid darken($primary, 10);
+
+            @media(min-width: 1200px){
+                border-bottom: 1px solid darken($primary, 10);
+            }
 
             & .left{
 
@@ -24,25 +45,56 @@ header{
                         display: block;
                         width: 180px;
                         height: 100%;
-                        background: url(/img/logo.svg) center center no-repeat;
+                        background: url(/img/logo.svg) left center no-repeat;
+
+                        @media(max-width: 600px){
+                            width: 80px;
+                        }
                     }
                 }
 
-                & .branch-selector-wrapper{
+                & .dropdown-wrapper{
 
-                    position: relative;
-
-                    & .current{
-                        line-height: 90px;
-                        padding: 0 20px;
+                    width: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    &:before, &:after{
+                        content: '';
+                        display: block;
+                        flex-grow: 1;
                     }
+                    margin: 0 10px;
+                    
+                    & .dropdown{
+                        
+                        position: relative;
 
-                    & .popup{
-                        border: 1px solid orange;
-                        position: absolute;
+                        & .current{
+                            line-height: 20px;
+                            background: darken($primary, 10);
+                            border: 0;
+
+                            &:after{
+                                width: 27px;
+                                height: 27px;
+                            }
+                        }
+
+                        & .popup{
+
+                            & a{
+                                padding: 0 10px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+               
+                    @media(max-width: 750px){
                         display: none;
                     }
                 }
+
 
             }
             & .separator{
@@ -50,13 +102,20 @@ header{
             }
             & > .right{
 
-                width: 445px;
                 display: flex;
                 padding: 15px 0;
+
+                @media(max-width: 600px){
+                    padding-right: .75rem;
+                }
 
                 & .app-stores{
 
                     width: 210px;
+
+                    @media(max-width: 1200px){
+                        display: none;
+                    }
 
                     & .app-store{
                         display: inline-block;
@@ -77,13 +136,17 @@ header{
                 & .lr-pair{
 
                     height: 30px;
-
+                    
                     & .right{
                         padding-left: 20px;
                         display: flex;
                     }
-
+                    
                     &.phones{
+                        
+                        @media(max-width: 750px){
+                            display: none;
+                        }
 
                         & .left{
                             border-right: 1px solid darken($primary, 5);
@@ -93,18 +156,71 @@ header{
 
                     &.cart{
 
-                        & .left{
+                        @media(max-width: 750px){
+                            line-height: 30px;
+                        }
 
+                        & .left{
+                            
                             & a{
                                 margin-right: 10px;
+
+                                
+                                &.phone{
+                                    @media(min-width: 751px){
+                                        display: none;
+                                    }
+                                }
                             }
                         }
 
                         & .right{
 
+                            @media(max-width: 750px){
+                                display: none;
+                            }
+
                             & span{
                                 line-height: 26px;
                             }
+                        }
+                    }
+                }
+
+                & .burger-wrapper{
+                    width: 30px;
+                    position: relative;
+
+                    @media(min-width: 751px){
+                        margin-left: 20px;
+                    }
+
+                    @media(min-width: 1200px){
+                        display: none;
+                    }
+
+                    & .burger{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    
+                    & .bar{
+                        position: absolute;
+                        width: 70%;
+                        height: 2px;
+                        background: #fff;
+                        top: calc(50% - 1px);
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transform-origin: center center;
+
+                        &:first-of-type{
+                            transform: translateX(-50%) translateY(-7px);
+                        }
+
+                        &:last-of-type{
+                            transform: translateX(-50%) translateY(7px);
                         }
                     }
                 }
@@ -114,6 +230,30 @@ header{
         & .bottom{
 
             display: flex;
+
+            @media(max-width: 1200px){
+                display: none;
+            }
+
+            & a{
+                line-height: 40px;
+                padding: 0 10px;
+                display: inline-block;
+                transition: background-color .2s;
+
+                &:hover{
+                    background:darken($primary, 10);
+                }
+                
+                &.repeat{
+                    
+                    background: $secondary;
+                    
+                    &:hover{
+                        background:darken($secondary, 10);
+                    }
+                }
+            }
 
             & .left{
                 flex-grow: 1;
@@ -153,15 +293,6 @@ header{
                             }
                         }
 
-                        & a{
-                            line-height: 40px;
-                            padding: 0 10px;
-                            display: block;
-
-                            &:hover{
-                                background:darken($primary, 10);
-                            }
-                        }
 
                         & ul{
                             background: #fff;
@@ -176,12 +307,16 @@ header{
                             transition: transform .3s, opacity .3s;
                             transform: translateY(-6px);
                             opacity: 0;
+                            z-index: 5;
+                            overflow: hidden;
                             
                             & li{
 
                                 & a{
                                     color: black;
                                     white-space: nowrap;
+                                    display: block;
+                                    width: 100%;
 
                                     &:hover{
                                         background: #eeeeee;
