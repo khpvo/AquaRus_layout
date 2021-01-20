@@ -79,18 +79,18 @@ p{
     width: 26px;
     height: 26px;
 
-    &.cart{background: url(/img/Cart.svg) center center no-repeat; background-size: 80% auto;}
-    &.person{background: url(/img/Person.svg) center center no-repeat; background-size: 80% auto;}
-    &.refresh{background: url(/img/Refresh.svg) center center no-repeat; background-size: 80% auto;}
-    &.whatsapp{background: url(/img/Whatsapp.svg) center center no-repeat; background-size: 80% auto;}
-    &.telegram{background: url(/img/Telegram.svg) center center no-repeat; background-size: 80% auto;}
-    &.phone{background: url(/img/Phone.svg) center center no-repeat; background-size: 80% auto;}
-    &.remove{background: url(/img/remove.svg) center center no-repeat;}
-    &.reroute{background: url(/img/reroute.svg) center center no-repeat;}
-    &.reciept{background: url(/img/reciept.svg) center center no-repeat;}
-    &.repay{background: url(/img/repay.svg) center center no-repeat;}
-    &.repeat{background: url(/img/repeat.svg) center center no-repeat;}
-    &.decline{background: url(/img/decline.svg) center center no-repeat;}
+    &.cart{background: url(../img/Cart.svg) center center no-repeat; background-size: 80% auto;}
+    &.person{background: url(../img/Person.svg) center center no-repeat; background-size: 80% auto;}
+    &.refresh{background: url(../img/Refresh.svg) center center no-repeat; background-size: 80% auto;}
+    &.whatsapp{background: url(../img/Whatsapp.svg) center center no-repeat; background-size: 80% auto;}
+    &.telegram{background: url(../img/Telegram.svg) center center no-repeat; background-size: 80% auto;}
+    &.phone{background: url(../img/Phone.svg) center center no-repeat; background-size: 80% auto;}
+    &.remove{background: url(../img/remove.svg) center center no-repeat;}
+    &.reroute{background: url(../img/reroute.svg) center center no-repeat;}
+    &.reciept{background: url(../img/reciept.svg) center center no-repeat;}
+    &.repay{background: url(../img/repay.svg) center center no-repeat;}
+    &.repeat{background: url(../img/repeat.svg) center center no-repeat;}
+    &.decline{background: url(../img/decline.svg) center center no-repeat;}
 }
 
 .disabled{
@@ -215,7 +215,7 @@ main{
 
 .response{
     height: 100%;
-    background: url(/img/response.svg) center center no-repeat;
+    background: url(../img/response.svg) center center no-repeat;
     background-size: 18px auto;
 }
 

@@ -4166,35 +4166,35 @@ p {
   width: 26px;
   height: 26px; }
   .icon.cart {
-    background: url(/img/Cart.svg) center center no-repeat;
+    background: url(../img/Cart.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.person {
-    background: url(/img/Person.svg) center center no-repeat;
+    background: url(../img/Person.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.refresh {
-    background: url(/img/Refresh.svg) center center no-repeat;
+    background: url(../img/Refresh.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.whatsapp {
-    background: url(/img/Whatsapp.svg) center center no-repeat;
+    background: url(../img/Whatsapp.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.telegram {
-    background: url(/img/Telegram.svg) center center no-repeat;
+    background: url(../img/Telegram.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.phone {
-    background: url(/img/Phone.svg) center center no-repeat;
+    background: url(../img/Phone.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.remove {
-    background: url(/img/remove.svg) center center no-repeat; }
+    background: url(../img/remove.svg) center center no-repeat; }
   .icon.reroute {
-    background: url(/img/reroute.svg) center center no-repeat; }
+    background: url(../img/reroute.svg) center center no-repeat; }
   .icon.reciept {
-    background: url(/img/reciept.svg) center center no-repeat; }
+    background: url(../img/reciept.svg) center center no-repeat; }
   .icon.repay {
-    background: url(/img/repay.svg) center center no-repeat; }
+    background: url(../img/repay.svg) center center no-repeat; }
   .icon.repeat {
-    background: url(/img/repeat.svg) center center no-repeat; }
+    background: url(../img/repeat.svg) center center no-repeat; }
   .icon.decline {
-    background: url(/img/decline.svg) center center no-repeat; }
+    background: url(../img/decline.svg) center center no-repeat; }
 
 .disabled {
   filter: grayscale(1);
@@ -4279,7 +4279,7 @@ main {
 
 .response {
   height: 100%;
-  background: url(/img/response.svg) center center no-repeat;
+  background: url(../img/response.svg) center center no-repeat;
   background-size: 18px auto; }
 
 h1 {
@@ -4459,7 +4459,7 @@ header {
           display: block;
           width: 180px;
           height: 100%;
-          background: url(/img/logo.svg) left center no-repeat; }
+          background: url(../img/logo.svg) left center no-repeat; }
           @media (max-width: 600px) {
             header .container .top .left .logo-wrapper .logo {
               width: 80px; } }
@@ -4506,9 +4506,9 @@ header {
           height: 32px;
           transform: translateY(5px); }
           header .container .top > .right .app-stores .app-store.gplay {
-            background: url(/img/gplay.png) center center no-repeat; }
+            background: url(../img/gplay.png) center center no-repeat; }
           header .container .top > .right .app-stores .app-store.appstore {
-            background: url(/img/appstore.png) center center no-repeat; }
+            background: url(../img/appstore.png) center center no-repeat; }
       header .container .top > .right .lr-pair {
         height: 30px; }
         header .container .top > .right .lr-pair .right {
@@ -4757,7 +4757,7 @@ footer {
         padding-top: 100%;
         width: 64px;
         border-radius: 50%;
-        background: #fff url(/img/avatar_logo.svg) center center no-repeat;
+        background: #fff url(../img/avatar_logo.svg) center center no-repeat;
         background-size: contain; }
     .sidenav .user-view .lr-pair .right .username {
       font-size: 16px;
@@ -4799,12 +4799,12 @@ footer {
           width: 100%;
           box-sizing: border-box; }
           .sidenav .main-catalog > .main-catalog-scroller li a.folder {
-            background-image: url(/img/forward.svg);
+            background-image: url(../img/forward.svg);
             background-position: right 20px center;
             background-repeat: no-repeat; }
           .sidenav .main-catalog > .main-catalog-scroller li a.back {
             padding-left: 50px;
-            background-image: url(/img/back.svg);
+            background-image: url(../img/back.svg);
             background-position: left 32px center;
             background-repeat: no-repeat; }
         .sidenav .main-catalog > .main-catalog-scroller li ul {
@@ -4839,9 +4839,9 @@ footer {
         height: 32px;
         transform: translateY(5px); }
         .sidenav .more-data .app-stores .app-store.gplay {
-          background: url(/img/gplay.png) center center no-repeat; }
+          background: url(../img/gplay.png) center center no-repeat; }
         .sidenav .more-data .app-stores .app-store.appstore {
-          background: url(/img/appstore.png) center center no-repeat; }
+          background: url(../img/appstore.png) center center no-repeat; }
     .sidenav .more-data .phones .left, .sidenav .more-data .phones .right {
       flex-grow: 1;
       text-align: center;
@@ -5033,7 +5033,7 @@ input[type="checkbox"].styled {
       position: absolute;
       top: 0;
       right: 0;
-      background: #37B7FF url(/img/Dropdown_chevron.svg) center center no-repeat;
+      background: #37B7FF url(../img/Dropdown_chevron.svg) center center no-repeat;
       width: 28px;
       height: 28px;
       transition: background-color .2s; }
@@ -5334,16 +5334,20 @@ input[type="checkbox"].styled {
 
 #profile .material-table tbody tr.order {
   cursor: pointer; }
-  @media (min-width: 600px) {
-    #profile .material-table tbody tr.order td:last-of-type {
-      text-align: right; } }
+  #profile .material-table tbody tr.order td {
+    padding: 10px 0; }
+    @media (min-width: 600px) {
+      #profile .material-table tbody tr.order td:last-of-type {
+        text-align: right; } }
+    #profile .material-table tbody tr.order td .icon {
+      padding: 0; }
   @media (max-width: 600px) {
     #profile .material-table tbody tr.order .expander {
       display: none; } }
   #profile .material-table tbody tr.order .expander .expander-trigger {
     width: 16px;
     height: 16px;
-    background: url(/img/forward.svg) center center no-repeat;
+    background: url(../img/forward.svg) center center no-repeat;
     transition: transform .4s; }
   #profile .material-table tbody tr.order + .details td {
     padding: 0;

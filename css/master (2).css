@@ -3489,22 +3489,22 @@ body {
   width: 26px;
   height: 26px; }
   .icon.cart {
-    background: url(/img/Cart.svg) center center no-repeat;
+    background: url(../img/Cart.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.person {
-    background: url(/img/Person.svg) center center no-repeat;
+    background: url(../img/Person.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.refresh {
-    background: url(/img/Refresh.svg) center center no-repeat;
+    background: url(../img/Refresh.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.whatsapp {
-    background: url(/img/Whatsapp.svg) center center no-repeat;
+    background: url(../img/Whatsapp.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.telegram {
-    background: url(/img/Telegram.svg) center center no-repeat;
+    background: url(../img/Telegram.svg) center center no-repeat;
     background-size: 80% auto; }
   .icon.phone {
-    background: url(/img/Phone.svg) center center no-repeat;
+    background: url(../img/Phone.svg) center center no-repeat;
     background-size: 80% auto; }
 
 .lazy-image {
@@ -3578,7 +3578,7 @@ header {
           display: block;
           width: 180px;
           height: 100%;
-          background: url(/img/logo.svg) left center no-repeat; }
+          background: url(../img/logo.svg) left center no-repeat; }
           @media (max-width: 600px) {
             header .container .top .left .logo-wrapper .logo {
               width: 80px; } }
@@ -3599,7 +3599,7 @@ header {
             position: absolute;
             top: 0;
             right: 0;
-            background: #37B7FF url(/img/Dropdown_chevron.svg) center center no-repeat;
+            background: #37B7FF url(../img/Dropdown_chevron.svg) center center no-repeat;
             width: 28px;
             height: 28px; }
         header .container .top .left .dropdown-wrapper .popup {
@@ -3625,9 +3625,9 @@ header {
           height: 32px;
           transform: translateY(5px); }
           header .container .top > .right .app-stores .app-store.gplay {
-            background: url(/img/gplay.png) center center no-repeat; }
+            background: url(../img/gplay.png) center center no-repeat; }
           header .container .top > .right .app-stores .app-store.appstore {
-            background: url(/img/appstore.png) center center no-repeat; }
+            background: url(../img/appstore.png) center center no-repeat; }
       header .container .top > .right .lr-pair {
         height: 30px; }
         header .container .top > .right .lr-pair .right {

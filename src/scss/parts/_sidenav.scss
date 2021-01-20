@@ -26,7 +26,7 @@
                     padding-top: 100%;
                     width: 64px;
                     border-radius: 50%;
-                    background: #fff url(/img/avatar_logo.svg) center center no-repeat;
+                    background: #fff url(../img/avatar_logo.svg) center center no-repeat;
                     background-size: contain;
                 }
             }
@@ -104,14 +104,14 @@
                     box-sizing: border-box;
 
                     &.folder{
-                        background-image: url(/img/forward.svg);
+                        background-image: url(../img/forward.svg);
                         background-position: right 20px center;
                         background-repeat: no-repeat;
                     }
 
                     &.back{
                         padding-left: 50px;
-                        background-image: url(/img/back.svg);
+                        background-image: url(../img/back.svg);
                         background-position: left 32px center;
                         background-repeat: no-repeat;
                     }
@@ -162,11 +162,11 @@
                 transform: translateY(5px);
                 
                 &.gplay{
-                    background: url(/img/gplay.png) center center no-repeat;
+                    background: url(../img/gplay.png) center center no-repeat;
                 }
                 
                 &.appstore{
-                    background: url(/img/appstore.png) center center no-repeat;
+                    background: url(../img/appstore.png) center center no-repeat;
                 }
             }
         }

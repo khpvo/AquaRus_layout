@@ -20,11 +20,17 @@
 
                     & td{
 
+                        padding: 10px 0;
+
                         &:last-of-type{
 
                             @media(min-width: 600px){
                                 text-align: right;
                             }
+                        }
+
+                        & .icon{
+                            padding: 0;
                         }
                     }
 
@@ -40,7 +46,7 @@
                         & .expander-trigger{
                             width: 16px;
                             height: 16px;
-                            background: url(/img/forward.svg) center center no-repeat;
+                            background: url(../img/forward.svg) center center no-repeat;
                             transition: transform .4s;
 
                         }

@@ -45,7 +45,7 @@ header{
                         display: block;
                         width: 180px;
                         height: 100%;
-                        background: url(/img/logo.svg) left center no-repeat;
+                        background: url(../img/logo.svg) left center no-repeat;
 
                         @media(max-width: 600px){
                             width: 80px;
@@ -124,11 +124,11 @@ header{
                         transform: translateY(5px);
 
                         &.gplay{
-                            background: url(/img/gplay.png) center center no-repeat;
+                            background: url(../img/gplay.png) center center no-repeat;
                         }
                         
                         &.appstore{
-                            background: url(/img/appstore.png) center center no-repeat;
+                            background: url(../img/appstore.png) center center no-repeat;
                         }
                     }
                 }
