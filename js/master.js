@@ -19,12 +19,29 @@ $(() => {
     $('body').on('click', hidePopups);
     $('body').on('click', 'tr.details', closeDetails);
     $('body').on('change', '[name="theme-selector"]', disenTheme);
+    $('body').on('click', '.products-sidebar-trigger a', toggleSidebarContent);
+    $('body').on('mouseenter', '#misc-products', pauseMiscSlider);
+    $('body').on('mouseleave', '#misc-products', resumeMiscSlider);
 
     $('.sidenav').sidenav();
     $('.modal').modal();
     $('p').hyphenate();
     $('.material-table').materialize();
+
 });
+
+function pauseMiscSlider(e){
+    miscSlider.autoplay.stop();
+}
+
+function resumeMiscSlider(e){
+    miscSlider.autoplay.start();
+}
+
+function toggleSidebarContent(e){
+    e?.preventDefault();
+    $(this).parents('.products-sidebar').find('.products-sidebar-content').toggleClass('open');
+}
 
 function updateTextarea(){
     this.style.height = 0;

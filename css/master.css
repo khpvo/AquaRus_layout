@@ -3450,7 +3450,7 @@ button.btn-floating {
   .btn-flat:focus, .btn-flat:hover {
     box-shadow: none; }
   .btn-flat:focus {
-    background-color: rgba(0, 0, 0, 0.1); }
+    background-color: transparent; }
   .btn-flat.disabled, .btn-flat.btn-flat[disabled] {
     background-color: transparent !important;
     color: #b3b3b3 !important;
@@ -4207,6 +4207,19 @@ p {
   font-size: 10px;
   font-weight: 500; }
 
+.warning {
+  background: #ffedcc;
+  color: #996300;
+  padding: 0 30px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px; }
+
+p.note {
+  color: #999999;
+  margin: 10px 0 !important;
+  font-size: 10px; }
+
 .add-cart {
   display: flex; }
   .add-cart.inline {
@@ -4686,7 +4699,12 @@ footer {
     padding: 30px 0; }
 
 .product-card {
-  margin: 10px; }
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+  .product-card .separator {
+    flex-grow: 1; }
   .product-card .card-content .header {
     font-size: 16px;
     font-weight: 500;
@@ -4766,9 +4784,20 @@ footer {
       font-size: 13px; }
     .sidenav .user-view .lr-pair .right a {
       line-height: 20px; }
+  .sidenav .repeat {
+    display: block;
+    width: 100%;
+    height: 44px;
+    background: #FF8B37;
+    color: #fff;
+    padding-left: 30px; }
+    .sidenav .repeat .icon {
+      transform: translateY(8px);
+      margin-right: 6px; }
   .sidenav .dropdown-wrapper {
     background: #3970C2;
-    padding: 10px; }
+    padding: 10px;
+    margin: 0; }
     .sidenav .dropdown-wrapper .dropdown .current {
       background-color: #2d599b;
       line-height: 30px;
@@ -4978,7 +5007,9 @@ input[type="checkbox"].styled {
   input[type="checkbox"].styled + label {
     user-select: none;
     cursor: pointer;
-    position: relative; }
+    position: relative;
+    line-height: 30px;
+    display: inline-block; }
     input[type="checkbox"].styled + label:before {
       content: '';
       display: inline-block;
@@ -4988,6 +5019,7 @@ input[type="checkbox"].styled {
       box-shadow: 0 0 0 1px #a2a2a2 inset;
       margin-right: 6px;
       border-radius: 4px;
+      transform: translateY(2px);
       transition: box-shadow .2s; }
     input[type="checkbox"].styled + label:after {
       content: '';
@@ -5001,7 +5033,7 @@ input[type="checkbox"].styled {
       opacity: 0;
       position: absolute;
       left: 0;
-      top: 0;
+      top: 7px;
       z-index: 2;
       transition: opacity .2s; }
     input[type="checkbox"].styled + label:hover:before {
@@ -5456,3 +5488,92 @@ input[type="checkbox"].styled {
 
 #checkout #set-password:not(.visible) {
   display: none; }
+
+#products-wrapper .products-sidebar {
+  padding: 10px 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 20px; }
+  @media (max-width: 700px) {
+    #products-wrapper .products-sidebar {
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 0px; } }
+  #products-wrapper .products-sidebar .products-sidebar-trigger {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+    text-transform: uppercase; }
+    @media (min-width: 700px) {
+      #products-wrapper .products-sidebar .products-sidebar-trigger {
+        display: none !important; } }
+    #products-wrapper .products-sidebar .products-sidebar-trigger a {
+      line-height: 40px;
+      background: #f2f2f2;
+      display: block;
+      width: 100%;
+      border-radius: 4px; }
+  #products-wrapper .products-sidebar .products-sidebar-content {
+    width: 100%;
+    display: none; }
+    @media (min-width: 700px) {
+      #products-wrapper .products-sidebar .products-sidebar-content {
+        display: block !important; } }
+    #products-wrapper .products-sidebar .products-sidebar-content.open {
+      display: block; }
+    #products-wrapper .products-sidebar .products-sidebar-content .categories-wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+      #products-wrapper .products-sidebar .products-sidebar-content .categories-wrapper .category {
+        border-left: 2px solid #ccc;
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        max-width: 100%;
+        line-height: 30px;
+        padding: 0 10px;
+        border-bottom: 1px dotted #d9d9d9; }
+        @media (max-width: 700px) {
+          #products-wrapper .products-sidebar .products-sidebar-content .categories-wrapper .category {
+            width: calc(45% - 16px);
+            flex-grow: 1; } }
+        #products-wrapper .products-sidebar .products-sidebar-content .categories-wrapper .category:hover {
+          background-color: #f2f2f2; }
+    @media (max-width: 700px) {
+      #products-wrapper .products-sidebar .products-sidebar-content .filters-wrapper {
+        display: flex;
+        flex-wrap: wrap; } }
+    #products-wrapper .products-sidebar .products-sidebar-content .filter {
+      margin-bottom: 30px;
+      border-left: 2px solid #ccc;
+      padding-left: 10px; }
+      @media (max-width: 700px) {
+        #products-wrapper .products-sidebar .products-sidebar-content .filter {
+          width: calc(100% / 3);
+          flex-grow: 1;
+          padding-right: 20px; } }
+      @media (max-width: 400px) {
+        #products-wrapper .products-sidebar .products-sidebar-content .filter {
+          width: 100%; } }
+      #products-wrapper .products-sidebar .products-sidebar-content .filter .filters-header {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+        color: #999999;
+        padding-bottom: 6px;
+        margin-bottom: 6px; }
+      #products-wrapper .products-sidebar .products-sidebar-content .filter label {
+        display: inline-block; }
+
+#products-wrapper #products, #products-wrapper #products2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  #products-wrapper #products .col, #products-wrapper #products2 .col {
+    margin-left: unset; }
+    #products-wrapper #products .col .product-card, #products-wrapper #products2 .col .product-card {
+      margin: 10px 0;
+      height: calc(100% - 1.5rem); }

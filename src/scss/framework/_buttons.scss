@@ -282,7 +282,8 @@ button.btn-floating {
     box-shadow: none;
   }
   &:focus {
-    background-color: rgba(0, 0, 0, .1);
+    // background-color: rgba(0, 0, 0, .1);
+    background-color: transparent;
   }
   &.disabled,
   &.btn-flat[disabled]  {
