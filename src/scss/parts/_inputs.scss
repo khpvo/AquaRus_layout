@@ -251,3 +251,19 @@ input[type="checkbox"]{
         }
     }
 }
+
+input[type="number"]{
+    
+    border: 0;
+    background: transparent;
+    width: 30px;
+    text-align: center;
+    -moz-appearance: textfield;
+    line-height: 32px;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

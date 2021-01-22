@@ -230,7 +230,6 @@
                                 <table class="material-table">
                                     <thead>
                                         <tr>
-                                            <th>Артикул</th>
                                             <th>Наименование</th>
                                             <th>Количество</th>
                                             <th>Цена за единицу</th>
@@ -240,7 +239,6 @@
                                     </thead>
                                     <tbody>
                                         <tr class="order">
-                                            <td>0001</td>
                                             <td><a class="underlined" href="product.html">Вода «Кубай»</a></td>
                                             <td>
                                                 <div class="add-cart inline">
@@ -260,7 +258,6 @@
                                             </td>
                                         </tr>
                                         <tr class="order">
-                                            <td>0001</td>
                                             <td><a class="underlined" href="product.html">Вода «Кубай»</a></td>
                                             <td>
                                                 <div class="add-cart inline">
@@ -280,7 +277,6 @@
                                             </td>
                                         </tr>
                                         <tr class="order">
-                                            <td>0001</td>
                                             <td><a class="underlined" href="product.html">Вода «Кубай»</a></td>
                                             <td>
                                                 <div class="add-cart inline">
@@ -311,10 +307,11 @@
                                 <div class="row">
                                     <div class="col m6 s12">
                                         <h3>Доставка</h3>
-                                        <div><input type="radio" class="styled" name="address" id="addr1"><label for="addr1">Россия, Краснодарский край, г. Краснодар, ул. Московская, 129/206</label></div>
-                                        <div><input type="radio" class="styled" name="address" id="addr2"><label for="addr2">Россия, Краснодарский край, г. Краснодар, ул. Северная, д. 324, литер Г</label></div>
-                                        <div><input type="radio" class="styled" name="address" id="addr3"><label for="addr3">Россия, Ставропольский край, г. Ессентуки, ул. Пушкина, 46/9</label></div>
-                                        <div class="input-field"><input type="text" class="styled" placeholder="Адрес"><label for="">Адрес</label></div>
+                                        <div><input type="radio" class="styled" value="address1" name="address" checked id="addr1"><label for="addr1">Россия, Краснодарский край, г. Краснодар, ул. Московская, 129/206</label></div>
+                                        <div><input type="radio" class="styled" value="address2" name="address" id="addr2"><label for="addr2">Россия, Краснодарский край, г. Краснодар, ул. Северная, д. 324, литер Г</label></div>
+                                        <div><input type="radio" class="styled" value="address3" name="address" id="addr3"><label for="addr3">Россия, Ставропольский край, г. Ессентуки, ул. Пушкина, 46/9</label></div>
+                                        <div><input type="radio" class="styled" value="user-address" name="address" id="addr4"><label for="addr4">Другое</label></div>
+                                        <div class="input-field hidden" id="user-address"><input type="text" class="styled" placeholder="Адрес"><label for="">Адрес</label></div>
                                     </div>
                                     <div class="col l3 m6 s12">
                                         <h3>Оплата</h3>
@@ -351,8 +348,9 @@
         <div class="container">
             <div class="navigation-blocks-wrapper">
                 <div class="navigation-block nb-left">
-                    <div class="header">О компании</div>
+                    <div class="header">Навигация</div>
                     <div class="links">
+                        <a href="" class="underlined">О компании</a>
                         <a href="" class="underlined">Адреса магазинов</a>
                         <a href="" class="underlined">Контакты</a>
                         <a href="" class="underlined">Вакансии</a>

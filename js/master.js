@@ -7,13 +7,14 @@ $(() => {
 
     initSliders();
     loadImages();
+    replaceLakeImage();
 
     $('body').on('click', '.sidenav .folder', nextLevel);
     $('body').on('click', '.sidenav .back', prevLevel);
     $('body').on('change', '#change-password-trigger', showChangePass);
     $('body').on('change', '.set-password-trigger', showSetPass);
     $('body').on('keyup', 'textarea', updateTextarea);
-    $('body').on('click', '.dropdown', openBranchPopup);
+    $('body').on('click', '.dropdown', openDropdown);
     $('body').on('click', '.dropdown a', setCurrent);
     $('body').on('click', 'tr.order', toggleDetails);
     $('body').on('click', hidePopups);
@@ -22,6 +23,8 @@ $(() => {
     $('body').on('click', '.products-sidebar-trigger a', toggleSidebarContent);
     $('body').on('mouseenter', '#misc-products', pauseMiscSlider);
     $('body').on('mouseleave', '#misc-products', resumeMiscSlider);
+    $('body').on('change', '[name="address"]', toggleUserAddress);
+    $(window).on('scroll', updateFloatingCart);
 
     $('.sidenav').sidenav();
     $('.modal').modal();
@@ -29,6 +32,37 @@ $(() => {
     $('.material-table').materialize();
 
 });
+
+function toggleUserAddress(){
+    if($(this).val() == "user-address"){
+        $('#user-address').removeClass('hidden');
+    }else{
+        $('#user-address').addClass('hidden');
+    }
+}
+
+function updateFloatingCart(){
+
+    var st = $('html, body').scrollTop();
+    if(st >= 132){
+        $('.floating-cart').addClass('shown');
+    }else{
+        $('.floating-cart').removeClass('shown');
+    }
+}
+
+function replaceLakeImage(){
+
+    if($('#lake-info').length){
+
+        var imageEl = $('#lake-info .modal-text p:first-of-type img');
+        var image = imageEl.attr('src');
+
+        $('#lake-info .modal-header').data('src', image);
+        imageEl.remove();
+        loadImages();
+    }
+}
 
 function pauseMiscSlider(e){
     miscSlider.autoplay.stop();
@@ -109,7 +143,7 @@ function hidePopups(e){
     }
 }
 
-function openBranchPopup(e){
+function openDropdown(e){
     e?.preventDefault();
     e?.stopPropagation();
     $(this).find('.popup').toggleClass('open');

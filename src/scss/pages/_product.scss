@@ -1,4 +1,22 @@
+@mixin product_description{
+
+    column-count: 2;
+    column-gap: 1.5rem;
+
+    & p{
+        margin-top: 0;
+    }
+
+    @media(max-width: 600px){
+        column-count: 1;
+    }
+}
+
 #product{
+
+    & .description{
+        @include product_description();
+    }
 
     & .page-product-image{
         padding-top: 100%;
@@ -26,6 +44,10 @@
 }
 
 #product-water{
+
+    & .description{
+        @include product_description();
+    }
     
     & .page-product-image{
         padding-top: 70%;
@@ -104,6 +126,7 @@
     }
 
 }
+
 .modal#lake-info{
 
     // width: 40vw;

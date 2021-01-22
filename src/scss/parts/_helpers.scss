@@ -243,6 +243,31 @@ h1{
     }
 }
 
+.hidden{
+    display: none;
+}
+
+.popup-wrapper{
+    border: 1px solid red;
+    position: relative;
+
+    & .popup{
+        border: 1px solid green;
+        position: absolute;
+        padding: 0;
+        right: 0;
+        background: #fff;
+
+        & li{
+            list-style: none;
+
+            & a{
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
 h2{
     font-size: 26px;
 }
@@ -257,6 +282,7 @@ a{
     display: inline-block;
     width: fit-content;
     position: relative;
+    cursor: pointer;
 
     &.underlined{
 

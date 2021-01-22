@@ -1,5 +1,61 @@
+@mixin middle {
+    line-height: 33px;
+    height: 33px;
+    background: $primary;
+
+    & .cart-link{
+        padding-left: 30px;
+        background: url(/img/Cart.svg) left center no-repeat;
+    }
+
+    & .clear-cart{
+        width: 16px;
+        height: 16px;
+        background: url(/img/close-white.svg) center center no-repeat;
+        background-size: 7px auto;
+        border-radius: 50%;
+    }
+}
+
 header{
     background-color: $primary;
+
+    & .floating-cart{
+        position: fixed;
+        right: 20px;
+        top: 0;
+        display: flex;
+        z-index: 20;
+        transition: top .8s, opacity .4s;
+        top: -80px;
+        opacity: 0;
+
+        &.shown{
+            @media(min-width: 1200px){
+                top: 0;
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+        
+        & .before{
+            content:'';
+            height: 33px;
+            width: 26px;
+            background: url(/img/fc_before.svg);
+        }
+        
+        & .middle{
+            @include middle();
+        }
+
+        & .after{
+            content: '';
+            height: 33px;
+            width: 26px;
+            background: url(/img/fc_after.svg);
+        }
+    }
 
     @media(max-width: 1200px){
         position: relative;
@@ -156,15 +212,16 @@ header{
 
                     &.cart{
 
+                        
                         @media(max-width: 750px){
                             line-height: 30px;
                         }
-
+                        
                         & .left{
                             
                             & a{
                                 margin-right: 10px;
-
+                                
                                 
                                 &.phone{
                                     @media(min-width: 751px){
@@ -173,12 +230,37 @@ header{
                                 }
                             }
                         }
-
+                        
                         & .right{
-
+                            
                             @media(max-width: 750px){
                                 display: none;
                             }
+
+                            & .cart-wrapper{
+                                @include middle();
+
+                                & .cart-full{
+                                    display: none;
+                                }
+
+                                & .cart-empty{
+                                    display: block;
+                                }
+
+                                &.active{
+                                    & .cart-full{
+                                        display: block;
+                                    }
+
+                                    & .cart-empty{
+                                        display: none;
+                                    }
+                                }
+                                
+                                
+                            }
+
 
                             & span{
                                 line-height: 26px;

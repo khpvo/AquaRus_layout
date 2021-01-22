@@ -3546,6 +3546,37 @@ button.btn-floating {
   border-radius: 0;
   will-change: bottom, opacity; }
 
+.material-tooltip {
+  padding: 10px 8px;
+  font-size: 1rem;
+  z-index: 2000;
+  background-color: transparent;
+  border-radius: 2px;
+  color: #fff;
+  min-height: 36px;
+  line-height: 120%;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  max-width: calc(100% - 4px);
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  visibility: hidden;
+  background-color: #323232; }
+
+.backdrop {
+  position: absolute;
+  opacity: 0;
+  height: 7px;
+  width: 14px;
+  border-radius: 0 0 50% 50%;
+  background-color: #323232;
+  z-index: -1;
+  transform-origin: 50% 0%;
+  visibility: hidden; }
+
 /**
  * Swiper 6.4.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -4302,6 +4333,23 @@ h1 {
     h1 {
       font-size: 28px; } }
 
+.hidden {
+  display: none; }
+
+.popup-wrapper {
+  border: 1px solid red;
+  position: relative; }
+  .popup-wrapper .popup {
+    border: 1px solid green;
+    position: absolute;
+    padding: 0;
+    right: 0;
+    background: #fff; }
+    .popup-wrapper .popup li {
+      list-style: none; }
+      .popup-wrapper .popup li a {
+        white-space: nowrap; }
+
 h2 {
   font-size: 26px; }
 
@@ -4313,7 +4361,8 @@ a {
   color: #FF8B37;
   display: inline-block;
   width: fit-content;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   a.underlined {
     line-height: 30px; }
     a.underlined:after {
@@ -4442,6 +4491,43 @@ a {
 
 header {
   background-color: #3970C2; }
+  header .floating-cart {
+    position: fixed;
+    right: 20px;
+    top: 0;
+    display: flex;
+    z-index: 20;
+    transition: top .8s, opacity .4s;
+    top: -80px;
+    opacity: 0; }
+    @media (min-width: 1200px) {
+      header .floating-cart.shown {
+        top: 0;
+        opacity: 1;
+        pointer-events: all; } }
+    header .floating-cart .before {
+      content: '';
+      height: 33px;
+      width: 26px;
+      background: url(/img/fc_before.svg); }
+    header .floating-cart .middle {
+      line-height: 33px;
+      height: 33px;
+      background: #3970C2; }
+      header .floating-cart .middle .cart-link {
+        padding-left: 30px;
+        background: url(/img/Cart.svg) left center no-repeat; }
+      header .floating-cart .middle .clear-cart {
+        width: 16px;
+        height: 16px;
+        background: url(/img/close-white.svg) center center no-repeat;
+        background-size: 7px auto;
+        border-radius: 50%; }
+    header .floating-cart .after {
+      content: '';
+      height: 33px;
+      width: 26px;
+      background: url(/img/fc_after.svg); }
   @media (max-width: 1200px) {
     header {
       position: relative;
@@ -4544,6 +4630,27 @@ header {
         @media (max-width: 750px) {
           header .container .top > .right .lr-pair.cart .right {
             display: none; } }
+        header .container .top > .right .lr-pair.cart .right .cart-wrapper {
+          line-height: 33px;
+          height: 33px;
+          background: #3970C2; }
+          header .container .top > .right .lr-pair.cart .right .cart-wrapper .cart-link {
+            padding-left: 30px;
+            background: url(/img/Cart.svg) left center no-repeat; }
+          header .container .top > .right .lr-pair.cart .right .cart-wrapper .clear-cart {
+            width: 16px;
+            height: 16px;
+            background: url(/img/close-white.svg) center center no-repeat;
+            background-size: 7px auto;
+            border-radius: 50%; }
+          header .container .top > .right .lr-pair.cart .right .cart-wrapper .cart-full {
+            display: none; }
+          header .container .top > .right .lr-pair.cart .right .cart-wrapper .cart-empty {
+            display: block; }
+          header .container .top > .right .lr-pair.cart .right .cart-wrapper.active .cart-full {
+            display: block; }
+          header .container .top > .right .lr-pair.cart .right .cart-wrapper.active .cart-empty {
+            display: none; }
         header .container .top > .right .lr-pair.cart .right span {
           line-height: 26px; }
       header .container .top > .right .burger-wrapper {
@@ -5103,6 +5210,17 @@ input[type="checkbox"].styled {
       .dropdown-wrapper .popup a:hover {
         background: #eeeeee; }
 
+input[type="number"] {
+  border: 0;
+  background: transparent;
+  width: 30px;
+  text-align: center;
+  -moz-appearance: textfield;
+  line-height: 32px; }
+  input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+
 #main #hero-slider {
   width: 100%; }
   @media (max-width: 600px) {
@@ -5270,6 +5388,15 @@ input[type="checkbox"].styled {
   #main #news .news-footer .right {
     text-align: right; }
 
+#product .description {
+  column-count: 2;
+  column-gap: 1.5rem; }
+  #product .description p {
+    margin-top: 0; }
+  @media (max-width: 600px) {
+    #product .description {
+      column-count: 1; } }
+
 #product .page-product-image {
   padding-top: 100%;
   background-size: contain;
@@ -5285,6 +5412,15 @@ input[type="checkbox"].styled {
 
 #product .add-cart.inline {
   margin: 30px 0; }
+
+#product-water .description {
+  column-count: 2;
+  column-gap: 1.5rem; }
+  #product-water .description p {
+    margin-top: 0; }
+  @media (max-width: 600px) {
+    #product-water .description {
+      column-count: 1; } }
 
 #product-water .page-product-image {
   padding-top: 70%;

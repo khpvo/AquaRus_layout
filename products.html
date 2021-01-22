@@ -43,9 +43,22 @@
                                 <a href="" class="icon whatsapp"></a>
                             </div>
                             <div class="separator"></div>
-                            <div class="right">
-                                <span>1/1200₽</span>
-                                <a href="/checkout.html" class="icon cart"></a>
+                            <div class="right ">
+                                <div class="cart-wrapper">
+                                    <div class="cart-full">
+                                        <a href="/checkout.html" class="cart-link">
+                                            <span class="rs-cart-items-count">1</span>
+                                            <span>/</span>
+                                            <span class="cost">
+                                                <span class="value">200 ₽</span>
+                                            </span>
+                                        </a>
+                                        <a href="" class="clear-cart"></a>
+                                    </div>
+                                    <div class="cart-empty">
+                                        В корзине пусто
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -91,6 +104,20 @@
                     </a>
                 </div>
             </nav>
+        </div>
+        <div class="floating-cart">
+            <div class="before"></div>
+            <div class="middle">
+                <a href="/checkout.html" class="cart-link">
+                    <span class="rs-cart-items-count">1</span>
+                    <span>/</span>
+                    <span class="cost">
+                        <span class="value">200 ₽</span>
+                    </span>
+                </a>
+                <a href="" class="clear-cart"></a>
+            </div>
+            <div class="after"></div>
         </div>
     </header>
     <div class="sidenav" id="mobile-nav">
@@ -196,8 +223,9 @@
         <div class="container">
             <div class="navigation-blocks-wrapper">
                 <div class="navigation-block nb-left">
-                    <div class="header">О компании</div>
+                    <div class="header">Навигация</div>
                     <div class="links">
+                        <a href="" class="underlined">О компании</a>
                         <a href="" class="underlined">Адреса магазинов</a>
                         <a href="" class="underlined">Контакты</a>
                         <a href="" class="underlined">Вакансии</a>
