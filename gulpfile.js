@@ -3,7 +3,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var include = require('gulp-file-include');
-const fileinclude = require('gulp-file-include');
+var imageMin = require('gulp-imagemin');
+
 
 var browserSync = require('browser-sync').init({
 	server: {
@@ -20,7 +21,7 @@ gulp.task('sass', function() {
 
 gulp.task('include', function(){
 	return gulp.src('./src/html/*.html')
-		.pipe(fileinclude({
+		.pipe(include({
 			prefix: '@@',
 			basepath: '@file'
 		}))
@@ -31,6 +32,15 @@ gulp.task('html', function(){
 	return gulp.src(['./release/*.html', './src/html/**/*.html'])
 		.pipe(browserSync.stream());
 });
+
+gulp.task('imageMin', function(){
+	return gulp.src('./src/img/**/*.*')
+		.pipe(imageMin([
+			imageMin.svgo(),
+			imageMin.optipng()
+		]))
+		.pipe(gulp.dest('./release/img/'));
+})
 
 gulp.task('js', function(){
 	return gulp.src('./release/js/*.js')
@@ -46,4 +56,5 @@ gulp.task('watch', function(){
 	gulp.watch('./release/*.html', gulp.series('html'));
 	gulp.watch('./src/html/**/*.html', gulp.series('include'));
 	gulp.watch('./release/js/*.js', gulp.series('js'));
+	gulp.watch('./src/img/**/*.*', gulp.series('imageMin'));
 });

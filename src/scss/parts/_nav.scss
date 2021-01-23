@@ -6,20 +6,20 @@
     & .clear-cart{
         width: 16px;
         height: 16px;
-        background: url(/img/close-white.svg) center center no-repeat;
+        background: url(../img/close-white.svg) center center no-repeat;
         background-size: 7px auto;
         border-radius: 50%;
     }
 
     & .cart-empty{
         padding-left: 20px;
-        background: url(/img/icons/cart_empty.svg) left center no-repeat;
+        background: url(../img/icons/cart_empty.svg) left center no-repeat;
         background-size: auto 14px;
     }
     
     & .cart-full{
         padding-left: 20px;
-        background: url(/img/icons/cart_full.svg) left center no-repeat;
+        background: url(../img/icons/cart_full.svg) left center no-repeat;
         background-size: auto 14px;
     }
 }
@@ -84,7 +84,7 @@ header{
             content:'';
             height: 33px;
             width: 26px;
-            background: url(/img/fc_before.svg);
+            background: url(../img/fc_before.svg);
         }
         
         & .middle{
@@ -100,7 +100,7 @@ header{
             content: '';
             height: 33px;
             width: 26px;
-            background: url(/img/fc_after.svg);
+            background: url(../img/fc_after.svg);
         }
     }
 
