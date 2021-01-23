@@ -3,11 +3,6 @@
     height: 33px;
     background: $primary;
 
-    & .cart-link{
-        padding-left: 30px;
-        background: url(/img/Cart.svg) left center no-repeat;
-    }
-
     & .clear-cart{
         width: 16px;
         height: 16px;
@@ -15,10 +10,57 @@
         background-size: 7px auto;
         border-radius: 50%;
     }
+
+    & .cart-empty{
+        padding-left: 20px;
+        background: url(/img/icons/cart_empty.svg) left center no-repeat;
+        background-size: auto 14px;
+    }
+    
+    & .cart-full{
+        padding-left: 20px;
+        background: url(/img/icons/cart_full.svg) left center no-repeat;
+        background-size: auto 14px;
+    }
+}
+
+@mixin cart_wrapper{
+    & .cart-full{
+        display: none;
+    }
+
+    & .cart-empty{
+        display: block;
+    }
+
+    &.active{
+
+        & .cart-full{
+            display: block;
+        }
+
+        & .cart-empty{
+            display: none;
+        }
+    }
 }
 
 header{
     background-color: $primary;
+
+    & .repeat-tablet{
+
+        display: none;
+
+        @media(min-width: 750px) and (max-width: 1200px){
+            display: inline-block;
+            padding: 0 10px 0 30px;
+            background: $secondary url(../img/icons/tb_repeat.svg) left 5px center no-repeat;
+            line-height: 30px;
+            margin: 0 10px;
+            border-radius: 4px;
+        }
+    }
 
     & .floating-cart{
         position: fixed;
@@ -46,7 +88,12 @@ header{
         }
         
         & .middle{
-            @include middle();
+
+            & .cart-wrapper{
+
+                @include middle();
+                @include cart_wrapper();
+            }
         }
 
         & .after{
@@ -239,26 +286,8 @@ header{
 
                             & .cart-wrapper{
                                 @include middle();
+                                @include cart_wrapper();
 
-                                & .cart-full{
-                                    display: none;
-                                }
-
-                                & .cart-empty{
-                                    display: block;
-                                }
-
-                                &.active{
-                                    & .cart-full{
-                                        display: block;
-                                    }
-
-                                    & .cart-empty{
-                                        display: none;
-                                    }
-                                }
-                                
-                                
                             }
 
 

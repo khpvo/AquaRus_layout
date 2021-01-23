@@ -17,6 +17,7 @@ $(() => {
     $('body').on('click', '.dropdown', openDropdown);
     $('body').on('click', '.dropdown a', setCurrent);
     $('body').on('click', 'tr.order', toggleDetails);
+    $('body').on('click', '.popup-trigger', togglePopup);
     $('body').on('click', hidePopups);
     $('body').on('click', 'tr.details', closeDetails);
     $('body').on('change', '[name="theme-selector"]', disenTheme);
@@ -32,6 +33,15 @@ $(() => {
     $('.material-table').materialize();
 
 });
+
+function togglePopup(e){
+    e?.preventDefault();
+    e?.stopPropagation();
+    var already = $(this).parent().find('.popup').hasClass('open');
+    var newClass = already ? '' : 'open';
+    $('.popup-wrapper .popup').removeClass('open');
+    $(this).parent().find('.popup').addClass(newClass);
+}
 
 function toggleUserAddress(){
     if($(this).val() == "user-address"){
@@ -136,10 +146,18 @@ function hidePopups(e){
     var path = e.originalEvent.path;
     var dropdownIndex = path.filter(el => {
         return $(el).hasClass('popup');
-    })
+    });
+
+    var popups = path.filter(el => {
+        return $(el).hasClass('popup-wrapper');
+    });
 
     if(!dropdownIndex.length){
         $('.dropdown-wrapper .popup').removeClass('open');
+    }
+
+    if(!popups.length){
+        $('.popup-wrapper .popup').removeClass('open');
     }
 }
 

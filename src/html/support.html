@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акватория | Поддержка</title>
+    <link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="support">
+            <div class="container">
+                <h1>Поддержка</h1>
+                <div class="row">
+                    <div class="col m4">
+                        <h2>Новое сообщение</h2>
+                        <div><input type="radio" name="theme-selector" class="styled" id="theme-selector1" checked><label for="theme-selector1">Создать новую тему</label></div>
+                        <div><input type="radio" name="theme-selector" class="styled" id="theme-selector2"><label for="theme-selector2">Написать в имеющуюся</label></div>
+                        <div class="dropdown-wrapper disabled" id="theme-selector">
+                            <div class="dropdown">
+                                <div class="current">Не работает оформление заказа</div>
+                                <div class="popup">
+                                    <a href="">Не работает оформление заказа</a>
+                                    <a href="">Как купить в кредит?</a>
+                                    <a href="">Не могу попасть на страницу заказа</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <textarea class="styled" placeholder="Текст сообщения"></textarea><label for="">Текст обращения</label>
+                        </div>
+                        <a href="/messages.html" class="btn float-right">Отправить</a>
+                    </div>
+                    <div class="col m8">
+                        <table class="material-table">
+                            <thead>
+                                <tr>
+                                    <th>Дата</th>
+                                    <th>Тема</th>
+                                    <th>Последний автор</th>
+                                    <th>Последняя дата</th>
+                                    <th>Статус</th>
+                                    <th class="right-align">Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5 января 2020 г.</td>
+                                    <td>
+                                        <a href="/messages.html" class="underlined">Не работает оформление заказа</a>
+                                    </td>
+                                    <td>Служба поддержки</td>
+                                    <td>6 января 2020 г.</td>
+                                    <td>Решен</td>
+                                    <td class="right-align">
+                                        <a href="" class="icon remove"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5 января 2020 г.</td>
+                                    <td>
+                                        <a href="/messages.html" class="underlined">Как купить в кредит?</a>
+                                    </td>
+                                    <td>Я</td>
+                                    <td>6 января 2020 г.</td>
+                                    <td>Открыт</td>
+                                    <td class="right-align">
+                                        <a href="" class="icon remove"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5 января 2020 г.</td>
+                                    <td>
+                                        <a href="/messages.html" class="underlined">Не могу попасть на страницу заказа</a>
+                                    </td>
+                                    <td>Служба поддержки</td>
+                                    <td>6 января 2020 г.</td>
+                                    <td>Решен</td>
+                                    <td class="right-align">
+                                        <a href="" class="icon remove"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    @@include('./html_parts/scripts.html')
+</body>
+</html>

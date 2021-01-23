@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акватория | Продукция</title>
+    <link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="products-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h1>Сопутствующие товары</h1>
+                        <div class="crumbs-wrapper">
+                            <a href="" class="crumb underlined">Главная</a>
+                            <span class="crumb-separator">/</span>
+                            <a href="" class="crumb underlined">Каталог</a>
+                            <span class="crumb-separator">/</span>
+                            <a href="" class="crumb">Сопутствующие товары</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m3 l2">
+                        <div class="products-sidebar">
+                            <div class="products-sidebar-trigger"><a href="" class="waves-effect waves-dark">Фильтры</a></div>
+                            <div class="products-sidebar-content">
+                                <div class="filters-wrapper">
+                                    <div class="filter">
+                                        <div class="filters-header">Цена (до)</div>
+                                        <div class="input-field">
+                                            <input type="text" class="styled" placeholder="Цена">
+                                            <label for="">Цена</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter">
+                                        <div class="filters-header">Нижняя загрузка</div>
+                                        <div><input type="radio" checked class="styled" name="bottom_loading" id="bottom_loading3"><label for="bottom_loading3">Не важно</label></div>
+                                        <div><input type="radio" class="styled" name="bottom_loading" id="bottom_loading1"><label for="bottom_loading1">Есть</label></div>
+                                        <div><input type="radio" class="styled" name="bottom_loading" id="bottom_loading2"><label for="bottom_loading2">Нет</label></div>
+                                    </div>
+                                    <div class="filter">
+                                        <div class="filters-header">Тип кулера</div>
+                                        <div><input type="checkbox" class="styled" id="floor"><label for="floor">Напольный</label></div>
+                                        <div><input type="checkbox" class="styled" id="wall"><label for="wall">Настольный</label></div>
+                                    </div>
+                                    <div class="filter">
+                                        <div class="filters-header">Холодильник</div>
+                                        <div><input type="radio" checked class="styled" name="freezer" id="freezer3"><label for="freezer3">Не важно</label></div>
+                                        <div><input type="radio" class="styled" name="freezer" id="freezer1"><label for="freezer1">Есть</label></div>
+                                        <div><input type="radio" class="styled" name="freezer" id="freezer2"><label for="freezer2">Нет</label></div>
+                                    </div>
+                                    <div class="filter">
+                                        <div class="filters-header">Тип охлаждения</div>
+                                        <div><input type="checkbox" class="styled" id="compress"><label for="compress">Компрессорный</label></div>
+                                        <div><input type="checkbox" class="styled" id="electronic"><label for="electronic">Электронный</label></div>
+                                    </div>
+                                    <div class="filter">
+                                        <div class="filters-header">Функции</div>
+                                        <div><input type="checkbox" class="styled" id="warm-cool"><label for="warm-cool">Охлаждение и нагрев</label></div>
+                                        <div><input type="checkbox" class="styled" id="warm-nocool"><label for="warm-nocool">Без охлаждения</label></div>
+                                        <div><input type="checkbox" class="styled" id="nowarm-nocool"><label for="nowarm-nocool">Без охлаждения и нагрева</label></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m9 l10">
+                        <div class="row" id="products2"></div>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="pagination-wrapper">
+                            <a href="" class="waves-effect page">1</a>
+                            <span class="page dots">…</span>
+                            <a href="" class="waves-effect page">12</a>
+                            <a href="" class="waves-effect page current">13</a>
+                            <a href="" class="waves-effect page">14</a>
+                            <span class="page dots">…</span>
+                            <a href="" class="waves-effect page">320</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="fixed-action-btn">
+        <a class="btn-floating green hoverable" href="/support.html">
+          <i class="response"></i>
+        </a>
+    </div>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    @@include('./html_parts/scripts.html')
+</body>
+</html>

@@ -1,5 +1,4 @@
-table.material-table{
-
+@mixin material_table{
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
@@ -12,18 +11,9 @@ table.material-table{
             text-align: left;
             font-weight: 500;
         }
-
-        @media(max-width: 600px){
-            display: none;
-        }
     }
 
     & tbody{
-
-        @media(max-width: 600px){
-            display: block;
-            width: 100%;
-        }
 
         & tr{
     
@@ -43,8 +33,25 @@ table.material-table{
                 background: rgba(#888, .1);
             }
 
-            @media(max-width: 600px){
+        }
+    }
+}
+
+@mixin responsive_table{
+
     
+    @media(max-width: 600px){
+
+        & thead{
+            display: none;
+        }
+        
+        & tbody{
+            display: block;
+            width: 100%;
+
+            & tr{
+
                 display: flex;
                 width: 100%;
                 flex-direction: column;
@@ -71,5 +78,6 @@ table.material-table{
                 }
             }
         }
+
     }
 }

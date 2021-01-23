@@ -101,10 +101,36 @@ footer{
                 flex-grow: 1;
             }
         }
+
+        & .right{
+
+            display: flex;
+
+            & .icon{
+                height: 40px;
+                width: 40px;
+                background-size: auto 60%;
+    
+                &:hover{
+                    background-color: darken($primary, 20);
+                }
+            }
+        }
+
     }
 
     & > .container{
         padding: 30px 0;
+    }
+
+    & .mobile-appstores{
+        
+        text-align: center;
+        padding-top: 20px;
+
+        @media(min-width: 600px){
+            display: none;
+        }
     }
 
 }

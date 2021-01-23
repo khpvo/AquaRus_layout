@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акватория | Продукция</title>
+    <link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="products-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h1>Сопутствующие товары</h1>
+                        <div class="crumbs-wrapper">
+                            <a href="" class="crumb underlined">Главная</a>
+                            <span class="crumb-separator">/</span>
+                            <a href="" class="crumb underlined">Каталог</a>
+                            <span class="crumb-separator">/</span>
+                            <a href="" class="crumb">Сопутствующие товары</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="warning">Доставка товаров из данной категории осуществляется только с поставкой воды.</div>
+                    </div>
+                </div>
+                <div class="row" id="products">
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="pagination-wrapper">
+                            <a href="" class="waves-effect page">1</a>
+                            <span class="page dots">…</span>
+                            <a href="" class="waves-effect page">12</a>
+                            <a href="" class="waves-effect page current">13</a>
+                            <a href="" class="waves-effect page">14</a>
+                            <span class="page dots">…</span>
+                            <a href="" class="waves-effect page">320</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="fixed-action-btn">
+        <a class="btn-floating green hoverable" href="/support.html">
+          <i class="response"></i>
+        </a>
+    </div>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    @@include('./html_parts/scripts.html')
+</body>
+</html>

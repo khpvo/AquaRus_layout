@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акватория | Личный кабинет</title>
+    <link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="checkout">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="underline-wrapper">
+                            <h1>Корзина</h1>
+                        </div>
+                    </div>
+                    <div class="col l3 m4 s12">
+                        <div class="underline-wrapper" id="ballance">
+                            <h2>
+                                Лицевой счет
+                            </h2>                            
+                        </div>
+                        <p>
+                            <span>Балланс: 240₽</span>
+                            <a href="javascript:void(0)" class="btn float-right waves-effect waves-light">Пополнить</a>
+                        </p>
+                        <div class="underline-wrapper">
+                            <h2>Профиль</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col l12 s12">
+                                <div class="input-field"><input type="text" class="styled" placeholder="Фамилия"><label for="">Фамилия</label></div>
+                            </div>
+                            <div class="col l6 m12 s12">
+                                <div class="input-field"><input type="text" class="styled" placeholder="Имя"><label for="">Имя</label></div>
+                            </div>
+                            <div class="col l6 m12 s12">
+                                <div class="input-field"><input type="text" class="styled" placeholder="Отчество"><label for="">Отчество</label></div>
+                            </div>
+                            <div class="col l6 m12 s12">
+                                <div class="input-field"><input type="text" class="styled" placeholder="E-mail"><label for="">E-mail</label></div>
+                            </div>
+                            <div class="col l6 m12 s12">
+                                <div class="input-field"><input type="phone" class="styled" placeholder="Телефон"><label for="">Телефон</label></div>
+                            </div>
+                            <div class="col m12 s12">
+                                <input type="radio" name="user-type" id="phisical" checked class="styled">
+                                <label for="phisical">Физическое лицо</label>
+                                <input type="radio" name="user-type" id="law" class="styled">
+                                <label for="law">Юридическое лицо</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <div><input type="radio" name="password-set" class="set-password-trigger styled" id="password-auto" checked><label for="password-auto">Сгенерировать пароль</label></div>
+                                <div><input type="radio" name="password-set" class="set-password-trigger styled" id="password-manual"><label for="password-manual">Задать пароль вручную</label></div>
+                            </div>
+                        </div>
+                        <div class="row" id="set-password">
+                            <div class="col m6 s6">
+                                <div class="input-field"><input type="password" class="styled" placeholder="Пароль"><label for="">Пароль</label></div>
+                            </div>
+                            <div class="col m6 s6">
+                                <div class="input-field"><input type="password" class="styled" placeholder="Подтверждение"><label for="">Подтверждение</label></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <a href="javascript:void(0);" class="btn float-right waves-effect waves-light">Сохранить</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l9 m8 s12">
+                        <div class="row">
+                            <div class="col s12">
+
+                                <div class="underline-wrapper">
+                                    <h2>Состав корзины</h2>
+                                </div>
+                                <table class="material-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Наименование</th>
+                                            <th>Количество</th>
+                                            <th>Цена за единицу</th>
+                                            <th>Сумма</th>
+                                            <th class="right-align">Действия</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="order">
+                                            <td><a class="underlined" href="product.html">Вода «Кубай»</a></td>
+                                            <td>
+                                                <div class="add-cart inline">
+                                                    <div class="plus">
+                                                        <a href="">–</a>
+                                                    </div>
+                                                    <div class="input" contenteditable="true">1</div>
+                                                    <div class="minus">
+                                                        <a href="">+</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>120₽</td>
+                                            <td>240₽</td>
+                                            <td>
+                                                <a href="" class="btn-flat icon float-right waves-effect waves-dark remove"></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="order">
+                                            <td><a class="underlined" href="product.html">Вода «Кубай»</a></td>
+                                            <td>
+                                                <div class="add-cart inline">
+                                                    <div class="plus">
+                                                        <a href="">–</a>
+                                                    </div>
+                                                    <div class="input" contenteditable="true">1</div>
+                                                    <div class="minus">
+                                                        <a href="">+</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>120₽</td>
+                                            <td>240₽</td>
+                                            <td>
+                                                <a href="" class="btn-flat icon float-right waves-effect waves-dark remove"></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="order">
+                                            <td><a class="underlined" href="product.html">Вода «Кубай»</a></td>
+                                            <td>
+                                                <div class="add-cart inline">
+                                                    <div class="plus">
+                                                        <a href="">–</a>
+                                                    </div>
+                                                    <div class="input" contenteditable="true">1</div>
+                                                    <div class="minus">
+                                                        <a href="">+</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>120₽</td>
+                                            <td>240₽</td>
+                                            <td>
+                                                <a href="" class="btn-flat icon float-right waves-effect waves-dark remove"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="underline-wrapper">
+                                    <h2>Доставка и оплата</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col m6 s12">
+                                        <h3>Доставка</h3>
+                                        <div><input type="radio" class="styled" value="address1" name="address" checked id="addr1"><label for="addr1">Россия, Краснодарский край, г. Краснодар, ул. Московская, 129/206</label></div>
+                                        <div><input type="radio" class="styled" value="address2" name="address" id="addr2"><label for="addr2">Россия, Краснодарский край, г. Краснодар, ул. Северная, д. 324, литер Г</label></div>
+                                        <div><input type="radio" class="styled" value="address3" name="address" id="addr3"><label for="addr3">Россия, Ставропольский край, г. Ессентуки, ул. Пушкина, 46/9</label></div>
+                                        <div><input type="radio" class="styled" value="user-address" name="address" id="addr4"><label for="addr4">Другое</label></div>
+                                        <div class="input-field hidden" id="user-address"><input type="text" class="styled" placeholder="Адрес"><label for="">Адрес</label></div>
+                                    </div>
+                                    <div class="col l3 m6 s12">
+                                        <h3>Оплата</h3>
+                                        <div><input checked type="radio" class="styled" name="payment-type" id="pay1"><label for="pay1">Наличными курьеру</label></div>
+                                        <div><input type="radio" class="styled" name="payment-type" id="pay2"><label for="pay2">Картой онлайн</label></div>
+                                        <div><input type="radio" class="styled" name="payment-type" id="pay3"><label for="pay3">Оплата по счету</label></div>
+                                        <div><input type="radio" class="styled" name="payment-type" id="pay4"><label for="pay4">Из балланса</label></div>
+                                    </div>
+                                    <div class="col l3 m6 s12">
+                                        <div class="summary" id="summary">
+                                            <div class="summary-wrapper">
+                                                <div class="top">
+                                                    <div class="left">Сумма: 534 950₽</div>
+                                                    <div class="right">Доставка: 200₽ </div>
+                                                </div>
+                                                <div class="bottom">К оплате: 535 150₽ </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="fixed-action-btn">
+        <a class="btn-floating green hoverable" href="/support.html">
+          <i class="response"></i>
+        </a>
+    </div>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    <div id="lake-info" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div class="lazy-image modal-header" data-src="/img/animals/serna.jpg"></div>
+            <div class="modal-text">
+                <p>Серны являются многочисленным семейством, за исключением кавказского подвида, который занесен в Красную Книгу России. На сегодняшний день его популяция состоит всего лишь из около 2000 животных, большая часть которых обитает на территории заповедников.</p>
+                <p>Ареал обитания серны включает Альпы и Пиренеи, Вогезы, Балканские горы и Карпаты, Большой и Малый Кавказ, Понтийские горы и Малую Азию. В России этот вид встречается на Большом Кавказском хребте. Продолжительность жизни серн в естественных условиях составляет 10-12 лет, самки обычно живут дольше, чем самцы, а половой зрелости животные достигают в возрасте 20 месяцев</p>
+                <p>Живут серны обычно небольшими группами, изредка формируют также и многочисленные стада, вожаком которых выступает наиболее опытная старая самка. </p>
+                <p>К естественным врагам серны относятся рысь, волк и медведь. На молодых особей достаточно часто нападают беркуты. Кроме того, для животных опасны скатывающиеся вниз камни и осколки скал, лавины, которые происходят в горах, и жертвами которых становятся зачастую именно детеныши этих животных. В суровые и снежные зимы серны очень часто погибают от нехватки пищи.</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="btn btn-flat modal-close">Закрыть</a>
+        </div>
+    </div>
+    @@include('./html_parts/scripts.html')
+</body>
+</html>

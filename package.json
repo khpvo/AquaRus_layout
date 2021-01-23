@@ -1,0 +1,27 @@
+{
+  "name": "layout",
+  "version": "1.0.0",
+  "description": "Aqua-rus website layout",
+  "main": "index.html",
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "devDependencies": {
+    "gulp-file-include": "^2.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2br-dev/AquaRus_layout.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2br-dev/AquaRus_layout/issues"
+  },
+  "homepage": "https://github.com/2br-dev/AquaRus_layout#readme"
+}

@@ -3,6 +3,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
+    height: 100vh;
 
     & .user-view{
 
@@ -11,6 +12,7 @@
         top: 0;
         margin: 0;
         padding-bottom: 5px;
+        z-index: 20;
 
         & a{
             color: #fff;
@@ -18,28 +20,41 @@
 
         & .lr-pair{
 
+            display: flex;
+
             & .left{
 
                 padding-right: 10px;
+                display: block;
 
                 & .avatar{
-                    padding-top: 100%;
+                    display: block;
                     width: 64px;
+                    line-height: 64px;
+                    text-align: center;
+                    background-color: #fff;
                     border-radius: 50%;
-                    background: #fff url(../img/avatar_logo.svg) center center no-repeat;
                     background-size: contain;
+                    color: $text;
+                    font-size: 20px;
+                    font-weight: bold;
                 }
             }
 
             & .right{
 
+                display: flex;
+                flex-direction: column;
+
+                &:before, &:after{
+                    content: '';
+                    flex-grow: 1;
+                    display: block;
+                }
+
                 & .username{
                     font-size: 16px;
                     font-weight: 500;
-                }
-
-                & .cart{
-                    font-size: 13px;
                 }
 
                 & a{
@@ -57,6 +72,7 @@
         background: $secondary;
         color: #fff;
         padding-left: 30px;
+        box-sizing: border-box;
 
         & .icon{
             transform: translateY(8px);
@@ -101,13 +117,15 @@
     & .main-catalog{
 
         position: relative;
+        flex-grow: 1;
         
         & > .main-catalog-scroller{
             position: relative;
             padding: 0;
             margin: 0;
-            height: calc(100vh - 240px);
             overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
 
             & li{
 
@@ -164,27 +182,17 @@
     }
 
     & .more-data{
-        flex-grow: 1;
-        
+
+        padding: 10px 0;
+
         & .app-stores{
-            
             text-align: center;
-            
+
             & .app-store{
-                display: inline-block;
-                width: 95px;
-                height: 32px;
                 transform: translateY(5px);
-                
-                &.gplay{
-                    background: url(../img/gplay.png) center center no-repeat;
-                }
-                
-                &.appstore{
-                    background: url(../img/appstore.png) center center no-repeat;
-                }
             }
         }
+
         
         & .phones{
                         
