@@ -5833,3 +5833,49 @@ input[type="number"] {
     #products-wrapper #products .col .product-card, #products-wrapper #products2 .col .product-card {
       margin: 10px 0;
       height: calc(100% - 1.5rem); }
+
+#support .material-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse; }
+  #support .material-table thead th {
+    font-size: 12px;
+    color: #888;
+    text-align: left;
+    font-weight: 500; }
+  #support .material-table tbody tr:first-of-type td {
+    border-top: 1px solid rgba(136, 136, 136, 0.4); }
+  #support .material-table tbody tr td {
+    border-bottom: 1px solid rgba(136, 136, 136, 0.4); }
+  #support .material-table tbody tr:hover {
+    background: rgba(136, 136, 136, 0.1); }
+  #support .material-table td, #support .material-table th {
+    white-space: nowrap; }
+    @media (max-width: 1100px) {
+      #support .material-table td.author, #support .material-table th.author {
+        display: none; } }
+    @media (max-width: 1000px) {
+      #support .material-table td.last-date, #support .material-table th.last-date {
+        display: none; } }
+    @media (max-width: 600px) {
+      #support .material-table td, #support .material-table th {
+        white-space: normal; }
+        #support .material-table td.date, #support .material-table th.date {
+          display: none; } }
+
+#policy .policy-wrapper, #policy .agreement-wrapper, #agreement .policy-wrapper, #agreement .agreement-wrapper {
+  column-count: 3;
+  column-gap: 1.5rem; }
+  @media (max-width: 1100px) {
+    #policy .policy-wrapper, #policy .agreement-wrapper, #agreement .policy-wrapper, #agreement .agreement-wrapper {
+      column-count: 2; } }
+  @media (max-width: 750px) {
+    #policy .policy-wrapper, #policy .agreement-wrapper, #agreement .policy-wrapper, #agreement .agreement-wrapper {
+      column-count: 1; } }
+  #policy .policy-wrapper p, #policy .agreement-wrapper p, #agreement .policy-wrapper p, #agreement .agreement-wrapper p {
+    margin: 0;
+    margin-bottom: 1.5rem; }
+    #policy .policy-wrapper p span, #policy .agreement-wrapper p span, #agreement .policy-wrapper p span, #agreement .agreement-wrapper p span {
+      font-weight: 700; }
+  #policy .policy-wrapper ul, #policy .agreement-wrapper ul, #agreement .policy-wrapper ul, #agreement .agreement-wrapper ul {
+    padding-left: 16px; }
