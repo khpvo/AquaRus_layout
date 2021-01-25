@@ -32,7 +32,121 @@ $(() => {
     $('p').hyphenate();
     $('.material-table').materialize();
 
+    if($('.ba-slider'.length)){
+        $('.ba-slider').beforeAfter();
+    }
+
+    if($('#map').length){
+        loadScript("https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js", () => {
+            initMap();
+        })
+    }
+
 });
+
+function initMap(){
+
+
+    var addr1 = new ol.geom.Circle(
+		ol.proj.fromLonLat([38.9893695, 45.0652408]), 
+		30
+    );
+
+    var addr2 = new ol.geom.Circle(
+		ol.proj.fromLonLat([38.9175483, 45.0631758]), 
+		30
+    );
+
+    var addr3 = new ol.geom.Circle(
+		ol.proj.fromLonLat([39.0797486, 45.036217]), 
+		30
+    );
+
+    var addr4 = new ol.geom.Circle(
+		ol.proj.fromLonLat([38.9591635, 45.0377622]), 
+		30
+    );
+
+    var addr5 = new ol.geom.Circle(
+		ol.proj.fromLonLat([38.9246163, 45.0092283]), 
+		30
+    );
+
+        var addr6 = new ol.geom.Circle(
+		ol.proj.fromLonLat([39.119738, 45.0113455]), 
+		30
+    );
+
+    var addr1F = new ol.Feature(addr1);
+    var addr2F = new ol.Feature(addr2);
+    var addr3F = new ol.Feature(addr3);
+    var addr4F = new ol.Feature(addr4);
+    var addr5F = new ol.Feature(addr5);
+    var addr6F = new ol.Feature(addr6);
+
+    var vectorSource = new ol.source.Vector({
+		features: [addr1F, addr2F, addr3F, addr4F, addr5F, addr6F]
+    });
+    
+    var style = new ol.style.Style({
+		fill: new ol.style.Fill({
+			color: 'rgba(255, 139, 55, .6)'
+		}),
+		stroke: new ol.style.Stroke({
+			width: 10,
+			color: 'rgba(255, 139, 55, .6)'
+		})
+	});
+
+    var vectorLayer = new ol.layer.Vector({
+		source: vectorSource,
+		style: style
+	});
+
+    var map = new ol.Map({
+		target: 'map',  // The DOM element that will contains the map
+		renderer: 'canvas', // Force the renderer to be used
+		layers: [
+			// Add a new Tile layer getting tiles from OpenStreetMap source
+			new ol.layer.Tile({
+				source: new ol.source.OSM({
+					url: "https://basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{r}.png"
+				})
+			}),
+			vectorLayer
+		],
+		// Create a view centered on the specified location and zoom level
+		view: new ol.View({
+			center: ol.proj.fromLonLat([38.9977062, 45.0326081]),
+			zoom: 11.25
+		})
+	});  
+}
+
+// ,
+
+loadScript = (url, callback) => {
+
+	var script = document.createElement("script")
+	script.type = "text/javascript";
+
+	if (script.readyState){  //IE
+		script.onreadystatechange = function(){
+			if (script.readyState == "loaded" ||
+					script.readyState == "complete"){
+				script.onreadystatechange = null;
+				callback();
+			}
+		};
+	} else {  //Others
+		script.onload = function(){
+			callback();
+		};
+	}
+
+	script.src = url;
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
 
 function togglePopup(e){
     e?.preventDefault();
@@ -259,9 +373,83 @@ function loadImages(){
 
         var imgTag = $('<img src="'+url+'" class="lazy-loading" />')[0];
         $(el).append(imgTag);
-        $('img').one('load', openImages);
+        $('.lazy-image img').one('load', openImages);
     })
 }
+
+(function($) {
+    function drags(dragElement, resizeElement, container) {
+      
+      // Initialize the dragging event on mousedown.
+      dragElement.on('mousedown.ba-events touchstart.ba-events', function(e) {
+        
+        dragElement.addClass('ba-draggable');
+        resizeElement.addClass('ba-resizable');
+        
+        // Check if it's a mouse or touch event and pass along the correct value
+        var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+        
+        // Get the initial position
+        var dragWidth = dragElement.outerWidth(),
+            posX = dragElement.offset().left + dragWidth - startX,
+            containerOffset = container.offset().left,
+            containerWidth = container.outerWidth();
+     
+        // Set limits
+        minLeft = containerOffset + 10;
+        maxLeft = containerOffset + containerWidth - dragWidth - 10;
+        
+        // Calculate the dragging distance on mousemove.
+        dragElement.parents().on("mousemove.ba-events touchmove.ba-events", function(e) {
+          
+          // Check if it's a mouse or touch event and pass along the correct value
+          var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+          
+          leftValue = moveX + posX - dragWidth;
+          
+          // Prevent going off limits
+          if ( leftValue < minLeft) {
+            leftValue = minLeft;
+          } else if (leftValue > maxLeft) {
+            leftValue = maxLeft;
+          }
+          
+          // Translate the handle's left value to masked divs width.
+          widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+          
+          // Set the new values for the slider and the handle. 
+          $('.ba-draggable').css('left', widthValue);
+          $('.ba-resizable').css('width', widthValue);
+        // Bind mouseup events to stop dragging.
+        }).on('mouseup.ba-events touchend.ba-events touchcancel.ba-events', function(){
+          dragElement.removeClass('ba-draggable');
+          resizeElement.removeClass('ba-resizable');
+          // Unbind all events for performance
+          $(this).off('.ba-events'); 
+        });
+        e.preventDefault();
+      });
+    }
+  
+    // Define plugin
+    $.fn.beforeAfter = function() {
+      var cur = this;
+      // Adjust the slider
+      var width = cur.width()+'px';
+      cur.find('.resize img').css('width', width);
+      // Bind dragging events
+      drags(cur.find('.handle'), cur.find('.resize'), cur);
+  
+      // Update sliders on resize. 
+      // Because we all do this: i.imgur.com/YkbaV.gif
+      $(window).resize(function(){
+        var width = cur.width()+'px';
+        cur.find('.resize img').css('width', width);
+      });
+    }
+  }(jQuery));
+  
+  
 
 $.fn.materialize = function(){
 

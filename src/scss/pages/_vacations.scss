@@ -1,0 +1,44 @@
+#vacations{
+
+    & .vacation{
+        border-left: 4px solid $primary;
+        padding-left: 10px;
+
+        & .v-block{
+
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(black, .2);
+            margin: 20px 0;
+
+            & .header{
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+
+            & ul{
+                padding-left: 1.5rem;
+            }
+        }
+
+        & .v-footer{
+
+            border-top: 1px dotted #ccc;
+            padding-top: 10px;
+
+            &.kv-pair{
+                display: flex;
+                flex-wrap: wrap;
+                line-height: 36px;
+
+                & .key{
+                    flex-grow: 1;
+                }
+
+                & p{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

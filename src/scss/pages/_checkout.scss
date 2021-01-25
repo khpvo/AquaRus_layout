@@ -2,6 +2,12 @@
 
     & .material-table{
         @include material_table();
+
+        @media(max-width: 450px){
+            & thead{
+                display: none;
+            }
+        }
     }
 
     #summary{

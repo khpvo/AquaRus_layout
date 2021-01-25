@@ -1,0 +1,57 @@
+#delivery{
+
+    
+    & .delivery-list{
+
+        & ul{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        & .l1{
+            padding: 0;
+
+            & > li{
+                list-style: none;
+                font-size: 18px;
+                font-weight: 500;
+                color: $secondary;
+            }
+        }
+        
+        & .l2{
+
+            padding: 0;
+            margin: 10px 0;
+
+            & > li{
+                list-style: none;
+                font-weight: bold;
+            }
+        }
+        
+        & .l3{
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    & .delivery-left{
+
+        width: calc(100% - 20px);
+        
+        & h2{
+            margin-top: 0;
+        }
+    }
+
+    & .regions{
+        
+        & ul{  
+            @media(max-width: 700px){
+                margin: 0 !important;
+            }
+        }
+    }
+}

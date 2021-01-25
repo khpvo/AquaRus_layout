@@ -1,6 +1,6 @@
-#policy, #agreement{
+#policy, #agreement, #processing{
 
-    & .policy-wrapper, & .agreement-wrapper{
+    & .policy-wrapper, & .agreement-wrapper, & .processing-wrapper{
 
         column-count: 3;
         column-gap: 1.5rem;

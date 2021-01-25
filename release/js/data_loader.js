@@ -51,7 +51,8 @@ var product_card_tpl=`
                 <input type="hidden" name="count" />
             </div>
             <div class="right">
-                <a href="javascript:void(0);" class="btn btn-flat waves-effect waves-dark">Купить</a>
+            <a href="javascript:void(0);" class="btn btn-flat green-text waves-effect waves-dark">Кредит</a>
+            <a href="javascript:void(0);" class="btn btn-flat waves-effect waves-dark">Купить</a>
             </div>
         </div>
     </form>

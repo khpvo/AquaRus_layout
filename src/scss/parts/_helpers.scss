@@ -66,48 +66,16 @@ body{
     }
 }
 
+.material-table{
+    @include material_table();
+}
+
 p{
     text-align: justify;
 }
 
 .right-align{
     text-align: right;
-}
-
-.icon{
-    display: inline-block;
-    width: 26px;
-    height: 26px;
-    
-    // Actions
-    &.decline{background: url(../img/icons/decline.svg) center center no-repeat;}
-    &.more{background: url(../img/icons/more-vert.svg) center center no-repeat;}
-    &.repay{background: url(../img/icons/repay.svg) center center no-repeat;}
-    &.repeat{background: url(../img/icons/repeat.svg) center center no-repeat;}
-    &.reroute{background: url(../img/icons/reroute.svg) center center no-repeat;}
-    &.reciept{background: url(../img/icons/reciept.svg) center center no-repeat;}
-    &.remove{background: url(../img/icons/remove.svg) center center no-repeat;}
-    &.refresh{background: url(../img/icons/Refresh.svg) center center no-repeat; background-size: 80% auto;}
-
-    // Social
-    &.whatsapp{background: url(../img/icons/Whatsapp.svg) center center no-repeat; background-size: 80% auto;}
-    &.telegram{background: url(../img/icons/Telegram.svg) center center no-repeat; background-size: 80% auto;}
-    &.youtube{background: url(../img/icons/yt.svg) center center no-repeat; background-size: 80% auto;}
-    &.facebook{background: url(../img/icons/fb.svg) center center no-repeat; background-size: 80% auto;}
-    &.instagram{background: url(../img/icons/in.svg) center center no-repeat; background-size: 80% auto;}
-    &.vkontakte{background: url(../img/icons/vk.svg) center center no-repeat; background-size: 80% auto;}
-
-    // Misc
-    &.cart{background: url(../img/icons/Cart.svg) center center no-repeat; background-size: 80% auto;}
-    &.person{background: url(../img/icons/Person.svg) center center no-repeat; background-size: 80% auto;}
-    &.phone{background: url(../img/icons/Phone.svg) center center no-repeat; background-size: 80% auto;}
-
-    // Toolbar
-    &.tb-fav{background: url(../img/icons/tb_fav.svg) center center no-repeat; background-size: 130% auto;}
-    &.tb-person{background: url(../img/icons/tb_person.svg) center center no-repeat; background-size: 130% auto;}
-    &.tb-cart{background: url(../img/icons/tb_cart.svg) center center no-repeat; background-size: 130% auto;}
-    &.tb-repeat{background: url(../img/icons/tb_repeat.svg) center center no-repeat; background-size: 130% auto;}
-    &.tb-announcement{background: url(../img/icons/tb_announcement.svg) center center no-repeat; background-size: 130% auto;}
 }
 
 .disabled{
@@ -136,6 +104,10 @@ p.note{
     color: $fogged;
     margin: 10px 0 !important;
     font-size: 10px;
+}
+
+ul{
+    padding-left: 1.5rem;
 }
 
 .add-cart{
@@ -200,7 +172,7 @@ p.note{
 }
 
 .lazy-image{
-    background: cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
@@ -225,6 +197,11 @@ p.note{
 
 main{
     min-height: calc(100vh - 352px);
+}
+
+.overline-wrapper{
+    border-top: 1px dotted #888;
+    padding-top: 6px;
 }
 
 .underline-wrapper{
@@ -449,5 +426,21 @@ a{
 @for $i from 1 to 10 {
     .column-gap-#{$i}{
         column-gap: #{$i * 10px};
+    }
+
+    .padding-left-#{$i}{
+        padding-left: #{$i}rem;
+
+        @media(max-width: $medium-screen){
+            padding-left: 0;
+        }
+    }
+
+    .padding-right-#{$i}{
+        padding-right: #{$i}rem;
+
+        @media(max-width: $medium-screen){
+            padding-right: 0;
+        }
     }
 }

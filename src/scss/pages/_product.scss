@@ -83,11 +83,14 @@
 
     & .lake-char{
 
+        flex-wrap: wrap;
+
         &:first-of-type{
             margin-top: 50px;
         }
     
-        @media(max-width: 600px){
+        @media(max-width: 700px){
+            margin-bottom: 2rem;
 
             & .left{
                 width: 100%;

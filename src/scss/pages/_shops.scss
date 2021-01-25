@@ -1,0 +1,46 @@
+#shops{
+
+    & .shops-wrapper{
+
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        & .col{
+            left: 0;
+            margin-left: 0;
+        }
+
+        & .card{
+
+            height: calc(100% - 1.5rem);
+            
+            & .card-image{
+                
+                & .lazy-image{
+                    padding-top: 70%;
+                }
+            }
+            
+            & .card-content{
+                box-sizing: border-box;
+            }
+    
+            & .card-header{
+                font-weight: 500;
+                font-size: 18px;
+            }
+    
+            & .kv-pair{
+                display: flex;
+                width: 100%;
+    
+                & .key, & .value{
+                    display: block;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    
+}

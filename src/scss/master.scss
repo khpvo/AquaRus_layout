@@ -21,14 +21,16 @@
 @import './parts/vars';
 
 // // Own parts=================================
+@import './parts/table';
 @import './parts/helpers';
 @import './parts/nav';
 @import './parts/footer';
 @import './parts/product-card';
 @import './parts/sidenav';
-@import './parts/table';
 @import './parts/inputs';
 @import './parts/bottom-toolbar';
+@import './parts/ba-slider';
+@import './parts/icons';
 
 // Entire pages==============================
 @import './pages/main';
@@ -38,3 +40,10 @@
 @import './pages/products';
 @import './pages/support';
 @import './pages/policy_agreement';
+@import './pages/delivery';
+@import './pages/props';
+@import './pages/vacations';
+@import './pages/contacts';
+@import './pages/service';
+@import './pages/shops';
+@import './pages/messages';

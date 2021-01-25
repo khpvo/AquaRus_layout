@@ -1,0 +1,19 @@
+#props{
+
+    color: $text;
+    padding-bottom: 60px;
+
+    & .kv-pair{
+        display: table-row;
+
+        & .key, & .value{
+            display: table-cell;
+            line-height: 30px;
+        }
+
+        & .key{
+            padding-right: 20px;
+            font-weight: bold;
+        }
+    }
+}
