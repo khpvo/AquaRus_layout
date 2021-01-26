@@ -27,12 +27,12 @@
 @mixin cart_wrapper{
    
     & .cart-full{
-        display: flex;
-        align-items: center;
+        display: none;
     }
     
     & .cart-empty{
-        display: none;
+        display: flex;
+        align-items: center;
     }
     
     &.active{
