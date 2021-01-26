@@ -56,6 +56,7 @@
                             width: 16px;
                             height: 16px;
                             background: url(../img/forward.svg) center center no-repeat;
+                            transform: translateY(2px);
                             transition: transform .4s;
 
                         }
@@ -100,7 +101,7 @@
                         & .expander{
 
                             & .expander-trigger{
-                                transform: rotate(90deg);
+                                transform: translateY(2px) rotate(90deg);
                             }
                         }
 

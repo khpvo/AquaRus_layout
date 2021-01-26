@@ -2,6 +2,7 @@ var product_card_tpl=`
 <div class="card product-card">
     <div class="card-content">
         <div class="header">«Долина Джентау» в&nbsp;одноразовой таре</div>
+        <a class="rs-favorite"></a>
         <div class="lr-pair">
             <div class="left">
                 <a href="/product.html" class="lazy-image product-image contain" data-src="/img/mirabelle.png"></a>

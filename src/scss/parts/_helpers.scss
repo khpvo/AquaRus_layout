@@ -9,6 +9,11 @@ body{
     -webkit-tap-highlight-color: transparent;
 }
 
+.responsive-img{
+    max-width: 100%;
+    height: auto;
+}
+
 .lr-pair{
 
     display: flex;
@@ -307,13 +312,14 @@ h1{
                 white-space: nowrap;
                 display: block;
                 width: 100%;
+                min-width: 160px;
                 line-height: 40px;
                 padding: 0 10px;
                 box-sizing: border-box;
                 color: $text;
                 
                 &:hover{
-                    background-color: lighten(#ccc, 10);
+                    background-color: lighten(#ccc, 10) !important;
                 }
             }
         }

@@ -406,7 +406,12 @@ header{
                     &:hover{
                         background:darken($secondary, 10);
                     }
+                    
                 }
+            }
+
+            & .popup-wrapper{
+                display: inline-block;
             }
 
             & .left{

@@ -95,9 +95,11 @@
                 & .message-body{
                     margin-right: 20px;
                     border-radius: 10px 10px 0px 10px;
+                    background-color: rgb(199, 238, 247);
 
                     &:before{
                         left: 100%;
+                        background-color: rgb(199, 238, 247);
                     }
 
                     &:after{
@@ -107,21 +109,40 @@
                 }
             }
         }
-    }
 
-    & .message-send-form{
-
-        display: flex;
-
-        & .input-field{
-            flex-grow: 1;
+        &#form{
+            border: 1px solid red;
         }
-        
-        & .trigger-wrapper{
+    }    
+}
 
-            & a{
-                margin-top: 1.3rem;
+.messages-form-wrapper{
+
+    background: #ccc;
+    position: sticky;
+    bottom: 0;
+
+    & .message-wrapper{
+
+        padding: 10px 0 !important;
+
+        
+        & .message-send-form{
+           
+            display: flex;
+            
+            & .input-field{
+                margin: 0;
+                flex-grow: 1;
+            }
+            
+            & .trigger-wrapper{
+    
+                & a{
+                    margin-top: 1.3rem;
+                }
             }
         }
     }
+
 }

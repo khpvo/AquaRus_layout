@@ -15,6 +15,7 @@ $(() => {
     $('body').on('change', '.set-password-trigger', showSetPass);
     $('body').on('keyup', 'textarea', updateTextarea);
     $('body').on('click', '.dropdown', openDropdown);
+    $('body').on('click', '.rs-favorite', toggleFav);
     $('body').on('click', '.dropdown a', setCurrent);
     $('body').on('click', 'tr.order', toggleDetails);
     $('body').on('click', '.popup-trigger', togglePopup);
@@ -31,6 +32,7 @@ $(() => {
     $('.modal').modal();
     $('p').hyphenate();
     $('.material-table').materialize();
+    $('.materialboxed').materialbox();
 
     if($('.ba-slider'.length)){
         $('.ba-slider').beforeAfter();
@@ -43,6 +45,11 @@ $(() => {
     }
 
 });
+
+function toggleFav(e){
+    e?.preventDefault();
+    $(this).toggleClass('rs-in-favorite');
+}
 
 function initMap(){
 

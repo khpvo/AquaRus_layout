@@ -100,10 +100,18 @@
                     <span class="icon refresh"></span>
                     <span>Повторить последний заказ</span>
                 </a>
-                <a href="/profile.html">
-                    <span class="icon person"></span>
-                    <span>MasterKadaj</span>
-                </a>
+                <div class="popup-wrapper">
+                    <a href="" class="popup-trigger">
+                        <span class="icon person"></span>
+                        <span>MasterKadaj</span>
+                    </a>
+                    <ul class="popup right">
+                        <li><a class="waves-effect waves-dark" href="/profile.html">Профиль</a></li>
+                        <li><a class="waves-effect waves-dark" href="/messages.html">Сообщения</a></li>
+                        <li class="divider"></li>
+                        <li><a class="waves-effect waves-dark" href="">Выход</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </div>
@@ -204,7 +212,7 @@
                     <div class="col l7 m12">
                         <div class="row">
                             <div class="col m6 s12">
-                                <div class="lazy-image page-product-image" data-src="/img/coffee.png"></div>
+                                <img src="/img/coffee.png" alt="" class="materialboxed responsive-img">
                             </div>
                             <div class="col m6 s12">
                                 <div class="lr-pair chars">
@@ -239,9 +247,6 @@
                             Кофе натуральный молотый темной обжарки Roberto Totti Ristretto. Сорт премиум. Великолепный букет высокогорной арабики раскрывается в каждой чашке тягучими нотами крепости, густым насыщенным ароматом и терпким шоколадным послевкусием. Кофе подходит для приготовления в эспрессо кофеварке, а также в гейзерной кофеварке и турке. Вся страсть итальянского эспрессо в уникальном бленде Ristretto от Roberto Totti.
                         </p>
                         <div class="add-cart inline">
-                            <div class="oneclick-wrapper">
-                                <a href="javascript:void(0);" class="btn btn-flat waves-effect waves-dark">Купить в один клик</a>
-                            </div>
                             <div class="plus">
                                 <a href="">–</a>
                             </div>
@@ -255,8 +260,11 @@
                                 <a href="" class="btn waves-effect waves-light">Купить</a>
                             </div>
                         </div>
+                        <div class="divider"></div>
                         <div>
+                            <a href="javascript:void(0);" class="btn btn-flat waves-effect waves-dark">В один клик</a>
                             <a href="" class="btn-flat waves-effect waves-dark">Сертификат</a>
+                            <a href="" class="btn-flat waves-effect waves-dark rs-favorite" data-default="В избранное" data-faved="В избранном">В избранное</a>
                         </div>
                     </div>
                 </div>

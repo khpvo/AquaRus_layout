@@ -35,10 +35,16 @@
         }
     }
 
-    & .add-cart{
+    & .divider{
+        margin: 10px 0;
+    }
 
-        &.inline{
-            margin: 30px 0;
+    & .rs-favorite{
+        padding-left: 40px;
+        background: url(../img/icons/fav-accent.svg) left 10px center no-repeat;
+
+        &.rs-in-favorite{
+            background: url(../img/icons/faved-accent.svg) left 10px center no-repeat;
         }
     }
 }

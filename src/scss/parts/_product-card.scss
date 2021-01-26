@@ -4,12 +4,30 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-
+    
     & .separator{
         flex-grow: 1;
     }
     
     & .card-content{
+        
+        position: relative;
+
+        & .rs-favorite{
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            z-index: 20;
+            bottom: 16px;
+            left: 16px;
+            background: url(../img/icons/fav-accent.svg) center center no-repeat;
+            transition: background-image .2s;
+            
+            &.rs-in-favorite{
+                background: url(../img/icons/faved-accent.svg) center center no-repeat;
+            }
+        }
 
         & .header{
             font-size: 16px;

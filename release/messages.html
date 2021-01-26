@@ -100,10 +100,18 @@
                     <span class="icon refresh"></span>
                     <span>Повторить последний заказ</span>
                 </a>
-                <a href="/profile.html">
-                    <span class="icon person"></span>
-                    <span>MasterKadaj</span>
-                </a>
+                <div class="popup-wrapper">
+                    <a href="" class="popup-trigger">
+                        <span class="icon person"></span>
+                        <span>MasterKadaj</span>
+                    </a>
+                    <ul class="popup right">
+                        <li><a class="waves-effect waves-dark" href="/profile.html">Профиль</a></li>
+                        <li><a class="waves-effect waves-dark" href="/messages.html">Сообщения</a></li>
+                        <li class="divider"></li>
+                        <li><a class="waves-effect waves-dark" href="">Выход</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </div>
@@ -251,10 +259,16 @@
                         </div>
                     </div>
                 </div>
-                <form action="" class="message-send-form">
-                    <div class="input-field"><input type="text" class="styled" placeholder="Текст сообщения"><label for="">Текст сообщения</label></div>
-                    <div class="trigger-wrapper"><a href="" class="icon send"></a></div>
-                </form>
+            </div>
+            <div class="messages-form-wrapper">
+                <div class="message-wrapper">
+                    <div class="messages">
+                        <form action="" class="message-send-form">
+                            <div class="input-field"><input type="text" class="styled" placeholder="Текст сообщения"><label for="">Текст сообщения</label></div>
+                            <div class="trigger-wrapper"><a href="" class="icon send"></a></div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
