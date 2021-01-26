@@ -5,6 +5,14 @@ body{
     font-family: 'Roboto';
 }
 
+body, html{
+    height: 100%;
+
+    & main{
+        min-height: calc(100% - 132px);
+    }
+}
+
 *{
     -webkit-tap-highlight-color: transparent;
 }
@@ -14,9 +22,45 @@ body{
     height: auto;
 }
 
+.image-tooltip{
+    display: inline-block;
+    
+    & .image-tooltip{
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: rgba(black, .7);
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border: 6px solid transparent;
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity .4s, top .4s;
+        left: calc(50% - 46px);
+        top: -70px;
+
+    }
+    &:hover .image-tooltip{
+        opacity: 1;
+        top: -100px;
+    }
+}
+
 .lr-pair{
 
     display: flex;
+
+    &.col2{
+           
+        & .left, & .right{
+            width: 25% !important;
+
+            @media(max-width: 600px){
+                width: 50% !important;
+            }
+        }
+    }
 
     & .grow{
         flex-grow: 1;
@@ -141,6 +185,10 @@ ul{
                 margin-bottom: 20px;
             }
         }  
+    }
+
+    &.center{
+        justify-content: center;
     }
 
     &.right{
@@ -448,5 +496,48 @@ a{
         @media(max-width: $medium-screen){
             padding-right: 0;
         }
+    }
+}
+
+.modal{
+
+    & .modal-content{
+
+        box-sizing: border-box;
+
+        & [data-mode="phisical"]{
+
+            & .law{
+                display: none;
+            }
+        }
+
+        & .social-networks{
+            background: $primary;
+            width: calc(100% + 48px);
+            margin-left: -24px;
+            padding: 0 24px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+
+            & a.icon{
+                height: 40px;
+                width: 40px;
+
+                &:hover{
+                    background-color: darken($primary, 10);
+                }
+            }
+        }
+    }
+
+    & .modal-footer{
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    &#login{
+        width: 300px;
     }
 }

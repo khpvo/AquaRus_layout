@@ -18,26 +18,26 @@
             <div class="separator"></div>
             <div class="right">
                 <div class="app-stores">
-                    <a href="" class="app-store gplay"></a>
-                    <a href="" class="app-store appstore"></a>
+                    <a class="app-store gplay"></a>
+                    <a class="app-store appstore"></a>
                 </div>
                 <div class="coords">
                     <div class="lr-pair phones">
-                        <div class="left"><a href="" class="phone">204-44-44</a></div>
+                        <div class="left"><a class="phone">204-44-44</a></div>
                         <div class="separator"></div>
-                        <div class="right"><a href="" class="mobile">8 (988) 333-444-3</a></div>
+                        <div class="right"><a class="mobile">8 (988) 333-444-3</a></div>
                     </div>
                     <div class="lr-pair cart">
                         <div class="left">
-                            <a href="" class="icon phone"></a>
-                            <a href="" class="icon telegram"></a>
-                            <a href="" class="icon whatsapp"></a>
+                            <a class="icon phone"></a>
+                            <a class="icon telegram"></a>
+                            <a class="icon whatsapp"></a>
                             <a href="/favorites.html" class="icon fav"></a>
                         </div>
                         <div class="separator"></div>
                         <div class="right ">
                             <div class="repeat-wrapper">
-                                <a href="" class="repeat-tablet waves-effect waves-light">Повтор</a>
+                                <a class="repeat-tablet waves-effect waves-light">Повтор</a>
                             </div>
                             <div class="cart-wrapper">
                                 <div class="cart-full">
@@ -48,7 +48,7 @@
                                             <span class="value">200 ₽</span>
                                         </span>
                                     </a>
-                                    <a href="" class="clear-cart"></a>
+                                    <a class="clear-cart"></a>
                                 </div>
                                 <div class="cart-empty">
                                     Пусто
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="burger-wrapper sidenav-trigger" data-target="mobile-nav">
-                    <a href="" class="burger">
+                    <a class="burger">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
@@ -88,13 +88,13 @@
                     <li><a href="/service.html">Сервисный центр</a></li>
                 </ul>
             </div>
-            <div class="right">
-                <a href="" class="repeat">
+            <div class="right" data-state="unlogged">
+                <a class="repeat">
                     <span class="icon refresh"></span>
                     <span>Повторить последний заказ</span>
                 </a>
-                <div class="popup-wrapper">
-                    <a href="" class="popup-trigger">
+                <div class="popup-wrapper logged">
+                    <a class="popup-trigger">
                         <span class="icon person"></span>
                         <span>MasterKadaj</span>
                     </a>
@@ -103,6 +103,20 @@
                         <li><a class="waves-effect waves-dark" href="/messages.html">Сообщения</a></li>
                         <li class="divider"></li>
                         <li><a class="waves-effect waves-dark" href="">Выход</a></li>
+                    </ul>
+                </div>
+                <div class="popup-wrapper unlogged">
+                    <a class="popup-trigger">
+                        <span class="icon person"></span>
+                        <span>Вход/Авторизация</span>
+                    </a>
+                    <ul class="popup right">
+                        <li>
+                            <a href="#login" class="modal-trigger waves-effect waves-dark">Авторизация</a>
+                        </li>
+                        <li>
+                            <a href="#signin" class="modal-trigger waves-effect waves-dark">Регистрация</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -120,7 +134,7 @@
                             <span class="value">200 ₽</span>
                         </span>
                     </a>
-                    <a href="" class="clear-cart"></a>
+                    <a class="clear-cart"></a>
                 </div>
                 <div class="cart-empty">Пусто</div>
             </div>

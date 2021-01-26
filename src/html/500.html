@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./html_parts/head.html', {title: "Страница не найдена"})
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="info">
+            <div class="info-wrapper">
+                <div class="info">
+                    <div class="info-icon e500"></div>
+                    <div class="info-header">Ошибка сервера</div>
+                    <div class="info-message">
+                        При загрузке страницы возникла ошибка! Мы в данный момент работаем над ее устранением, попробуйте зайти чуть позже. Если ошибка повторится, пожалуйста, напишите администратору!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    @@include('./html_parts/scripts.html')
+</body>
+</html>

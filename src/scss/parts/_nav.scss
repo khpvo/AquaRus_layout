@@ -410,6 +410,19 @@ header{
                 }
             }
 
+            & [data-state="logged"]{
+
+                & .unlogged{
+                    display: none;
+                }
+            }
+
+            & [data-state="unlogged"]{
+                & .logged{
+                    display: none;
+                }
+            }
+
             & .popup-wrapper{
                 display: inline-block;
             }

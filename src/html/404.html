@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./html_parts/head.html', {title: "Страница не найдена"})
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="info">
+            <div class="info-wrapper">
+                <div class="info">
+                    <div class="info-icon e404"></div>
+                    <div class="info-header">Страница не найдена</div>
+                    <div class="info-message">
+                        К сожалению, запрашиваемой Вами страницы на сервере нет – она могла быть удалена, или Вы просто ошиблись при наборе адреса в адресной строке. Попробуйте вернуться на главную, или воспользоваться поиском.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    @@include('./html_parts/scripts.html')
+</body>
+</html>

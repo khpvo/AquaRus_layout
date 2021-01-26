@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./html_parts/head.html', {title: "Заказ успешно сформирован!"})
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="info">
+            <div class="info-wrapper">
+                <div class="info error">
+                    <div class="info-icon error"></div>
+                    <div class="info-text">
+                        <div class="info-header">Ошибка!</div>
+                        <div class="info-message">
+                            Теперь Вы сможете отслеживать выполнение Вашего заказа из <a class="underlined" href="/profile.html">личного кабинета</a>. Данные для входа находятся в электронной почте, указанной во время оформления заказа.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    @@include('./html_parts/scripts.html')
+</body>
+</html>

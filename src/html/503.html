@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./html_parts/head.html', {title: "Доступ запрещен"})
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="info">
+            <div class="info-wrapper">
+                <div class="info">
+                    <div class="info-icon e503"></div>
+                    <div class="info-header">Сервер недоступен</div>
+                    <div class="info-message">
+                        Сервер перегружен количеством запросов, пожалуйста, подождите минут 5–10, после чего попробуйте снова. Если ошибка повторится,пожалуйста, свяжитесь с администратором сайта.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    @@include('./html_parts/scripts.html')
+</body>
+</html>

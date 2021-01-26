@@ -25,26 +25,26 @@
             <div class="separator"></div>
             <div class="right">
                 <div class="app-stores">
-                    <a href="" class="app-store gplay"></a>
-                    <a href="" class="app-store appstore"></a>
+                    <a class="app-store gplay"></a>
+                    <a class="app-store appstore"></a>
                 </div>
                 <div class="coords">
                     <div class="lr-pair phones">
-                        <div class="left"><a href="" class="phone">204-44-44</a></div>
+                        <div class="left"><a class="phone">204-44-44</a></div>
                         <div class="separator"></div>
-                        <div class="right"><a href="" class="mobile">8 (988) 333-444-3</a></div>
+                        <div class="right"><a class="mobile">8 (988) 333-444-3</a></div>
                     </div>
                     <div class="lr-pair cart">
                         <div class="left">
-                            <a href="" class="icon phone"></a>
-                            <a href="" class="icon telegram"></a>
-                            <a href="" class="icon whatsapp"></a>
+                            <a class="icon phone"></a>
+                            <a class="icon telegram"></a>
+                            <a class="icon whatsapp"></a>
                             <a href="/favorites.html" class="icon fav"></a>
                         </div>
                         <div class="separator"></div>
                         <div class="right ">
                             <div class="repeat-wrapper">
-                                <a href="" class="repeat-tablet waves-effect waves-light">Повтор</a>
+                                <a class="repeat-tablet waves-effect waves-light">Повтор</a>
                             </div>
                             <div class="cart-wrapper">
                                 <div class="cart-full">
@@ -55,7 +55,7 @@
                                             <span class="value">200 ₽</span>
                                         </span>
                                     </a>
-                                    <a href="" class="clear-cart"></a>
+                                    <a class="clear-cart"></a>
                                 </div>
                                 <div class="cart-empty">
                                     Пусто
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="burger-wrapper sidenav-trigger" data-target="mobile-nav">
-                    <a href="" class="burger">
+                    <a class="burger">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
@@ -95,13 +95,13 @@
                     <li><a href="/service.html">Сервисный центр</a></li>
                 </ul>
             </div>
-            <div class="right">
-                <a href="" class="repeat">
+            <div class="right" data-state="unlogged">
+                <a class="repeat">
                     <span class="icon refresh"></span>
                     <span>Повторить последний заказ</span>
                 </a>
-                <div class="popup-wrapper">
-                    <a href="" class="popup-trigger">
+                <div class="popup-wrapper logged">
+                    <a class="popup-trigger">
                         <span class="icon person"></span>
                         <span>MasterKadaj</span>
                     </a>
@@ -110,6 +110,20 @@
                         <li><a class="waves-effect waves-dark" href="/messages.html">Сообщения</a></li>
                         <li class="divider"></li>
                         <li><a class="waves-effect waves-dark" href="">Выход</a></li>
+                    </ul>
+                </div>
+                <div class="popup-wrapper unlogged">
+                    <a class="popup-trigger">
+                        <span class="icon person"></span>
+                        <span>Вход/Авторизация</span>
+                    </a>
+                    <ul class="popup right">
+                        <li>
+                            <a href="#login" class="modal-trigger waves-effect waves-dark">Авторизация</a>
+                        </li>
+                        <li>
+                            <a href="#signin" class="modal-trigger waves-effect waves-dark">Регистрация</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -127,7 +141,7 @@
                             <span class="value">200 ₽</span>
                         </span>
                     </a>
-                    <a href="" class="clear-cart"></a>
+                    <a class="clear-cart"></a>
                 </div>
                 <div class="cart-empty">Пусто</div>
             </div>
@@ -271,7 +285,84 @@
             </div>
         </div>
     </main>
-    <footer>
+    <div class="modal" id="login">
+    <div class="modal-content">
+        <h4>Авторизация</h4>
+        <div class="social-networks">
+            <a class="icon vkontakte"></a>
+            <a class="icon facebook"></a>
+            <a class="icon odnoklassniki"></a>
+            <a class="icon mailru"></a>
+            <a class="icon twitter"></a>
+            <a class="icon google"></a>
+        </div>
+        <div class="input-field"><input type="text" placeholder="Логин" class="styled"><label for="">Логин</label></div>
+        <div class="input-field"><input type="password" placeholder="Пароль" class="styled"><label for="">Пароль</label></div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat modal-close">Закрыть</a>
+        <a class="btn btn-flat float-right">Войти</a>
+    </div>
+</div>
+<div class="modal modal-fixed-footer" id="signin">
+    <div class="modal-content">
+        <h4>Регистрация</h4>
+        <div class="row">
+            <div class="col s12">
+                <input type="radio" value="phisical" name="account-type" checked id="type1" class="styled">
+                <label for="type1">Физическое лицо</label>
+                <input type="radio" value="law" name="account-type" id="type2" class="styled">
+                <label for="type2">Юридическое лицо</label>
+            </div>
+        </div>
+        <div class="row" data-mode="phisical" id="fieldset">
+            <div class="col m6 s12 law">
+                <div class="input-field"><input type="text" class="styled" placeholder="Организация"><label for="">Организация</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="Фамилия"><label for="">Фамилия</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="Имя"><label for="">Имя</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="Отчество"><label for="">Отчество</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="Телефон"><label for="">Телефон</label></div>
+            </div>
+            <div class="col m6 s12 law">
+                <div class="input-field"><input type="text" class="styled" placeholder="ИНН"><label for="">ИНН</label></div>
+            </div>
+            <div class="col m6 s12 law">
+                <div class="input-field"><input type="text" class="styled" placeholder="ОГРН/ОГРИП"><label for="">ОГРН/ОГРИП</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="E-mail"><label for="">E-mail</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="Пароль"><label for="">Пароль</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="Подтверждение"><label for="">Подтверждение</label></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <p class="note">
+                    Нажимая кнопку «Регистрация», я принимаю условия <a href="/agreement.html">Пользовательского соглашения</a> 
+                    и даю своё согласие на обработку персональных данных ООО "Акватория" и ИП Картамышева А.А., в соответствии с <a href="http://www.consultant.ru/document/cons_doc_LAW_61801/" >Федеральным законом</a> 
+                    от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных <a href="/policy.html" >Политикой конфиденциальности</a> 
+                    и Политикой в отношении обработки персональных данных</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat modal-close">Закрыть</a>
+        <a class="btn btn-flat float-right">Регистрация</a>
+    </div>
+</div>
+<footer>
     <div class="container">
         <div class="navigation-blocks-wrapper">
             <div class="navigation-block nb-left">

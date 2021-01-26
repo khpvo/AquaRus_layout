@@ -26,6 +26,7 @@ $(() => {
     $('body').on('mouseenter', '#misc-products', pauseMiscSlider);
     $('body').on('mouseleave', '#misc-products', resumeMiscSlider);
     $('body').on('change', '[name="address"]', toggleUserAddress);
+    $('body').on('change', '[name="account-type"]', toggleAccountType);
     $(window).on('scroll', updateFloatingCart);
 
     $('.sidenav').sidenav();
@@ -33,6 +34,13 @@ $(() => {
     $('p').hyphenate();
     $('.material-table').materialize();
     $('.materialboxed').materialbox();
+    initImageToolTips();
+    
+
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true
+      });
 
     if($('.ba-slider'.length)){
         $('.ba-slider').beforeAfter();
@@ -45,6 +53,19 @@ $(() => {
     }
 
 });
+
+function toggleAccountType(){
+    var newVal = $(this).val();
+    $('#fieldset').attr('data-mode', newVal);
+}
+
+function initImageToolTips(){
+    $('.image-tooltip').each((index, tooltip) => {
+        var url = $(tooltip).data('src');
+        // console.log(url)
+        $(tooltip).prepend($("<div class=\"image-tooltip\" style=\"background-image:url('"+url+"')\">"));
+    })
+}
 
 function toggleFav(e){
     e?.preventDefault();
@@ -129,8 +150,6 @@ function initMap(){
 		})
 	});  
 }
-
-// ,
 
 loadScript = (url, callback) => {
 

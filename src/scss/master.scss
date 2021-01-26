@@ -17,6 +17,7 @@
 @import './framework/tooltip';
 @import './framework/swiper_bundle';
 @import './framework/materialbox';
+@import './framework/carousel';
 
 // Own variables ============================
 @import './parts/vars';
@@ -33,7 +34,7 @@
 @import './parts/ba-slider';
 @import './parts/icons';
 
-// Entire pages==============================
+// // Entire pages==============================
 @import './pages/main';
 @import './pages/product';
 @import './pages/profile';
@@ -48,3 +49,4 @@
 @import './pages/service';
 @import './pages/shops';
 @import './pages/messages';
+@import './pages/error';
