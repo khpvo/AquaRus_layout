@@ -5,7 +5,7 @@
     @@include('./html_parts/header.html')
     @@include('./html_parts/sidenav.html')
     <main>
-        <div class="global-wrapper" id="checkout">
+        <div class="global-wrapper" id="checkout-wrapper">
             <div class="container">
                 <form class="row">
                     <div class="col s12">
@@ -21,7 +21,7 @@
                         </div>
                         <p>
                             <span>Балланс: 240₽</span>
-                            <a href="javascript:void(0)" class="btn btn-flat float-right waves-effect waves-dark">Пополнить</a>
+                            <a class="btn btn-flat float-right waves-effect waves-dark">Пополнить</a>
                         </p>
                     </div>
                     <div class="col l9 m8 s12">
@@ -31,7 +31,7 @@
                                 <div class="underline-wrapper">
                                     <h2>Состав корзины</h2>
                                 </div>
-                                <table class="material-table">
+                                <table class="material-table responsive-table">
                                     <thead>
                                         <tr>
                                             <th>Наименование</th>
@@ -47,18 +47,18 @@
                                             <td>
                                                 <div class="add-cart inline">
                                                     <div class="plus">
-                                                        <a href="">–</a>
+                                                        <a>–</a>
                                                     </div>
                                                     <div class="input" contenteditable="true">1</div>
                                                     <div class="minus">
-                                                        <a href="">+</a>
+                                                        <a>+</a>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>120₽</td>
                                             <td>240₽</td>
                                             <td>
-                                                <a href="" class="btn-flat icon float-right waves-effect waves-dark remove"></a>
+                                                <a class="btn-flat icon float-right waves-effect waves-dark remove"></a>
                                             </td>
                                         </tr>
                                         <tr class="order">
@@ -66,18 +66,18 @@
                                             <td>
                                                 <div class="add-cart inline">
                                                     <div class="plus">
-                                                        <a href="">–</a>
+                                                        <a>–</a>
                                                     </div>
                                                     <div class="input" contenteditable="true">1</div>
                                                     <div class="minus">
-                                                        <a href="">+</a>
+                                                        <a>+</a>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>120₽</td>
                                             <td>240₽</td>
                                             <td>
-                                                <a href="" class="btn-flat icon float-right waves-effect waves-dark remove"></a>
+                                                <a class="btn-flat icon float-right waves-effect waves-dark remove"></a>
                                             </td>
                                         </tr>
                                         <tr class="order">
@@ -85,18 +85,18 @@
                                             <td>
                                                 <div class="add-cart inline">
                                                     <div class="plus">
-                                                        <a href="">–</a>
+                                                        <a>–</a>
                                                     </div>
                                                     <div class="input" contenteditable="true">1</div>
                                                     <div class="minus">
-                                                        <a href="">+</a>
+                                                        <a>+</a>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>120₽</td>
                                             <td>240₽</td>
                                             <td>
-                                                <a href="" class="btn-flat icon float-right waves-effect waves-dark remove"></a>
+                                                <a class="btn-flat icon float-right waves-effect waves-dark remove"></a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -128,7 +128,7 @@
                         </div>
                         <div class="row">
                             <div class="col s12 right-align">
-                                <a href="" class="btn-flat waves-effect waves-dark">Авторизоваться</a>
+                                <a class="btn-flat waves-effect waves-dark">Авторизоваться</a>
                             </div>
                             <!-- <div class="col m12 s12">
                                 <input type="radio" name="user-type" id="phisical" checked class="styled">
@@ -164,11 +164,18 @@
                         <div class="row">
                             <div class="col l9 m7 s12">
                                 <h3>Адрес</h3>
-                                <div><input type="radio" class="styled" value="address1" name="address" checked id="addr1"><label for="addr1">Россия, Краснодарский край, г. Краснодар, ул. Московская, 129/206</label></div>
-                                <div><input type="radio" class="styled" value="address2" name="address" id="addr2"><label for="addr2">Россия, Краснодарский край, г. Краснодар, ул. Северная, д. 324, литер Г</label></div>
-                                <div><input type="radio" class="styled" value="address3" name="address" id="addr3"><label for="addr3">Россия, Ставропольский край, г. Ессентуки, ул. Пушкина, 46/9</label></div>
-                                <div><input type="radio" class="styled" value="user-address" name="address" id="addr4"><label for="addr4">Другое</label></div>
-                                <div class="input-field hidden" id="user-address"><input type="text" class="styled" placeholder="Адрес"><label for="">Адрес</label></div>
+                                <div class="checkout_changeRegionButton rs-checkout_changeRegionButton">
+                                    <img width="24" src="/img/icons/map-marker.svg" class="map-marker">
+                                    <span>Анапа</span>
+                                    <a class="small underlined">изменить</a>
+                                </div>
+                                <div class="address-list">
+                                    <div><input type="radio" class="styled" value="address1" name="address" checked id="addr1"><label for="addr1">Россия, Краснодарский край, г. Краснодар, ул. Московская, 129/206</label></div>
+                                    <div><input type="radio" class="styled" value="address2" name="address" id="addr2"><label for="addr2">Россия, Краснодарский край, г. Краснодар, ул. Северная, д. 324, литер Г</label></div>
+                                    <div><input type="radio" class="styled" value="address3" name="address" id="addr3"><label for="addr3">Россия, Ставропольский край, г. Ессентуки, ул. Пушкина, 46/9</label></div>
+                                    <div><input type="radio" class="styled" value="user-address" name="address" id="addr4"><label for="addr4">Другое</label></div>
+                                    <div class="input-field hidden" id="user-address"><input type="text" class="styled" placeholder="Адрес"><label for="">Адрес</label></div>
+                                </div>
                             </div>
                             <div class="col l3 m5 s12">
                                 <h3>Оплата</h3>

@@ -1,0 +1,215 @@
+@mixin modal-close-button{
+    position: absolute;
+    border: 0;
+    top: 0;
+    right: 0;
+    color: transparent;
+    background-color: transparent;
+    background-image: url(../img/close-dark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width:40px;
+    height: 40px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #eee;
+    }
+}
+
+.modal{
+
+    position: relative;
+    position: fixed;
+
+    & .modal-content{
+        box-sizing: border-box;
+    }
+
+    & .modal-footer{
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    &#login{
+        width: 300px;
+                & .social-networks{
+            background: $primary;
+            width: calc(100% + 48px);
+            margin-left: -24px;
+            
+            & #uLogin{
+                padding: 0px 24px !important;
+                box-sizing: border-box !important;
+            }
+            
+            & .ulogin-buttons-container{
+                
+                width: 100% !important;
+                box-sizing: border-box;
+                display: flex !important;
+
+                & > div{
+
+                    margin: 0 !important;
+                    background-size: 80% auto !important;
+                    background-repeat: no-repeat !important;
+                    background-position: center !important;
+                    height: 40px !important;
+                    width: 40px !important;
+    
+                    &[title="VK"]{background-image: url(../img/icons/vk.svg) !important}
+                    &[title="Google"]{background-image: url(../img/icons/google.svg) !important}
+                    &[title="Odnoklassniki"]{background-image: url(../img/icons/odnoklassniki.svg) !important}
+                    &[title="Mail.ru"]{background-image: url(../img/icons/mailru.svg) !important}
+
+                    &.ulogin-dropdown-button{background-image: url(../img/icons/dropdown.svg) !important}
+    
+                    &:hover{
+                        background-color: darken($primary, 10) !important;
+                        opacity: 1 !important;
+                    }
+                }
+                
+            }
+
+            & a.icon{
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+
+    &#signin{
+        width: 500px;
+        max-width: 90vw;
+
+        & [data-mode="phisical"]{
+
+            & .law{
+                display: none;
+            }
+        }
+    }
+
+    &#repeat{
+
+        & .modal-content{
+
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+
+            & h3{
+                width: 100%;
+            }
+
+            & .last_order_row_title{
+                color: $fogged;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 500;
+                border-bottom: 1px solid $fogged;
+            }
+    
+            & p{
+                margin: 0;
+                line-height: 30px;
+            }
+    
+            & .last_order_data{
+                display: flex;
+                width: 100%;
+    
+                & .last_order_row_title{
+                    border: none;
+                }
+    
+                & .last_order_row_info{
+                    padding-left: 20px;
+                }
+            }
+    
+            & .last_order_products{
+    
+                margin: 30px 0;
+                width: 100%;
+    
+                & .last_order_row_info{
+                    
+                    display: table;
+                    width: 100%;
+                    
+                    & .last_order_productItem{
+    
+                        display: table-row;
+    
+                        & p{
+                            display: table-cell;
+                            width: 50%;
+                            line-height: 30px;
+                            padding: 0 10px;
+                            border-bottom: 1px solid lighten($fogged, 30);
+                        }
+                    }
+                }
+            }
+    
+            & .last_order_total, & .last_order_address, & .last_order_payment{
+                width: 30%;
+                min-width: 160px;
+                flex-grow: 1;
+                padding-right: 20px;
+            }
+        }
+
+        & .last_order_action{
+            border-top: 1px solid lighten($fogged, 30);
+            padding-top: 20px;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+
+            & .last_order_confirm{
+                flex-grow: 1;
+            }
+        }
+        
+        & .mfp-close{
+            @include modal-close-button();
+        }
+    }
+
+    &#set{
+
+        position: relative;
+        position: fixed;
+
+        & .set-close{
+            @include modal-close-button();
+        }
+
+        & .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        & .kv-pair{
+            display: flex;
+
+            & .key{
+                padding-right: 20px;
+                line-height: 40px;
+            }
+
+            & .value{
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+
+        & .add-cart{
+            margin-top: 30px;
+        }
+    }
+}

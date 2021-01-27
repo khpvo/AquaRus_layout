@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./html_parts/head.html', {title: "История операций"})
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="history">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h1>История операций</h1>
+                    </div>
+                    <div class="col s12">
+                        <table class="material-table">
+                            <thead>
+                                <th>ID операции</th>
+                                <th>Дата</th>
+                                <th>Описание</th>
+                                <th>Сумма</th>
+                            </thead>
+                            <tbody id="history-wrapper"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    @@include('./html_parts/scripts.html')
+</body>
+</html>

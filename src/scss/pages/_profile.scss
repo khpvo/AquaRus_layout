@@ -26,8 +26,6 @@
 
                     & td{
 
-                        line-height: 40px;
-
                         &:last-of-type{
 
                             & .popup-wrapper{
@@ -41,8 +39,8 @@
                         }
 
                         & .icon{
-                            width: 40px;
-                            height: 40px;
+                            width: 30px;
+                            height: 30px;
                             border-radius: 50%;
                         }
                     }
@@ -134,8 +132,8 @@
                     }
                 }
             }
-
         }
+        
         @media(max-width: 900px){
 
             & .order-date{
@@ -151,12 +149,35 @@
             }
         }
 
+        @media(max-width: 400px){
+            & .order-state{
+                display: none;
+            }
+        }
+
     }
 
     & #change-password{
         
         &:not(.visible){
             display: none;
+        }
+    }
+
+    & .ballance-block{
+        
+        margin-bottom: 36px;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        & .ballance{
+            flex-grow: 1;
+            line-height: 36px;
+        }
+
+        & .history{
+            line-height: 36px;
         }
     }
 }

@@ -28,6 +28,7 @@ $(() => {
     $('body').on('change', '[name="address"]', toggleUserAddress);
     $('body').on('change', '[name="account-type"]', toggleAccountType);
     $(window).on('scroll', updateFloatingCart);
+    $(window).on('resize', updateModalClass);
 
     $('.sidenav').sidenav();
     $('.modal').modal();
@@ -35,6 +36,7 @@ $(() => {
     $('.material-table').materialize();
     $('.materialboxed').materialbox();
     initImageToolTips();
+    updateModalClass();
     
 
     $('.carousel.carousel-slider').carousel({
@@ -53,6 +55,14 @@ $(() => {
     }
 
 });
+
+function updateModalClass(){
+    if($(window).outerWidth() <= 500){
+        $('#set').addClass('modal-fixed-footer');
+    }else{
+        $('#set').removeClass('modal-fixed-footer');
+    }
+}
 
 function toggleAccountType(){
     var newVal = $(this).val();
@@ -257,7 +267,7 @@ function toggleDetails(e){
     var path = e.originalEvent.path;
 
     var link_in_path = path.filter(el => {
-        return el.tagName == 'A'
+        return (el.tagName == 'A' && !$(el).hasClass('expander-trigger'))
     });
 
     console.log(link_in_path);

@@ -41,19 +41,19 @@ var product_card_tpl=`
             <div class="left grow">
                 <div class="add-cart">
                     <div class="plus">
-                        <a href="">–</a>
+                        <a>–</a>
                     </div>
                     <div class="input" contenteditable="true">0</div>
                     <div class="minus">
-                        <a href="">+</a>
+                        <a>+</a>
                     </div>
                 </div>
                 <input type="hidden" name="product_id" value="1" />
                 <input type="hidden" name="count" />
             </div>
             <div class="right">
-            <a href="javascript:void(0);" class="btn btn-flat green-text waves-effect waves-dark">Кредит</a>
-            <a href="javascript:void(0);" class="btn btn-flat waves-effect waves-dark">Купить</a>
+            <a href="javascript:void(0);" class="btn btn-flat green-text waves-effect waves-dark credit">Кредит</a>
+            <a href="#set" class="btn btn-flat waves-effect waves-dark modal-trigger">Купить</a>
             </div>
         </div>
     </form>
@@ -84,11 +84,11 @@ var product_card_tpl2=`
             <div class="left grow">
                 <div class="add-cart">
                     <div class="plus">
-                        <a href="">–</a>
+                        <a>–</a>
                     </div>
                     <div class="input" contenteditable="true">0</div>
                     <div class="minus">
-                        <a href="">+</a>
+                        <a>+</a>
                     </div>
                 </div>
                 <input type="hidden" name="product_id" value="1" />
@@ -111,17 +111,48 @@ var slider_card_tpl = `
 var col_card_tpl = `
 <div class="col xl3 l4 m6 s12">
 `+product_card_tpl+`
-</div>`
+</div>`;
 
 var col_card_tpl2 = `
 <div class="col xl3 l4 m6 s12">
 `+product_card_tpl2+`
-</div>`
+</div>`;
+
+var history_row_tpl = `
+<tr>
+    <td>[+1+]</td>
+    <td>[+2+]</td>
+    <td>[+3+]</td>
+    <td>[+4+]</td>
+</tr>
+`
 
 $(() => {
     fillSlider();
     fillProducts();
+    fillHistory();
 })
+
+function fillHistory(){
+    if($('#history-wrapper').length){
+        $.ajax({
+            url: "/data/history.json",
+            success: response => {
+                
+                $(response.history).each((index, entry) => {
+                    
+                    var row = history_row_tpl
+                        .replaceAll("[+1+]", entry.id)
+                        .replaceAll("[+2+]", entry.date)
+                        .replaceAll("[+3+]", entry.description)
+                        .replaceAll("[+4+]", entry.amount + " р.")
+
+                    $('#history-wrapper').append(row);
+                })
+            }
+        })
+    }
+}
 
 function fillSlider(){
     for(f=0; f<=14; f++){

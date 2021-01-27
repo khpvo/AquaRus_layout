@@ -1,0 +1,62 @@
+#credit-howto{
+
+    & .container{
+
+        max-width: 1200px;
+
+        & .credit-row{
+    
+            & .col{
+    
+                & .credit-block{
+                    height: 100%;
+                    display: flex;
+                    box-sizing: border-box;
+                    margin: 1.5rem 0;
+                    background: #fff;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 8px rgba(black, .2);
+                    padding: 50px 20px;
+
+                    @media(max-width: 600px){
+                        flex-direction: column-reverse;
+                    }
+    
+                    & .credit-icon{
+    
+                        width: 20%;
+                        flex-shrink: 0;
+                        margin: auto;
+
+                        @media(max-width: 600px){
+                            width: 40vw;
+                            margin-bottom: 20px;
+                        }
+    
+                        & .lazy-image{
+                            padding-top: 100%;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                    }
+    
+                    & .credit-header{
+                        font-size: 24px;
+                    }
+
+                    & .credit-body{
+                        padding-right: 1.5rem;
+                    }
+                }
+
+                & iframe{
+                    display: block;
+                    width: 800px;
+                    height: 500px;
+                    margin: auto;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

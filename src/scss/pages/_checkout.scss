@@ -1,4 +1,4 @@
-#checkout{
+#checkout-wrapper{
 
     & .material-table{
         @include material_table();
@@ -7,6 +7,28 @@
             & thead{
                 display: none;
             }
+        }
+    }
+
+    & .responsive-table{
+        @include responsive_table();
+    }
+
+    & .checkout_changeRegionButton{
+        margin-bottom: 20px;
+
+        .map-marker{
+            height: 18px;
+            width: auto;
+        }
+
+        & span{
+            font-size: 16px;
+            margin-right: 6px;
+        }
+
+        & .small{
+            font-size: 16px;
         }
     }
 

@@ -19,10 +19,17 @@
                                 Лицевой счет
                             </h2>                            
                         </div>
-                        <p>
-                            <span>Балланс: 240₽</span>
-                            <a href="javascript:void(0)" class="btn float-right waves-effect waves-light">Пополнить</a>
-                        </p>
+                        <div class="ballance-block">
+                            <div class="ballance">
+                                <span>Балланс: 240₽</span>
+                            </div>
+                            <div class="refull">
+                                <a class="btn float-right waves-effect waves-light">Пополнить</a>
+                            </div>
+                            <div class="history">
+                                <a href="/history.html" class="underlined">История операций</a>
+                            </div>
+                        </div>
                         <div class="underline-wrapper">
                             <h2>Профиль</h2>
                         </div>
@@ -30,19 +37,19 @@
                             <div class="col l12 s12">
                                 <div class="input-field"><input class="styled" type="text" placeholder="Фамилия"><label for="">Фамилия</label></div>
                             </div>
-                            <div class="col l6 m12 s12">
+                            <div class="col s12">
                                 <div class="input-field"><input class="styled" type="text" placeholder="Имя"><label for="">Имя</label></div>
                             </div>
-                            <div class="col l6 m12 s12">
+                            <div class="col s12">
                                 <div class="input-field"><input class="styled" type="text" placeholder="Отчество"><label for="">Отчество</label></div>
                             </div>
-                            <div class="col l6 m12 s12">
+                            <div class="col s12">
                                 <div class="input-field"><input class="styled" type="text" placeholder="E-mail"><label for="">E-mail</label></div>
                             </div>
-                            <div class="col l6 m12 s12">
+                            <div class="col s12">
                                 <div class="input-field"><input class="styled" type="phone" placeholder="Телефон"><label for="">Телефон</label></div>
                             </div>
-                            <div class="col m12 s12">
+                            <div class="col s12">
                                 <input type="radio" class="styled" name="user-type" id="phisical" checked>
                                 <label for="phisical">Физическое лицо</label>
                                 <input type="radio" class="styled" name="user-type" id="law">
@@ -81,7 +88,7 @@
                                     <th>Заказ</th>
                                     <th class="order-date">Дата</th>
                                     <th>Сумма</th>
-                                    <th>Статус</th>
+                                    <th class="order-state">Статус</th>
                                     <th class="order-payment">Способ оплаты</th>
                                     <th>Действия</th>
                                 </tr>
@@ -89,22 +96,22 @@
                             <tbody>
                                 <tr class="order">
                                     <td class="expander">
-                                        <a href="" class="expander-trigger"></a>
+                                        <a class="expander-trigger"></a>
                                     </td>
                                     <td>№23452467</td>
                                     <td class="order-date">1 декабря 2012</td>
                                     <td>240₽</td>
-                                    <td>Выполнен</td>
+                                    <td class="order-state">Выполнен</td>
                                     <td class="order-payment">Безнал по счету</td>
                                     <td>
                                         <div class="popup-wrapper">
-                                            <a href="" class="popup-trigger icon more waves-effect waves-dark"></a>
+                                            <a class="popup-trigger icon more waves-effect waves-dark"></a>
                                             <ul class="popup right">
-                                                <li><a class="waves-effect waves-dark" href="">Изменить адрес доставки</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Документы</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Оплатить</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Повторить</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Отказаться</a></li>
+                                                <li><a class="waves-effect waves-dark">Изменить адрес доставки</a></li>
+                                                <li><a class="waves-effect waves-dark">Документы</a></li>
+                                                <li><a class="waves-effect waves-dark">Оплатить</a></li>
+                                                <li><a class="waves-effect waves-dark">Повторить</a></li>
+                                                <li><a class="waves-effect waves-dark">Отказаться</a></li>
                                             </ul>
                                         </div>
                                     </td>
@@ -122,22 +129,22 @@
                                 </tr>
                                 <tr class="order">
                                     <td class="expander">
-                                        <a href="" class="expander-trigger"></a>
+                                        <a class="expander-trigger"></a>
                                     </td>
                                     <td>№23452467</td>
                                     <td class="order-date">1 декабря 2012</td>
                                     <td>240₽</td>
-                                    <td>Выполнен</td>
+                                    <td class="order-state">Выполнен</td>
                                     <td class="order-payment">Картой онлайн</td>
                                     <td>
                                         <div class="popup-wrapper">
-                                            <a href="" class="popup-trigger icon more waves-effect waves-dark"></a>
+                                            <a class="popup-trigger icon more waves-effect waves-dark"></a>
                                             <ul class="popup right">
-                                                <li><a class="waves-effect waves-dark" href="">Изменить адрес доставки</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Документы</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Оплатить</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Повторить</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Отказаться</a></li>
+                                                <li><a class="waves-effect waves-dark">Изменить адрес доставки</a></li>
+                                                <li><a class="waves-effect waves-dark">Документы</a></li>
+                                                <li><a class="waves-effect waves-dark">Оплатить</a></li>
+                                                <li><a class="waves-effect waves-dark">Повторить</a></li>
+                                                <li><a class="waves-effect waves-dark">Отказаться</a></li>
                                             </ul>
                                         </div>
                                     </td>
@@ -155,22 +162,22 @@
                                 </tr>
                                 <tr class="order">
                                     <td class="expander">
-                                        <a href="" class="expander-trigger"></a>
+                                        <a class="expander-trigger"></a>
                                     </td>
                                     <td>№23452467</td>
                                     <td class="order-date">1 декабря 2012</td>
                                     <td>240₽</td>
-                                    <td>Выполнен</td>
+                                    <td class="order-state">Выполнен</td>
                                     <td class="order-payment">Наличными курьеру</td>
                                     <td>
                                         <div class="popup-wrapper">
-                                            <a href="" class="popup-trigger icon more waves-effect waves-dark"></a>
+                                            <a class="popup-trigger icon more waves-effect waves-dark"></a>
                                             <ul class="popup right">
-                                                <li><a class="waves-effect waves-dark" href="">Изменить адрес доставки</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Документы</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Оплатить</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Повторить</a></li>
-                                                <li><a class="waves-effect waves-dark" href="">Отказаться</a></li>
+                                                <li><a class="waves-effect waves-dark">Изменить адрес доставки</a></li>
+                                                <li><a class="waves-effect waves-dark">Документы</a></li>
+                                                <li><a class="waves-effect waves-dark">Оплатить</a></li>
+                                                <li><a class="waves-effect waves-dark">Повторить</a></li>
+                                                <li><a class="waves-effect waves-dark">Отказаться</a></li>
                                             </ul>
                                         </div>
                                     </td>
@@ -200,20 +207,6 @@
     </div>
     @@include('./html_parts/footer.html')
     @@include('./html_parts/bottom_toolbar.html')
-    <div id="lake-info" class="modal modal-fixed-footer">
-        <div class="modal-content">
-            <div class="lazy-image modal-header" data-src="/img/animals/serna.jpg"></div>
-            <div class="modal-text">
-                <p>Серны являются многочисленным семейством, за исключением кавказского подвида, который занесен в Красную Книгу России. На сегодняшний день его популяция состоит всего лишь из около 2000 животных, большая часть которых обитает на территории заповедников.</p>
-                <p>Ареал обитания серны включает Альпы и Пиренеи, Вогезы, Балканские горы и Карпаты, Большой и Малый Кавказ, Понтийские горы и Малую Азию. В России этот вид встречается на Большом Кавказском хребте. Продолжительность жизни серн в естественных условиях составляет 10-12 лет, самки обычно живут дольше, чем самцы, а половой зрелости животные достигают в возрасте 20 месяцев</p>
-                <p>Живут серны обычно небольшими группами, изредка формируют также и многочисленные стада, вожаком которых выступает наиболее опытная старая самка. </p>
-                <p>К естественным врагам серны относятся рысь, волк и медведь. На молодых особей достаточно часто нападают беркуты. Кроме того, для животных опасны скатывающиеся вниз камни и осколки скал, лавины, которые происходят в горах, и жертвами которых становятся зачастую именно детеныши этих животных. В суровые и снежные зимы серны очень часто погибают от нехватки пищи.</p>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <a href="javascript:void(0);" class="btn btn-flat modal-close">Закрыть</a>
-        </div>
-    </div>
     @@include('./html_parts/scripts.html')
 </body>
 </html>
