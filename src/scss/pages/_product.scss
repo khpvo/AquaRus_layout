@@ -34,9 +34,25 @@
         margin-bottom: 50px;
     }
 
+    & .lr-pair{
+
+        &.chars{
+            
+            @media(max-width: 400px){
+                
+                & .left, & .right{
+                    width: 100% !important;
+                }
+
+                & .right{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
     & .add-cart-block{
         margin: 30px 0;
-        z-index: -1;
     }
 
     & .price.head{

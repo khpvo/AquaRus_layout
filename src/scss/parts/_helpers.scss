@@ -90,13 +90,15 @@ body, html{
 
     &.chars{
         flex-wrap: wrap;
-        line-height: 30px;
+        // line-height: 30px;
         
         &.nowrap{
             flex-wrap:nowrap !important;
         }
 
         & .left, & .right{
+
+            padding: 3px 0;
 
             &.head{
                 border-bottom: 1px solid #888;
@@ -188,10 +190,6 @@ ul{
     
         & .buy-wrapper{
             margin-left: 30px;
-
-            @media(max-width: 350px){
-                margin-left: 0;
-            }
         }
        
         @media(max-width: 400px){
@@ -526,6 +524,26 @@ a{
 
         @media(max-width: $medium-screen){
             padding-right: 0;
+        }
+    }
+}
+
+.marked-list{
+    list-style: none;
+
+    & li{
+
+        position: relative;
+
+        &:before{
+            content: '•';
+            font-size: 28px;
+            left: 0;
+            top: 5px;
+            line-height: 1.5rem;
+            position: absolute;
+            left: -16px;
+            color: $primary;
         }
     }
 }

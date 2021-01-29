@@ -12,22 +12,26 @@
     & .card-content{
         
         position: relative;
-
-        & .rs-favorite{
-            display: block;
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            z-index: 20;
-            top: 70px;
-            left: 20px;
-            background: url(../img/icons/fav-accent.svg) center center no-repeat;
-            transition: background-image .2s;
+        
+        & .left{
             
-            &.rs-in-favorite{
-                background: url(../img/icons/faved-accent.svg) center center no-repeat;
+            position: relative;
+
+            & .rs-favorite{
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                z-index: 20;
+                background: url(../img/icons/fav-accent.svg) center center no-repeat;
+                transition: background-image .2s;
+                
+                &.rs-in-favorite{
+                    background: url(../img/icons/faved-accent.svg) center center no-repeat;
+                }
             }
         }
+
 
         & .header{
             font-size: 16px;
@@ -103,6 +107,10 @@
             & a, & div{
                 font-size: 18px;
             }
+        }
+
+        & .right{
+            text-align: right;
         }
 
         & a:not(.btn){

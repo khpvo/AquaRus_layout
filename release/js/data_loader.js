@@ -2,9 +2,9 @@ var product_card_tpl=`
 <div class="card product-card">
     <div class="card-content">
         <div class="header">«Долина Джентау» в&nbsp;одноразовой таре</div>
-        <a class="rs-favorite"></a>
         <div class="lr-pair">
             <div class="left">
+                <a class="rs-favorite"></a>
                 <a href="/product.html" class="lazy-image product-image contain" data-src="/img/mirabelle.png"></a>
             </div>
             <div class="right grow">
@@ -27,7 +27,7 @@ var product_card_tpl=`
                 <div class="lr-pair dotted">
                     <div class="left count">от 4х</div>
                     <div class="separator grow"></div>
-                    <div class="right price">110₽ *</div>
+                    <div class="right price">11 000₽ *</div>
                 </div>
                 <p class="note">
                     * - при наличии оборотной тары. К обмену принимается тара только от воды из ассортимента нашего магазина.

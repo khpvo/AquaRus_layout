@@ -119,9 +119,10 @@
         flex-wrap: wrap;
         justify-content: flex-start;
     
-        & .col{
+        & > .col{
     
             margin-left: unset;
+            padding: 0 0.7rem;
     
             & .product-card{
                 margin: 10px 0;
