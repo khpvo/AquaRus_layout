@@ -16,23 +16,29 @@
                 font-size: 18px;
                 font-weight: 500;
                 color: $secondary;
+
             }
         }
-        
+
         & .l2{
 
             padding: 0;
             margin: 10px 0;
-
+            color: $text;
+            font-size: 16px;
+            
             & > li{
                 list-style: none;
                 font-weight: bold;
             }
         }
         
+        
         & .l3{
+            list-style: disc;
             padding-left: 15px;
             margin-bottom: 20px;
+            font-weight: 400;
         }
 
     }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap");
 .materialize-red {
   background-color: #e51c23 !important; }
@@ -4789,14 +4788,17 @@ a {
   .marked-list li {
     position: relative; }
     .marked-list li:before {
-      content: '•';
+      content: '';
+      width: 6px;
+      height: 6px;
+      top: calc(50% - 3px);
+      border-radius: 50%;
+      background: #3970C2;
       font-size: 28px;
       left: 0;
-      top: 5px;
       line-height: 1.5rem;
       position: absolute;
-      left: -16px;
-      color: #3970C2; }
+      left: -16px; }
 
 header {
   background-color: #3970C2; }
@@ -6568,14 +6570,18 @@ input[type="number"] {
 
 #delivery .delivery-list .l2 {
   padding: 0;
-  margin: 10px 0; }
+  margin: 10px 0;
+  color: #414141;
+  font-size: 16px; }
   #delivery .delivery-list .l2 > li {
     list-style: none;
     font-weight: bold; }
 
 #delivery .delivery-list .l3 {
+  list-style: disc;
   padding-left: 15px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-weight: 400; }
 
 #delivery .delivery-left {
   width: calc(100% - 20px); }

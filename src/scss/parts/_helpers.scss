@@ -536,14 +536,17 @@ a{
         position: relative;
 
         &:before{
-            content: '•';
+            content: '';
+            width: 6px;
+            height: 6px;
+            top: calc(50% - 3px);
+            border-radius: 50%;
+            background: $primary;
             font-size: 28px;
             left: 0;
-            top: 5px;
             line-height: 1.5rem;
             position: absolute;
             left: -16px;
-            color: $primary;
         }
     }
 }
