@@ -10,7 +10,7 @@
         display: none;
     }
 
-    & a{
+    & > a, & > div{
         padding: 6px 0;
         width: 25%;
         display: block;
@@ -18,6 +18,23 @@
 
         &:not(:last-of-type){
             border-right: 1px solid rgba($fogged, .5);
+        }
+
+        & ul{
+            display: block;
+            position: absolute;
+        }
+
+        & .popup{
+            top: unset;
+            transition: bottom .2s;
+            bottom: calc(100% - 20px);
+            left: unset;
+            right: 0;
+
+            &.open{
+                bottom: 100%;
+            }
         }
 
         & .icon{
@@ -50,6 +67,26 @@
             & .text{
                 color: #fff;
             }
+        }
+    }
+
+    &[data-state=logged]{
+        & .repeat{
+            display: block;
+        }
+
+        & .login{
+            display: none;
+        }
+    }
+
+    &[data-state=unlogged]{
+        & .repeat{
+            display: none;
+        }
+
+        & .login{
+            display: block;
         }
     }
 }

@@ -5592,22 +5592,33 @@ input[type="number"] {
   @media (min-width: 750px) {
     .bottom-toolbar {
       display: none; } }
-  .bottom-toolbar a {
+  .bottom-toolbar > a, .bottom-toolbar > div {
     padding: 6px 0;
     width: 25%;
     display: block;
     position: relative; }
-    .bottom-toolbar a:not(:last-of-type) {
+    .bottom-toolbar > a:not(:last-of-type), .bottom-toolbar > div:not(:last-of-type) {
       border-right: 1px solid rgba(153, 153, 153, 0.5); }
-    .bottom-toolbar a .icon {
+    .bottom-toolbar > a ul, .bottom-toolbar > div ul {
+      display: block;
+      position: absolute; }
+    .bottom-toolbar > a .popup, .bottom-toolbar > div .popup {
+      top: unset;
+      transition: bottom .2s;
+      bottom: calc(100% - 20px);
+      left: unset;
+      right: 0; }
+      .bottom-toolbar > a .popup.open, .bottom-toolbar > div .popup.open {
+        bottom: 100%; }
+    .bottom-toolbar > a .icon, .bottom-toolbar > div .icon {
       display: block;
       margin: auto; }
-    .bottom-toolbar a .text {
+    .bottom-toolbar > a .text, .bottom-toolbar > div .text {
       display: block;
       text-align: center;
       font-size: 10px;
       color: #999999; }
-    .bottom-toolbar a .count {
+    .bottom-toolbar > a .count, .bottom-toolbar > div .count {
       position: absolute;
       top: 6px;
       left: calc(50% + 6px);
@@ -5616,10 +5627,18 @@ input[type="number"] {
       padding: 0 6px;
       font-size: 10px;
       border-radius: 10px; }
-    .bottom-toolbar a.accent {
+    .bottom-toolbar > a.accent, .bottom-toolbar > div.accent {
       background: #FF8B37; }
-      .bottom-toolbar a.accent .text {
+      .bottom-toolbar > a.accent .text, .bottom-toolbar > div.accent .text {
         color: #fff; }
+  .bottom-toolbar[data-state=logged] .repeat {
+    display: block; }
+  .bottom-toolbar[data-state=logged] .login {
+    display: none; }
+  .bottom-toolbar[data-state=unlogged] .repeat {
+    display: none; }
+  .bottom-toolbar[data-state=unlogged] .login {
+    display: block; }
 
 .ba-slider {
   position: relative;
