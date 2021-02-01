@@ -5759,97 +5759,123 @@ input[type="number"] {
   .modal .modal-footer {
     box-sizing: border-box;
     text-align: left; }
-  .modal#login {
-    width: 300px; }
-    .modal#login .social-networks {
-      background: #3970C2;
-      width: calc(100% + 48px);
-      margin-left: -24px; }
-      .modal#login .social-networks #uLogin {
-        padding: 0px 24px !important;
-        box-sizing: border-box !important; }
-      .modal#login .social-networks .ulogin-buttons-container {
-        width: 100% !important;
-        box-sizing: border-box;
-        display: flex !important; }
-        .modal#login .social-networks .ulogin-buttons-container > div {
-          margin: 0 !important;
-          background-size: 80% auto !important;
-          background-repeat: no-repeat !important;
-          background-position: center !important;
-          height: 40px !important;
-          width: 40px !important; }
-          .modal#login .social-networks .ulogin-buttons-container > div[title="VK"] {
-            background-image: url(../img/icons/vk.svg) !important; }
-          .modal#login .social-networks .ulogin-buttons-container > div[title="Google"] {
-            background-image: url(../img/icons/google.svg) !important; }
-          .modal#login .social-networks .ulogin-buttons-container > div[title="Odnoklassniki"] {
-            background-image: url(../img/icons/odnoklassniki.svg) !important; }
-          .modal#login .social-networks .ulogin-buttons-container > div[title="Mail.ru"] {
-            background-image: url(../img/icons/mailru.svg) !important; }
-          .modal#login .social-networks .ulogin-buttons-container > div.ulogin-dropdown-button {
-            background-image: url(../img/icons/dropdown.svg) !important; }
-          .modal#login .social-networks .ulogin-buttons-container > div:hover {
-            background-color: #2d599b !important;
-            opacity: 1 !important; }
-      .modal#login .social-networks a.icon {
-        height: 40px;
-        width: 40px; }
-  .modal#signin {
-    width: 500px;
-    max-width: 90vw; }
-    .modal#signin [data-mode="phisical"] .law {
-      display: none; }
-  .modal#repeat .modal-content {
+
+#login .social-networks {
+  background: #3970C2;
+  width: calc(100% + 48px);
+  margin-left: -24px;
+  overflow-y: hidden; }
+  #login .social-networks #uLogin {
+    padding: 0px 24px !important;
+    box-sizing: border-box !important; }
+  #login .social-networks .ulogin-buttons-container {
+    width: 100% !important;
+    box-sizing: border-box;
+    display: flex !important;
+    height: 40px !important; }
+    #login .social-networks .ulogin-buttons-container > div {
+      margin: 0 !important;
+      background-size: 80% auto !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      height: 40px !important;
+      width: 40px !important; }
+      #login .social-networks .ulogin-buttons-container > div[title="VK"] {
+        background-image: url(../img/icons/vk.svg) !important; }
+      #login .social-networks .ulogin-buttons-container > div[title="Google"] {
+        background-image: url(../img/icons/google.svg) !important; }
+      #login .social-networks .ulogin-buttons-container > div[title="Odnoklassniki"] {
+        background-image: url(../img/icons/odnoklassniki.svg) !important; }
+      #login .social-networks .ulogin-buttons-container > div[title="Mail.ru"] {
+        background-image: url(../img/icons/mailru.svg) !important; }
+      #login .social-networks .ulogin-buttons-container > div[title="Facebook"] {
+        background-image: url(../img/icons/fb.svg) !important; }
+      #login .social-networks .ulogin-buttons-container > div.ulogin-dropdown-button {
+        background-image: url(../img/icons/dropdown.svg) !important; }
+      #login .social-networks .ulogin-buttons-container > div:hover {
+        background-color: #2d599b !important;
+        opacity: 1 !important; }
+  #login .social-networks a.icon {
+    height: 40px;
+    width: 40px; }
+
+#signin {
+  width: 500px;
+  max-width: 90vw; }
+  #signin [data-mode="phisical"] .law {
+    display: none; }
+
+#repeat .modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative; }
+  #repeat .modal-content h3 {
+    width: 100%; }
+  #repeat .modal-content .last_order_row_title {
+    color: #999999;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    border-bottom: 1px solid #999999; }
+  #repeat .modal-content p {
+    margin: 0;
+    line-height: 30px; }
+  #repeat .modal-content .last_order_data {
     display: flex;
-    flex-wrap: wrap;
-    position: relative; }
-    .modal#repeat .modal-content h3 {
+    width: 100%; }
+    #repeat .modal-content .last_order_data .last_order_row_title {
+      border: none; }
+    #repeat .modal-content .last_order_data .last_order_row_info {
+      padding-left: 20px; }
+  #repeat .modal-content .last_order_products {
+    margin: 30px 0;
+    width: 100%; }
+    #repeat .modal-content .last_order_products .last_order_row_info {
+      display: table;
       width: 100%; }
-    .modal#repeat .modal-content .last_order_row_title {
-      color: #999999;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 500;
-      border-bottom: 1px solid #999999; }
-    .modal#repeat .modal-content p {
-      margin: 0;
-      line-height: 30px; }
-    .modal#repeat .modal-content .last_order_data {
-      display: flex;
-      width: 100%; }
-      .modal#repeat .modal-content .last_order_data .last_order_row_title {
-        border: none; }
-      .modal#repeat .modal-content .last_order_data .last_order_row_info {
-        padding-left: 20px; }
-    .modal#repeat .modal-content .last_order_products {
-      margin: 30px 0;
-      width: 100%; }
-      .modal#repeat .modal-content .last_order_products .last_order_row_info {
-        display: table;
-        width: 100%; }
-        .modal#repeat .modal-content .last_order_products .last_order_row_info .last_order_productItem {
-          display: table-row; }
-          .modal#repeat .modal-content .last_order_products .last_order_row_info .last_order_productItem p {
-            display: table-cell;
-            width: 50%;
-            line-height: 30px;
-            padding: 0 10px;
-            border-bottom: 1px solid #e6e6e6; }
-    .modal#repeat .modal-content .last_order_total, .modal#repeat .modal-content .last_order_address, .modal#repeat .modal-content .last_order_payment {
-      width: 30%;
-      min-width: 160px;
-      flex-grow: 1;
-      padding-right: 20px; }
-  .modal#repeat .last_order_action {
-    border-top: 1px solid #e6e6e6;
-    padding-top: 20px;
-    width: 100%;
-    margin-top: 30px;
-    display: flex; }
-    .modal#repeat .last_order_action .last_order_confirm {
-      flex-grow: 1; }
-  .modal#repeat .mfp-close {
+      #repeat .modal-content .last_order_products .last_order_row_info .last_order_productItem {
+        display: table-row; }
+        #repeat .modal-content .last_order_products .last_order_row_info .last_order_productItem p {
+          display: table-cell;
+          width: 50%;
+          line-height: 30px;
+          padding: 0 10px;
+          border-bottom: 1px solid #e6e6e6; }
+  #repeat .modal-content .last_order_total, #repeat .modal-content .last_order_address, #repeat .modal-content .last_order_payment {
+    width: 30%;
+    min-width: 160px;
+    flex-grow: 1;
+    padding-right: 20px; }
+
+#repeat .last_order_action {
+  border-top: 1px solid #e6e6e6;
+  padding-top: 20px;
+  width: 100%;
+  margin-top: 30px;
+  display: flex; }
+  #repeat .last_order_action .last_order_confirm {
+    flex-grow: 1; }
+
+#repeat .mfp-close {
+  position: absolute;
+  border: 0;
+  top: 0;
+  right: 0;
+  color: transparent;
+  background-color: transparent;
+  background-image: url(../img/close-dark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  cursor: pointer; }
+  #repeat .mfp-close:hover {
+    background-color: #eee; }
+
+#set {
+  position: relative;
+  position: fixed; }
+  #set .set-close {
     position: absolute;
     border: 0;
     top: 0;
@@ -5862,39 +5888,21 @@ input[type="number"] {
     width: 40px;
     height: 40px;
     cursor: pointer; }
-    .modal#repeat .mfp-close:hover {
+    #set .set-close:hover {
       background-color: #eee; }
-  .modal#set {
-    position: relative;
-    position: fixed; }
-    .modal#set .set-close {
-      position: absolute;
-      border: 0;
-      top: 0;
-      right: 0;
-      color: transparent;
-      background-color: transparent;
-      background-image: url(../img/close-dark.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 40px;
-      height: 40px;
-      cursor: pointer; }
-      .modal#set .set-close:hover {
-        background-color: #eee; }
-    .modal#set .row {
-      display: flex;
-      flex-wrap: wrap; }
-    .modal#set .kv-pair {
-      display: flex; }
-      .modal#set .kv-pair .key {
-        padding-right: 20px;
-        line-height: 40px; }
-      .modal#set .kv-pair .value {
-        font-size: 30px;
-        line-height: 40px; }
-    .modal#set .add-cart {
-      margin-top: 30px; }
+  #set .row {
+    display: flex;
+    flex-wrap: wrap; }
+  #set .kv-pair {
+    display: flex; }
+    #set .kv-pair .key {
+      padding-right: 20px;
+      line-height: 40px; }
+    #set .kv-pair .value {
+      font-size: 30px;
+      line-height: 40px; }
+  #set .add-cart {
+    margin-top: 30px; }
 
 #main #hero-slider {
   width: 100%; }

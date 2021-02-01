@@ -17,26 +17,27 @@
     }
 }
 
-.modal{
+.modal {
 
-    position: relative;
-    position: fixed;
+  position: relative;
+  position: fixed;
 
-    & .modal-content{
-        box-sizing: border-box;
-    }
+  & .modal-content {
+    box-sizing: border-box;
+  }
 
-    & .modal-footer{
-        box-sizing: border-box;
-        text-align: left;
-    }
+  & .modal-footer {
+    box-sizing: border-box;
+    text-align: left;
+  }
+}
 
-    &#login{
-        width: 300px;
-                & .social-networks{
+    #login{
+            & .social-networks{
             background: $primary;
             width: calc(100% + 48px);
             margin-left: -24px;
+            overflow-y: hidden;
             
             & #uLogin{
                 padding: 0px 24px !important;
@@ -48,6 +49,7 @@
                 width: 100% !important;
                 box-sizing: border-box;
                 display: flex !important;
+                height: 40px !important;
 
                 & > div{
 
@@ -62,6 +64,7 @@
                     &[title="Google"]{background-image: url(../img/icons/google.svg) !important}
                     &[title="Odnoklassniki"]{background-image: url(../img/icons/odnoklassniki.svg) !important}
                     &[title="Mail.ru"]{background-image: url(../img/icons/mailru.svg) !important}
+                    &[title="Facebook"]{background-image: url(../img/icons/fb.svg) !important}
 
                     &.ulogin-dropdown-button{background-image: url(../img/icons/dropdown.svg) !important}
     
@@ -80,7 +83,7 @@
         }
     }
 
-    &#signin{
+    #signin{
         width: 500px;
         max-width: 90vw;
 
@@ -92,7 +95,7 @@
         }
     }
 
-    &#repeat{
+    #repeat{
 
         & .modal-content{
 
@@ -180,7 +183,7 @@
         }
     }
 
-    &#set{
+    #set{
 
         position: relative;
         position: fixed;
@@ -212,4 +215,3 @@
             margin-top: 30px;
         }
     }
-}
