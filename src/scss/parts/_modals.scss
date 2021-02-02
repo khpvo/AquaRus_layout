@@ -184,10 +184,6 @@
     }
 
     #set{
-
-        position: relative;
-        position: fixed;
-
         & .set-close{
             @include modal-close-button();
         }
