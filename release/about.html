@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Акватория | О компании</title>
+<link rel="stylesheet" href="/css/master.css">
+<body>
+    <header>
+    <div class="container">
+        <div class="top">
+            <div class="left">
+                <div class="logo-wrapper">
+                    <a href="/" class="logo"></a>
+                </div>
+                <div class="dropdown-wrapper">
+                    <div class="dropdown">
+                        <div class="current">Краснодар</div>
+                        <div class="popup">
+                            <a>Краснодар</a>
+                            <a>Анапа</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="right">
+                <div class="app-stores">
+                    <a class="app-store gplay"></a>
+                    <a class="app-store appstore"></a>
+                </div>
+                <div class="coords">
+                    <div class="lr-pair phones">
+                        <div class="left"><a class="phone">204-44-44</a></div>
+                        <div class="separator"></div>
+                        <div class="right"><a class="mobile">8 (988) 333-444-3</a></div>
+                    </div>
+                    <div class="lr-pair cart">
+                        <div class="left">
+                            <a class="icon phone"></a>
+                            <a href="tg://msg?text=Mi_mensaje&to=+79180849370" class="icon telegram"></a>
+                            <a class="icon whatsapp"></a>
+                            <a href="/favorites.html" class="icon fav"></a>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="right ">
+                            <div class="repeat-wrapper">
+                                <a href="#repeat" class="modal-trigger repeat-tablet waves-effect waves-light">Повтор</a>
+                            </div>
+                            <div class="cart-wrapper">
+                                <div class="cart-full">
+                                    <a href="/checkout.html" class="cart-link">
+                                        <span class="rs-cart-items-count">1</span>
+                                        <span>/</span>
+                                        <span class="cost">
+                                            <span class="value">200 ₽</span>
+                                        </span>
+                                    </a>
+                                    <a class="clear-cart"></a>
+                                </div>
+                                <div class="cart-empty">
+                                    Пусто
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger-wrapper sidenav-trigger" data-target="mobile-nav">
+                    <a class="burger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="bottom">
+            <div class="left">
+                <ul>
+                    <li class="folder">
+                        <a href="/products.html">Каталог</a>
+                        <ul>
+                            <li><a href="/products.html" class="waves-effect">Вода</a></li>
+                            <li><a href="/products2.html" class="waves-effect">Акции</a></li>
+                            <li><a href="/products.html" class="waves-effect">Кулеры</a></li>
+                            <li><a href="/products.html" class="waves-effect">Помпы</a></li>
+                            <li><a href="/products.html" class="waves-effect">Фильтры</a></li>
+                            <li><a href="/products.html" class="waves-effect">Пурифайеры</a></li>
+                            <li><a href="/products3.html" class="waves-effect">Сопутствующие товары</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/events.html">Акции</a></li>
+                    <li><a href="/rent.html">Аренда кулеров</a></li>
+                    <li><a href="/delivery.html">Оплата и доставка</a></li>
+                    <li><a href="/shops.html">Магазины</a></li>
+                    <li><a href="/service.html">Сервисный центр</a></li>
+                </ul>
+            </div>
+            <div class="right" data-state="logged">
+                <a class="repeat modal-trigger" href="#repeat">
+                    <span class="icon refresh"></span>
+                    <span>Повторить последний заказ</span>
+                </a>
+                <div class="popup-wrapper logged">
+                    <a class="popup-trigger">
+                        <span class="icon person"></span>
+                        <span>MasterKadaj</span>
+                    </a>
+                    <ul class="popup right">
+                        <li><a class="waves-effect waves-dark" href="/profile.html">Профиль</a></li>
+                        <li><a class="waves-effect waves-dark" href="/messages.html">Сообщения</a></li>
+                        <li class="divider"></li>
+                        <li><a class="waves-effect waves-dark">Выход</a></li>
+                    </ul>
+                </div>
+                <div class="popup-wrapper unlogged">
+                    <a class="popup-trigger">
+                        <span class="icon person"></span>
+                        <span>Вход/Авторизация</span>
+                    </a>
+                    <ul class="popup right">
+                        <li>
+                            <a href="#login" class="modal-trigger waves-effect waves-dark">Авторизация</a>
+                        </li>
+                        <li>
+                            <a href="#signin" class="modal-trigger waves-effect waves-dark">Регистрация</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="floating-cart">
+        <div class="before"></div>
+        <div class="middle">
+            <div class="cart-wrapper">
+                <div class="cart-full">
+                    <a href="/checkout.html" class="cart-link">
+                        <span class="rs-cart-items-count">1</span>
+                        <span>/</span>
+                        <span class="cost">
+                            <span class="value">200 ₽</span>
+                        </span>
+                    </a>
+                    <a class="clear-cart"></a>
+                </div>
+                <div class="cart-empty">Пусто</div>
+            </div>
+        </div>
+        <div class="after"></div>
+    </div>
+</header>
+    <div class="sidenav" id="mobile-nav">
+    <div class="user-view lazy-image" data-src="/img/userview_bgr.svg">
+        <div class="profile-wrapper" data-state="unlogged">
+            <div class="profile-block">
+                <a class="lr-pair" href="/profile.html">
+                    <div class="left">
+                        <span class="avatar" >MK</span>
+                    </div>
+                    <div class="right">
+                        <span class="username">MasterKadaj</span>
+                        <span class="mail">masterkadaj@gmail.com</span>
+                    </div>
+                </a>
+            </div>
+            <div class="login-block">
+                <div class="buttons-wrapper">
+                    <a href="#login" class="btn light-blue waves-effect waves-light modal-trigger">Вход</a>
+                    <a href="#signin" class="btn light-blue waves-effect waves-light modal-trigger">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown-wrapper">
+        <div class="dropdown">
+            <div class="current">Краснодар</div>
+            <div class="popup">
+                <a>Краснодар</a>
+                <a>Анапа</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-catalog">
+        <ul class="main-catalog-scroller">
+            <li>
+                <a href="/products.html" class="folder">Каталог</a>
+                <ul>
+                    <li><a class="waves-effect back">Назад</a></li>
+                    <li><a class="waves-effect">Весь каталог</a></li>
+                    <li><a href="/products.html" class="waves-effect">Вода</a></li>
+                    <li><a href="/products2.html" class="waves-effect">Акции</a></li>
+                    <li><a href="/products.html" class="waves-effect">Кулеры</a></li>
+                    <li><a href="/products.html" class="waves-effect">Помпы</a></li>
+                    <li><a href="/products.html" class="waves-effect">Фильтры</a></li>
+                    <li><a href="/products.html" class="waves-effect">Пурифайеры</a></li>
+                    <li><a href="/products3.html" class="waves-effect">Сопутствующие товары</a></li>
+                </ul>
+            </li>
+            <li><a href="/events.html">Акции</a></li>
+            <li><a href="/rent.html">Аренда кулеров</a></li>
+            <li><a href="/payment-delivery.html">Оплата и доставка</a></li>
+            <li><a href="/shops.html">Магазины</a></li>
+            <li><a href="/service.html">Сервисный центр</a></li>
+        </ul>
+    </div>
+    <div class="more-data">
+        <div class="app-stores">
+            <a class="app-store gplay"></a>
+            <a class="app-store appstore"></a>
+        </div>
+        <div class="lr-pair phones">
+            <div class="left">204-44-44</div>
+            <div class="separator"></div>
+            <div class="right">8 (988) 333-444-3</div>
+        </div>
+    </div>
+</div>
+    <main>
+        <div class="global-wrapper" id="about">
+            <div class="hero-about lazy-image" data-src="/img/hero/about_hero.png">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                                            <div class="hero-text">
+                    <h1>О компании</h1>
+                    <p>«Единая служба Доставки питьевой Воды» — один из немногих поставщиков очищенной питьевой воды на Краснодарском и Анапском рынках услуг, ставшим надежным партнером многих крупных фирм и организаций, работающая не только с физическими, но и с юридическими лицами. Мы являемся членом Международного альянса производителей и дистрибьюторов питьевой воды. </p>
+                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col m6 s12">
+                        <div class="lazy-image about-img" data-src="/img/water_delivery.png"></div>
+                    </div>
+                    <div class="col m6 s12">
+                        <div class="digits-wrapper">
+                            <div class="digit-block">
+                                <div class="digit">10</div>
+                                <div class="sign">Более 10 лет на рынке <br> водного бизнеса</div>
+                            </div>
+                            <div class="digit-block">
+                                <div class="digit">10</div>
+                                <div class="sign">Более 10 видов <br> помп для воды</div>
+                            </div>
+                            <div class="digit-block">
+                                <div class="digit">55</div>
+                                <div class="sign">Более 55 <br> моделей кулеров</div>
+                            </div>
+                            <div class="digit-block">
+                                <div class="digit">5</div>
+                                <div class="sign">Рейтинг компании <br> по версии Zoon</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m6 s12 more-text">
+                        <p>В каждом городе состав воды из-под крана очень различается. И зачастую такая вода не является питьевой. Самостоятельная отчистка воды (кипячение, фильтрация) требует времени и не даёт гарантии, что теперь в воде не осталось посторонних элементов. В последние годы многие жители города предпочитают не пить воду из крана, а используют бутыилированную питьевую воду. Для привычных бутылей на 19 литров обычно используются помпы или кулеры. Отвечая на появившийся спрос, в Краснодаре начала работать и наша компания. Мы предлагаем услуги по доставке питьевой воды в квартиры и в офисы. Кроме этого, в числе специализаций фирмы продажа кулеров для воды.</p>
+                    </div>
+                    <div class="col m6 s12 more-text">
+                        <p>Мы работаем не только в рабочие дни и часы, но и вечером и в выходные и праздничные дни, доставляя воду для офисов, складов, в детские учреждения и на дом. </p>
+                        <p>Наша компания – это высокий уровень обслуживания:</p>
+                        <ol>
+                            <li>Бесплатная доставка Воды</li>
+                            <li>Работа без праздников и выходных с 8-00 до 20-00</li>
+                            <li>Выгодные условия сотрудничества для организаций</li>
+                            <li>Постоянный контроль качества обслуживания и продукции</li>
+                            <li>Сеть собственных розничных магазинов "Мир Воды"</li>
+                            <li>Широкий оборудования для розлива воды и сопутствующих товаров</li>
+                            <li>Собственный сервисный центр гарантийного и постгарантийного обслуживаня кулеров для воды.</li>
+                        <oul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Форма авторизации -->
+<form class="modal" id="login">
+    <div class="modal-content">
+        <h3>Авторизация</h3>
+        <div class="social-networks">
+            <script src="//ulogin.ru/js/ulogin.js"></script>
+<div id="uLogin" data-ulogin="display=panel;theme=flat;fields=first_name,last_name;providers=vkontakte,odnoklassniki,mailru,facebook;hidden=twitter,google;redirect_uri=http%3A%2F%2F;mobilebuttons=0;"></div>
+        </div>
+        <div class="input-field"><input type="text" placeholder="Логин" class="styled"><label for="">Логин</label></div>
+        <div class="input-field"><input type="password" placeholder="Пароль" class="styled"><label for="">Пароль</label></div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat modal-close">Закрыть</a>
+        <a class="btn btn-flat float-right">Войти</a>
+    </div>
+</form>
+
+<!-- Форма регистрации -->
+<form class="modal modal-fixed-footer" id="signin">
+    <div class="modal-content">
+        <h3>Регистрация</h3>
+        <div class="row">
+            <div class="col s12">
+                <input type="radio" value="phisical" name="account-type" checked id="type1" class="styled">
+                <label for="type1">Физическое лицо</label>
+                <input type="radio" value="law" name="account-type" id="type2" class="styled">
+                <label for="type2">Юридическое лицо</label>
+            </div>
+        </div>
+        <div class="row" data-mode="phisical" id="fieldset">
+            <div class="col m6 s12 law">
+                <div class="input-field"><input type="text" class="styled" placeholder="Организация"><label for="">Организация</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="Фамилия"><label for="">Фамилия</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="Имя"><label for="">Имя</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="Отчество"><label for="">Отчество</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="text" class="styled" placeholder="Телефон"><label for="">Телефон</label></div>
+            </div>
+            <div class="col m6 s12 law">
+                <div class="input-field"><input type="text" class="styled" placeholder="ИНН"><label for="">ИНН</label></div>
+            </div>
+            <div class="col m6 s12 law">
+                <div class="input-field"><input type="text" class="styled" placeholder="ОГРН/ОГРИП"><label for="">ОГРН/ОГРИП</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="email" class="styled" placeholder="E-mail"><label for="">E-mail</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="password" class="styled" placeholder="Пароль"><label for="">Пароль</label></div>
+            </div>
+            <div class="col m6 s12">
+                <div class="input-field"><input type="password" class="styled" placeholder="Подтверждение"><label for="">Подтверждение</label></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <p class="note">
+                    Нажимая кнопку «Регистрация», я принимаю условия <a href="/agreement.html">Пользовательского соглашения</a> 
+                    и даю своё согласие на обработку персональных данных ООО "Акватория" и ИП Картамышева А.А., в соответствии с <a href="http://www.consultant.ru/document/cons_doc_LAW_61801/" >Федеральным законом</a> 
+                    от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных <a href="/policy.html" >Политикой конфиденциальности</a> 
+                    и Политикой в отношении обработки персональных данных</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat modal-close">Закрыть</a>
+        <a class="btn btn-flat float-right">Регистрация</a>
+    </div>
+</form>
+
+<!-- Повтор заказа -->
+<form class="modal last_order" id="repeat">
+    <div class="modal-content">
+        <h3 class="last_order_title">Заказ: № 82390</h3>
+        <div class="last_order_data">
+            <p class="last_order_row_title">Дата заказа:</p>
+            <p class="last_order_row_info">
+                25.08.2020
+            </p>
+        </div>
+        <div class="last_order_products">
+            <div class="last_order_row_title">
+                <p>Детали заказа:</p>
+            </div>
+            <div class="last_order_row_info">
+                                <div class="last_order_productItem">
+                        <p class="last_order_productTitle">Серебряная</p>
+                        <p class="last_order_productAmount">1 шт.</p>
+                    </div>
+                                <div class="last_order_productItem">
+                        <p class="last_order_productTitle">Почемучка</p>
+                        <p class="last_order_productAmount">1 шт.</p>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="last_order_total">
+            <p class="last_order_row_title">Общая сумма:</p>
+            <p class="last_order_row_info">280.00</p>
+        </div>
+        <div class="last_order_address">
+            <p class="last_order_row_title">Адрес доставки:</p>
+            <p class="last_order_row_info">Селезнева 248 кв. 69</p>
+        </div>
+        <div class="last_order_payment">
+            <p class="last_order_row_title">Тип оплаты:</p>
+            <p class="last_order_row_info">Наличными курьеру</p>
+        </div>
+                <div class="last_order_action">
+                <div class="last_order_confirm">
+                    <a class="btn btn-flat waves-effect waves-dark" href="/eridan-front-repeatlastorder/repeatLastOrder/?order_num=82390">Повторить заказ</a>
+                </div>
+    
+                <div class="last_order_edit">
+                    <a class="btn btn-flat waves-effect waves-dark right" href="/cart/?Act=repeatOrder&amp;order_num=82390">Редактировать</a>
+                </div>
+            </div>
+        <button title="Закрыть" type="button" class="mfp-close modal-close">×</button>
+    </div>
+</form>
+
+<!-- Выбор комплектации -->
+<form action="" id="set" class="modal">
+    <a class="set-close modal-close"></a>
+    <div class="modal-content">
+        <h3>Выбор комплектации</h3>
+        <div class="row">
+            <div class="col m4 s12">
+                <img src="/img/coolers/cooler-2-1.webp" alt="" class="responsive-img">
+            </div>
+            <div class="col m8">
+                <h4>Ecotronic P5-LPM</h4>
+                <div class="complectations">
+                    <a data-src="/img/coolers/cooler-1-1.webp" class="complectation image-tooltip active">Белый</a>
+                    <a data-src="/img/coolers/cooler-2-1.webp" class="complectation image-tooltip">Черный</a>
+                </div>
+                <div class="price kv-pair">
+                    <div class="key">цена</div>
+                    <div class="value">19 250₽</div>
+                </div>
+                <div class="add-cart inline">
+                    <div class="plus">
+                        <a>–</a>
+                    </div>
+                    <div>
+                        <input type="number" min=1 value=1></input>
+                    </div>
+                    <div class="minus">
+                        <a>+</a>
+                    </div>
+                    <div class="buy-wrapper">
+                        <a class="btn btn-flat waves-effect waves-dark">В корзину</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat modal-close waves-effect green-text waves-dark credit">Кредит</a>
+        <a class="btn btn-flat modal-close float-right waves-effect waves-dark">Купить</a>
+    </div>
+</form>
+
+<!-- Информация о воде (вода с озером) -->
+<div id="lake-info" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <div class="lazy-image modal-header" data-src="/img/animals/serna.jpg"></div>
+        <div class="modal-text">
+            <p>Серны являются многочисленным семейством, за исключением кавказского подвида, который занесен в Красную Книгу России. На сегодняшний день его популяция состоит всего лишь из около 2000 животных, большая часть которых обитает на территории заповедников.</p>
+            <p>Ареал обитания серны включает Альпы и Пиренеи, Вогезы, Балканские горы и Карпаты, Большой и Малый Кавказ, Понтийские горы и Малую Азию. В России этот вид встречается на Большом Кавказском хребте. Продолжительность жизни серн в естественных условиях составляет 10-12 лет, самки обычно живут дольше, чем самцы, а половой зрелости животные достигают в возрасте 20 месяцев</p>
+            <p>Живут серны обычно небольшими группами, изредка формируют также и многочисленные стада, вожаком которых выступает наиболее опытная старая самка. </p>
+            <p>К естественным врагам серны относятся рысь, волк и медведь. На молодых особей достаточно часто нападают беркуты. Кроме того, для животных опасны скатывающиеся вниз камни и осколки скал, лавины, которые происходят в горах, и жертвами которых становятся зачастую именно детеныши этих животных. В суровые и снежные зимы серны очень часто погибают от нехватки пищи.</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="javascript:void(0);" class="btn btn-flat modal-close">Закрыть</a>
+    </div>
+</div>
+
+<!-- Отзывы -->
+<div class="modal" id="feedback">
+    <form class="modal-content">
+        <div class="row">
+            <div class="col s12">
+                <h3>Оставить отзыв</h3>
+                <p>Оставьте своё имя и номер телефона, чтобы мы смогли связаться с вами решить вопрос</p>
+            </div>
+            <div class="col m4 s12">
+                <div class="input-field"><input class="styled" type="text" name="name" placeholder="name"><label for="">Имя</label></div>
+            </div>
+            <div class="col m4 s12">
+                <div class="input-field"><input class="styled" type="text" name="phone" placeholder="phone"><label for="">Телефон</label></div>
+            </div>
+            <div class="col m4 s12">
+                <div class="input-field">
+                    <i class="icon file"></i>
+                    <input type="file" class="styled" id="attachment" data-default-text="Выберите файл">
+                    <label class="filename" for="attachment">Выберите файл</label>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="input-field">
+                    <textarea name="feedTextArea" class="styled" id=""  cols="30" rows="10" placeholder="Текст сообщения"></textarea><label for="">Текст сообщения</label>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="modal-footer">
+        <a class="btn btn-flat modal-close">Закрыть</a><a class="btn btn-flat float-right">Отправить</a>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="navigation-blocks-wrapper">
+            <div class="navigation-block nb-left">
+                <div class="header">Навигация</div>
+                <div class="links">
+                    <a href="/about.html" class="underlined">О компании</a>
+                    <a href="/shops.html" class="underlined">Адреса магазинов</a>
+                    <a href="/contacts.html" class="underlined">Контакты</a>
+                    <a href="/vacations.html" class="underlined">Вакансии</a>
+                    <a href="/props.html" class="underlined">Реквизиты</a>
+                </div>
+            </div>
+            <div class="navigation-block nb-left">
+                <div class="header">Покупателям</div>
+                <div class="links">
+                    <a class="underlined">Доставка и оплата</a>
+                    <a class="underlined">График работ</a>
+                    <a class="underlined">Как заказать</a>
+                    <a class="underlined">Наши партнеры</a>
+                </div>
+            </div>
+            <div class="navigation-block nb-left">
+                <div class="header">Каталог</div>
+                <div class="links">
+                    <a class="underlined">Вода</a>
+                    <a class="underlined">Кулеры</a>
+                    <a class="underlined">Помпы</a>
+                    <a class="underlined">Фильтры</a>
+                    <a class="underlined">Пурифайеры</a>
+                    <a class="underlined">Сопутствующие товары</a>
+                </div>
+            </div>
+            <div class="navigation-block nb-left" id="delivery-times">
+                <div class="header">График доставки</div>
+                <div class="links">
+                    <div class="lr-pair">
+                        <div class="left">
+                            <div class="subheader">Будние</div>
+                            <div>с 9:00 до 15:00</div>
+                            <div>с 12:00 до 17:00</div>
+                            <div>с 18:00 до 22:00</div>
+                        </div>
+                        <div class="right">
+                            <div class="subheader">Выходные</div>
+                            <div>с 11:00 до 16:00</div>
+                            <div>с 18:00 до 22:00</div>
+                        </div>
+                    </div>
+                    <div class="mobile-appstores app-stores">
+                        <a class="app-store gplay"></a>
+                        <a class="app-store appstore"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="navigation-block nb-right">
+                <div class="header">Новороссийск</div>
+                <div class="links">
+                    <a href="tel:+78617211731" class="underlined">8 (8617) 211-731</a>
+                    <a href="tel:+79887697744" class="underlined">8 (988) 769-77-44</a>
+                </div>
+            </div>
+            <div class="navigation-block nb-right">
+                <div class="header">Анапа</div>
+                <div class="links">
+                    <a href="+78613324333" class="underlined">8 (8613) 324-333</a>
+                    <a href="+79183333222" class="underlined">8 (918) 33-33-222</a>                        
+                </div>
+            </div>
+            <div class="navigation-block nb-right">
+                <div class="header">Краснодар</div>
+                <div class="links">
+                    <a class="underlined" href="tel:+78622044444">204-44-44</a>
+                    <a class="underlined" href="tel:+79883334443">8 (988) 333-444-3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="lr-pair">
+                <div class="left">
+                    © Акватория, 2021
+                </div>
+                <div class="right">
+                    <a class="icon vkontakte"></a>
+                    <a class="icon youtube"></a>
+                    <a class="icon instagram"></a>
+                    <a class="icon facebook"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <div class="bottom-toolbar" data-state="logged">
+    <a class="toolbar-item">
+        <span class="icon tb-fav"></span>
+        <span class="text">Избранное</span>
+    </a>
+    <a href="/checkout.html" class="toolbar-item">
+        <span class="icon tb-cart"></span>
+        <span class="text">Корзина</span>
+        <span class="count">20</span>
+    </a>
+    <a href="/messages.html" class="toolbar-item">
+        <span class="icon tb-announcement"></span>
+        <span class="text">Отзыв</span>
+    </a>
+    <a class="toolbar-item accent repeat">
+        <span class="icon tb-repeat accent"></span>
+        <span class="text">Повтор</span>
+    </a>
+</div>
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script src="/js/jquery.hyphen.ru.min.js"></script>
+<script src="/js/swiper-bundle.js"></script>
+<script src="/js/data_loader.js"></script>
+<script src="/js/master.js"></script>
+<!-- <script src="/js/brand.js"></script> -->
+</body>
+</html>

@@ -58,6 +58,20 @@
         left: 0;
         border-bottom: 1px solid $primary;
     }
+
+    & input[type=file]{
+
+        &.styled{
+
+            display: none;
+            
+            & + label{
+                display: inline-block;
+                transform: translateY(-6px);
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 input[type="radio"]{

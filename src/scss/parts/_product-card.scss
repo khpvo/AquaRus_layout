@@ -1,3 +1,18 @@
+.single-price{
+
+    & .table-header{
+
+        & + .lr-pair{
+            margin-bottom: 78px;
+        }
+    }
+
+    & .not-first{
+        border: 1px solid green;
+        display: none;
+    }
+}
+
 .product-card{
     
     margin: 10px;

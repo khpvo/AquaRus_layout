@@ -63,6 +63,39 @@
             }
         }
 
+        & .login-block, & .profile-block{
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+
+            &:before, &:after{
+                content: '';
+                flex-grow: 1;
+            }
+        }
+
+        & [data-state=logged]{
+
+            & .login-block{
+                display: none;
+            }
+
+            & .profile-block{
+                display: flex;
+            }
+        }
+
+        & [data-state=unlogged]{
+
+            & .login-block{
+                display: flex;
+            }
+
+            & .profile-block{
+                display: none;
+            }
+        }
+
     }
 
     & .repeat{

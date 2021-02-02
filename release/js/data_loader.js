@@ -19,12 +19,12 @@ var product_card_tpl=`
                     <div class="separator grow"></div>
                     <div class="right price">130₽ *</div>
                 </div>
-                <div class="lr-pair dotted">
+                <div class="lr-pair dotted not-first">
                     <div class="left count">от 2х</div>
                     <div class="separator grow"></div>
                     <div class="right price">120₽ *</div>
                 </div>
-                <div class="lr-pair dotted">
+                <div class="lr-pair dotted not-first">
                     <div class="left count">от 4х</div>
                     <div class="separator grow"></div>
                     <div class="right price">11 000₽ *</div>
@@ -156,7 +156,11 @@ function fillHistory(){
 
 function fillSlider(){
     for(f=0; f<=14; f++){
-        $('#misc-products-container').append(slider_card_tpl);
+        var slide_card_dom = $(slider_card_tpl);
+        if(f == 1 || f == 3){
+            $(slide_card_dom).addClass('single-price');
+        }
+        $('#misc-products-container').append(slide_card_dom);
     }
 }
 

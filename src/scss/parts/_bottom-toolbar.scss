@@ -25,18 +25,6 @@
             position: absolute;
         }
 
-        & .popup{
-            top: unset;
-            transition: bottom .2s;
-            bottom: calc(100% - 20px);
-            left: unset;
-            right: 0;
-
-            &.open{
-                bottom: 100%;
-            }
-        }
-
         & .icon{
             display: block;
             margin: auto;
@@ -67,26 +55,6 @@
             & .text{
                 color: #fff;
             }
-        }
-    }
-
-    &[data-state=logged]{
-        & .repeat{
-            display: block;
-        }
-
-        & .login{
-            display: none;
-        }
-    }
-
-    &[data-state=unlogged]{
-        & .repeat{
-            display: none;
-        }
-
-        & .login{
-            display: block;
         }
     }
 }

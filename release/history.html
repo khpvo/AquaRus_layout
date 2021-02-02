@@ -37,7 +37,7 @@
                     <div class="lr-pair cart">
                         <div class="left">
                             <a class="icon phone"></a>
-                            <a class="icon telegram"></a>
+                            <a href="tg://msg?text=Mi_mensaje&to=+79180849370" class="icon telegram"></a>
                             <a class="icon whatsapp"></a>
                             <a href="/favorites.html" class="icon fav"></a>
                         </div>
@@ -151,15 +151,25 @@
 </header>
     <div class="sidenav" id="mobile-nav">
     <div class="user-view lazy-image" data-src="/img/userview_bgr.svg">
-        <a class="lr-pair" href="/profile.html">
-            <div class="left">
-                <span class="avatar" >MK</span>
+        <div class="profile-wrapper" data-state="unlogged">
+            <div class="profile-block">
+                <a class="lr-pair" href="/profile.html">
+                    <div class="left">
+                        <span class="avatar" >MK</span>
+                    </div>
+                    <div class="right">
+                        <span class="username">MasterKadaj</span>
+                        <span class="mail">masterkadaj@gmail.com</span>
+                    </div>
+                </a>
             </div>
-            <div class="right">
-                <span class="username">MasterKadaj</span>
-                <span class="mail">masterkadaj@gmail.com</span>
+            <div class="login-block">
+                <div class="buttons-wrapper">
+                    <a href="#login" class="btn light-blue waves-effect waves-light modal-trigger">Вход</a>
+                    <a href="#signin" class="btn light-blue waves-effect waves-light modal-trigger">Регистрация</a>
+                </div>
             </div>
-        </a>
+        </div>
     </div>
     <div class="dropdown-wrapper">
         <div class="dropdown">
@@ -412,6 +422,39 @@
         <a href="javascript:void(0);" class="btn btn-flat modal-close">Закрыть</a>
     </div>
 </div>
+
+<!-- Отзывы -->
+<div class="modal" id="feedback">
+    <form class="modal-content">
+        <div class="row">
+            <div class="col s12">
+                <h3>Оставить отзыв</h3>
+                <p>Оставьте своё имя и номер телефона, чтобы мы смогли связаться с вами решить вопрос</p>
+            </div>
+            <div class="col m4 s12">
+                <div class="input-field"><input class="styled" type="text" name="name" placeholder="name"><label for="">Имя</label></div>
+            </div>
+            <div class="col m4 s12">
+                <div class="input-field"><input class="styled" type="text" name="phone" placeholder="phone"><label for="">Телефон</label></div>
+            </div>
+            <div class="col m4 s12">
+                <div class="input-field">
+                    <i class="icon file"></i>
+                    <input type="file" class="styled" id="attachment" data-default-text="Выберите файл">
+                    <label class="filename" for="attachment">Выберите файл</label>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="input-field">
+                    <textarea name="feedTextArea" class="styled" id=""  cols="30" rows="10" placeholder="Текст сообщения"></textarea><label for="">Текст сообщения</label>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="modal-footer">
+        <a class="btn btn-flat modal-close">Закрыть</a><a class="btn btn-flat float-right">Отправить</a>
+    </div>
+</div>
 <footer>
     <div class="container">
         <div class="navigation-blocks-wrapper">
@@ -521,16 +564,6 @@
         <span class="icon tb-announcement"></span>
         <span class="text">Отзыв</span>
     </a>
-    <div class="toolbar-item popup-wrapper top login">
-        <div class="popup-trigger">
-            <span class="icon tb-person"></span>
-            <span class="text">Вход</span>
-        </div>
-        <ul class="popup">
-            <li><a class="modal-trigger" href="#login">Авторизация</a></li>
-            <li><a class="modal-trigger" href="#signin">Регистрация</a></li>
-        </ul>
-    </div>
     <a class="toolbar-item accent repeat">
         <span class="icon tb-repeat accent"></span>
         <span class="text">Повтор</span>

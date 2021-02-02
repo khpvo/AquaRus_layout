@@ -29,6 +29,7 @@ $(() => {
     $('body').on('change', '[name="account-type"]', toggleAccountType);
     $(window).on('scroll', updateFloatingCart);
     $(window).on('resize', updateModalClass);
+    $('body').on('change', '[type=file]', updateInputFileText);
 
     $('.sidenav').sidenav();
     $('.modal').modal();
@@ -55,6 +56,12 @@ $(() => {
     }
 
 });
+
+function updateInputFileText(e){
+    var file = $(this).val() !== "" ? $(this).val().replace("C:\\fakepath\\", '') : $(this).data('default-text');
+
+    $(this).parent().find('.filename').text(file);
+}
 
 function updateModalClass(){
     if($(window).outerWidth() <= 500){

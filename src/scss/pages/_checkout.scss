@@ -1,5 +1,46 @@
 #checkout-wrapper{
 
+    & .address-list{
+
+        margin-bottom: 20px;
+
+        & .address-block{
+            display: flex;
+    
+            & .address{
+                width: calc(100% - 40px);
+                display: flex;
+                
+                & label{
+                    max-width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    line-height: 40px;
+                }
+            }
+    
+            & .action{
+    
+                & a{
+                    padding: 5px 0;
+                    box-sizing: border-box;
+                    width: 40px;
+                    height: 40px;
+                    opacity: 0;
+                }
+            }
+    
+            &:hover{
+    
+                & .action a{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
     & .material-table{
         @include material_table();
 
