@@ -33,6 +33,7 @@
 }
 
     #login{
+      width: 320px;
             & .social-networks{
             background: $primary;
             width: calc(100% + 48px);
@@ -184,10 +185,6 @@
     }
 
     #set{
-
-        position: relative;
-        position: fixed;
-
         & .set-close{
             @include modal-close-button();
         }

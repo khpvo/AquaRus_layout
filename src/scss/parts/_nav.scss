@@ -75,7 +75,7 @@ header{
         top: -80px;
         opacity: 0;
 
-        &.shown{
+        &.visible.shown{
             @media(min-width: 1200px){
                 top: 0;
                 opacity: 1;

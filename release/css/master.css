@@ -4822,7 +4822,7 @@ header {
     top: -80px;
     opacity: 0; }
     @media (min-width: 1200px) {
-      header .floating-cart.shown {
+      header .floating-cart.visible.shown {
         top: 0;
         opacity: 1;
         pointer-events: all; } }
@@ -5779,44 +5779,46 @@ input[type="number"] {
     box-sizing: border-box;
     text-align: left; }
 
-#login .social-networks {
-  background: #3970C2;
-  width: calc(100% + 48px);
-  margin-left: -24px;
-  overflow-y: hidden; }
-  #login .social-networks #uLogin {
-    padding: 0px 24px !important;
-    box-sizing: border-box !important; }
-  #login .social-networks .ulogin-buttons-container {
-    width: 100% !important;
-    box-sizing: border-box;
-    display: flex !important;
-    height: 40px !important; }
-    #login .social-networks .ulogin-buttons-container > div {
-      margin: 0 !important;
-      background-size: 80% auto !important;
-      background-repeat: no-repeat !important;
-      background-position: center !important;
-      height: 40px !important;
-      width: 40px !important; }
-      #login .social-networks .ulogin-buttons-container > div[title="VK"] {
-        background-image: url(../img/icons/vk.svg) !important; }
-      #login .social-networks .ulogin-buttons-container > div[title="Google"] {
-        background-image: url(../img/icons/google.svg) !important; }
-      #login .social-networks .ulogin-buttons-container > div[title="Odnoklassniki"] {
-        background-image: url(../img/icons/odnoklassniki.svg) !important; }
-      #login .social-networks .ulogin-buttons-container > div[title="Mail.ru"] {
-        background-image: url(../img/icons/mailru.svg) !important; }
-      #login .social-networks .ulogin-buttons-container > div[title="Facebook"] {
-        background-image: url(../img/icons/fb.svg) !important; }
-      #login .social-networks .ulogin-buttons-container > div.ulogin-dropdown-button {
-        background-image: url(../img/icons/dropdown.svg) !important; }
-      #login .social-networks .ulogin-buttons-container > div:hover {
-        background-color: #2d599b !important;
-        opacity: 1 !important; }
-  #login .social-networks a.icon {
-    height: 40px;
-    width: 40px; }
+#login {
+  width: 320px; }
+  #login .social-networks {
+    background: #3970C2;
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    overflow-y: hidden; }
+    #login .social-networks #uLogin {
+      padding: 0px 24px !important;
+      box-sizing: border-box !important; }
+    #login .social-networks .ulogin-buttons-container {
+      width: 100% !important;
+      box-sizing: border-box;
+      display: flex !important;
+      height: 40px !important; }
+      #login .social-networks .ulogin-buttons-container > div {
+        margin: 0 !important;
+        background-size: 80% auto !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        height: 40px !important;
+        width: 40px !important; }
+        #login .social-networks .ulogin-buttons-container > div[title="VK"] {
+          background-image: url(../img/icons/vk.svg) !important; }
+        #login .social-networks .ulogin-buttons-container > div[title="Google"] {
+          background-image: url(../img/icons/google.svg) !important; }
+        #login .social-networks .ulogin-buttons-container > div[title="Odnoklassniki"] {
+          background-image: url(../img/icons/odnoklassniki.svg) !important; }
+        #login .social-networks .ulogin-buttons-container > div[title="Mail.ru"] {
+          background-image: url(../img/icons/mailru.svg) !important; }
+        #login .social-networks .ulogin-buttons-container > div[title="Facebook"] {
+          background-image: url(../img/icons/fb.svg) !important; }
+        #login .social-networks .ulogin-buttons-container > div.ulogin-dropdown-button {
+          background-image: url(../img/icons/dropdown.svg) !important; }
+        #login .social-networks .ulogin-buttons-container > div:hover {
+          background-color: #2d599b !important;
+          opacity: 1 !important; }
+    #login .social-networks a.icon {
+      height: 40px;
+      width: 40px; }
 
 #signin {
   width: 500px;
@@ -5891,37 +5893,37 @@ input[type="number"] {
   #repeat .mfp-close:hover {
     background-color: #eee; }
 
-#set {
-  position: relative;
-  position: fixed; }
-  #set .set-close {
-    position: absolute;
-    border: 0;
-    top: 0;
-    right: 0;
-    color: transparent;
-    background-color: transparent;
-    background-image: url(../img/close-dark.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
-    cursor: pointer; }
-    #set .set-close:hover {
-      background-color: #eee; }
-  #set .row {
-    display: flex;
-    flex-wrap: wrap; }
-  #set .kv-pair {
-    display: flex; }
-    #set .kv-pair .key {
-      padding-right: 20px;
-      line-height: 40px; }
-    #set .kv-pair .value {
-      font-size: 30px;
-      line-height: 40px; }
-  #set .add-cart {
-    margin-top: 30px; }
+#set .set-close {
+  position: absolute;
+  border: 0;
+  top: 0;
+  right: 0;
+  color: transparent;
+  background-color: transparent;
+  background-image: url(../img/close-dark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  cursor: pointer; }
+  #set .set-close:hover {
+    background-color: #eee; }
+
+#set .row {
+  display: flex;
+  flex-wrap: wrap; }
+
+#set .kv-pair {
+  display: flex; }
+  #set .kv-pair .key {
+    padding-right: 20px;
+    line-height: 40px; }
+  #set .kv-pair .value {
+    font-size: 30px;
+    line-height: 40px; }
+
+#set .add-cart {
+  margin-top: 30px; }
 
 #main #hero-slider {
   width: 100%; }
@@ -6838,28 +6840,28 @@ input[type="number"] {
         background-position: center center;
         background-repeat: no-repeat; }
         #info .info-wrapper .info .info-icon.success {
-          background-image: url(/img/errors/success.svg);
+          background-image: url(../img/errors/success.svg);
           background-size: 70% auto; }
         #info .info-wrapper .info .info-icon.error {
-          background-image: url(/img/errors/error.svg);
+          background-image: url(../img/errors/error.svg);
           background-size: 70% auto; }
         #info .info-wrapper .info .info-icon.e404 {
           width: 70vw;
           max-width: 360px;
           height: 200px;
-          background-image: url(/img/errors/e404.svg);
+          background-image: url(../img/errors/e404.svg);
           background-size: contain; }
         #info .info-wrapper .info .info-icon.e500 {
           width: 70vw;
           max-width: 360px;
           height: 200px;
-          background-image: url(/img/errors/e500.svg);
+          background-image: url(../img/errors/e500.svg);
           background-size: contain; }
         #info .info-wrapper .info .info-icon.e503 {
           width: 70vw;
           max-width: 360px;
           height: 200px;
-          background-image: url(/img/errors/e503.svg);
+          background-image: url(../img/errors/e503.svg);
           background-size: contain; }
 
 #credit-howto .container {
