@@ -2,6 +2,9 @@ var heroSlider;
 var heroSliderMobile;
 var miscSlider;
 var observe;
+var modals;
+var materialboxes;
+var sidenav;
 
 $(() => {
 
@@ -30,12 +33,21 @@ $(() => {
     $(window).on('scroll', updateFloatingCart);
     $(window).on('resize', updateModalClass);
     $('body').on('change', '[type=file]', updateInputFileText);
+    $('body').on('click', '.swiper-container-wrapper a.prev', sliderPrev);
+    $('body').on('click', '.swiper-container-wrapper a.next', sliderNext);
 
-    $('.sidenav').sidenav();
-    $('.modal').modal();
+    var modals_el = document.querySelectorAll('.modal');
+    modals = M.Modal.init(modals_el);
+
+    var elems = document.querySelectorAll('.materialboxed');
+    materialboxes = M.Materialbox.init(elems);
+
+    var elems = document.querySelectorAll('.sidenav');
+    sidenav = M.Sidenav.init(elems);
+
     $('p').hyphenate();
     $('.material-table').materialize();
-    $('.materialboxed').materialbox();
+    
     initImageToolTips();
     updateModalClass();
     
@@ -56,6 +68,18 @@ $(() => {
     }
 
 });
+
+function sliderPrev(e){
+    e?.preventDefault();
+    var slider = $(this).next().get(0).swiper;
+    slider.slidePrev();
+}
+
+function sliderNext(e){
+    e?.preventDefault();
+    var slider = $(this).prev().get(0).swiper;
+    slider.slideNext();
+}
 
 function updateInputFileText(e){
     var file = $(this).val() !== "" ? $(this).val().replace("C:\\fakepath\\", '') : $(this).data('default-text');

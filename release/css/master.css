@@ -4257,6 +4257,32 @@ body {
   width: 100%;
   height: 100%; }
 
+.swiper-container-wrapper {
+  position: relative; }
+  .swiper-container-wrapper .prev, .swiper-container-wrapper .next {
+    position: absolute;
+    font-size: 70px;
+    z-index: 200;
+    display: block;
+    width: 40px;
+    height: 60px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid rgba(153, 153, 153, 0.4);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(251, 251, 253, 0.8); }
+  .swiper-container-wrapper .prev {
+    left: -10px;
+    border-left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px; }
+  .swiper-container-wrapper .next {
+    right: -10px;
+    border-right: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px; }
+
 html {
   position: relative; }
 
@@ -6949,6 +6975,10 @@ input[type="number"] {
     height: 500px;
     margin: auto;
     margin-bottom: 30px; }
+
+#about ol {
+  padding: 0 1.5rem;
+  margin: 0; }
 
 #about .hero-about {
   position: relative;
