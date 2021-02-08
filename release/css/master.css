@@ -4463,9 +4463,7 @@ ul {
 .lazy-image {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity .5s; }
+  background-repeat: no-repeat; }
   .lazy-image.quadro {
     padding-top: 100%; }
   .lazy-image.lazy-loading {
@@ -4474,8 +4472,6 @@ ul {
     background-size: contain; }
   .lazy-image.top {
     background-position: top; }
-  .lazy-image.complete {
-    opacity: 1; }
 
 .overline-wrapper {
   border-top: 1px dotted #888;
@@ -4937,9 +4933,9 @@ header {
         font-size: 0;
         padding-left: 30px; }
         header .container .top .coords .lr-pair.phones a.phone {
-          background: url(/img/icons/Phone.svg) center center no-repeat; }
+          background: url(../img/icons/Phone.svg) center center no-repeat; }
         header .container .top .coords .lr-pair.phones a.mobile {
-          background: url(/img/icons/mobile.svg) center center no-repeat; } }
+          background: url(../img/icons/mobile.svg) center center no-repeat; } }
     @media (max-width: 749px) {
       header .container .top .coords .fav {
         display: none; } }
@@ -5316,7 +5312,11 @@ footer {
     top: 0;
     margin: 0;
     padding-bottom: 5px;
-    z-index: 20; }
+    z-index: 20;
+    height: 120px; }
+    .sidenav .user-view .logout-block {
+      border-top: 1px solid white;
+      margin: 20px 0; }
     .sidenav .user-view a {
       color: #fff; }
     .sidenav .user-view .lr-pair {
@@ -5456,6 +5456,7 @@ footer {
   padding-top: 15px;
   margin: 6px 0; }
   .input-field input[type="text"].styled,
+  .input-field input[type="number"].styled,
   .input-field input[type="email"].styled,
   .input-field input[type="phone"].styled,
   .input-field input[type="password"].styled,
@@ -5465,12 +5466,14 @@ footer {
     width: 100%;
     line-height: 30px; }
     .input-field input[type="text"].styled::placeholder,
+    .input-field input[type="number"].styled::placeholder,
     .input-field input[type="email"].styled::placeholder,
     .input-field input[type="phone"].styled::placeholder,
     .input-field input[type="password"].styled::placeholder,
     .input-field textarea.styled::placeholder {
       color: transparent; }
     .input-field input[type="text"].styled + label,
+    .input-field input[type="number"].styled + label,
     .input-field input[type="email"].styled + label,
     .input-field input[type="phone"].styled + label,
     .input-field input[type="password"].styled + label,
@@ -5481,6 +5484,8 @@ footer {
       font-size: 16px;
       top: 17px; }
     .input-field input[type="text"].styled:not(:placeholder-shown) + label, .input-field input[type="text"].styled:focus + label,
+    .input-field input[type="number"].styled:not(:placeholder-shown) + label,
+    .input-field input[type="number"].styled:focus + label,
     .input-field input[type="email"].styled:not(:placeholder-shown) + label,
     .input-field input[type="email"].styled:focus + label,
     .input-field input[type="phone"].styled:not(:placeholder-shown) + label,
@@ -5659,6 +5664,14 @@ input[type="number"] {
   @media (min-width: 750px) {
     .bottom-toolbar {
       display: none; } }
+  .bottom-toolbar .popup {
+    top: unset;
+    left: unset;
+    right: 0;
+    bottom: calc(100% - 40px); }
+    .bottom-toolbar .popup.open {
+      top: unset;
+      bottom: 100%; }
   .bottom-toolbar > a, .bottom-toolbar > div {
     padding: 6px 0;
     width: 25%;
@@ -6392,14 +6405,27 @@ input[type="number"] {
   display: none; }
 
 #profile .ballance-block {
-  margin-bottom: 36px;
   display: flex;
   flex-wrap: wrap; }
+  #profile .ballance-block + .underline-wrapper {
+    margin-top: 36px; }
+  #profile .ballance-block input {
+    text-align: left; }
   #profile .ballance-block .ballance {
+    width: 20px;
     flex-grow: 1;
-    line-height: 36px; }
-  #profile .ballance-block .history {
-    line-height: 36px; }
+    padding-right: 10px;
+    box-sizing: border-box; }
+    #profile .ballance-block .ballance.input-field {
+      margin-right: 20px; }
+    #profile .ballance-block .ballance:not(.input-field) {
+      padding-top: 20px; }
+  #profile .ballance-block .action {
+    padding-top: 12px; }
+  #profile .ballance-block > * {
+    height: 46px;
+    margin: 0;
+    box-sizing: border-box; }
 
 #checkout #ballance + p {
   margin-bottom: 60px; }
@@ -6424,6 +6450,30 @@ input[type="number"] {
       height: 40px;
       opacity: 0; }
     #checkout-wrapper .address-list .address-block:hover .action a {
+      opacity: 1; }
+
+#checkout-wrapper .image-link {
+  padding-top: 4px;
+  position: relative; }
+  #checkout-wrapper .image-link .image {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: auto 80%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    bottom: calc(100% - 10px);
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity .2s, bottom .2s; }
+  #checkout-wrapper .image-link:hover {
+    text-decoration: underline; }
+    #checkout-wrapper .image-link:hover .image {
+      bottom: 100%;
       opacity: 1; }
 
 #checkout-wrapper .material-table {

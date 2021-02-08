@@ -13,6 +13,12 @@
         margin: 0;
         padding-bottom: 5px;
         z-index: 20;
+        height: 120px;
+
+        & .logout-block{
+            border-top: 1px solid white;
+            margin: 20px 0;
+        }
 
         & a{
             color: #fff;

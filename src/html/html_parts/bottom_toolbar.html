@@ -1,4 +1,4 @@
-<div class="bottom-toolbar" data-state="logged">
+<!-- <div class="bottom-toolbar" data-state="logged">
     <a class="toolbar-item">
         <span class="icon tb-fav"></span>
         <span class="text">Избранное</span>
@@ -16,4 +16,30 @@
         <span class="icon tb-repeat accent"></span>
         <span class="text">Повтор</span>
     </a>
-</div>
+</div> -->
+<div class="bottom-toolbar">
+    <a href="/favorite/" class="toolbar-item rs-favorite-block " data-favorite-url="/favorite/">
+        <!-- <span class="link-chip rs-favorite-items-count">0</span> -->
+        <span class="icon tb-fav"></span>
+        <span class="text">Избранное</span>
+    </a>
+    <a href="/cart/" class="toolbar-item " id="rs-cart">
+        <span class="icon tb-cart"></span>
+        <span class="text">Корзина</span>
+        <span class="rs-cart-items-count count">0</span>
+    </a>
+    <a href="/feedback-3/" class="toolbar-item rs-in-dialog">
+        <span class="icon tb-announcement"></span>
+        <span class="text">Отзыв</span>
+    </a>
+            <div class="toolbar-item popup-wrapper top">
+            <div class="popup-trigger">
+                <span class="icon tb-person"></span>
+                <span class="text">Вход</span>
+            </div>
+            <ul class="popup">
+                <li><a href="/auth/" class="rs-in-dialog">Авторизация</a></li>
+                <li><a href="/register/" class="rs-in-dialog">Регистрация</a></li>
+            </ul>
+        </div>
+    </div>

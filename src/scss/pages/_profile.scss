@@ -166,18 +166,41 @@
 
     & .ballance-block{
         
-        margin-bottom: 36px;
+        & + .underline-wrapper{
+            margin-top: 36px;
+        }
+        
+        & input{
+            text-align: left;
+        }
 
         display: flex;
         flex-wrap: wrap;
 
         & .ballance{
+
+            width: 20px;
             flex-grow: 1;
-            line-height: 36px;
+            padding-right: 10px;
+            box-sizing: border-box;
+
+            &.input-field{
+                margin-right: 20px;
+            }
+
+            &:not(.input-field){
+                padding-top: 20px;
+            }
         }
 
-        & .history{
-            line-height: 36px;
+        & .action{
+            padding-top: 12px;
+        }
+
+        & > *{
+            height: 46px;
+            margin: 0;
+            box-sizing: border-box;
         }
     }
 }

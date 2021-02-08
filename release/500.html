@@ -151,15 +151,18 @@
 </header>
     <div class="sidenav" id="mobile-nav">
     <div class="user-view lazy-image" data-src="/img/userview_bgr.svg">
-        <div class="profile-wrapper" data-state="unlogged">
+        <div class="profile-wrapper" data-state="logged">
             <div class="profile-block">
                 <a class="lr-pair" href="/profile.html">
                     <div class="left">
-                        <span class="avatar" >MK</span>
+                        <span class="avatar">MK</span>
                     </div>
                     <div class="right">
                         <span class="username">MasterKadaj</span>
                         <span class="mail">masterkadaj@gmail.com</span>
+                    </div>
+                    <div class="logout-block">
+                        <a class="btn btn-flat float-right">Выйти из профиля</a>
                     </div>
                 </a>
             </div>
@@ -541,7 +544,7 @@
         </div>
     </div>
 </footer>
-    <div class="bottom-toolbar" data-state="logged">
+    <!-- <div class="bottom-toolbar" data-state="logged">
     <a class="toolbar-item">
         <span class="icon tb-fav"></span>
         <span class="text">Избранное</span>
@@ -559,7 +562,33 @@
         <span class="icon tb-repeat accent"></span>
         <span class="text">Повтор</span>
     </a>
-</div>
+</div> -->
+<div class="bottom-toolbar">
+    <a href="/favorite/" class="toolbar-item rs-favorite-block " data-favorite-url="/favorite/">
+        <!-- <span class="link-chip rs-favorite-items-count">0</span> -->
+        <span class="icon tb-fav"></span>
+        <span class="text">Избранное</span>
+    </a>
+    <a href="/cart/" class="toolbar-item " id="rs-cart">
+        <span class="icon tb-cart"></span>
+        <span class="text">Корзина</span>
+        <span class="rs-cart-items-count count">0</span>
+    </a>
+    <a href="/feedback-3/" class="toolbar-item rs-in-dialog">
+        <span class="icon tb-announcement"></span>
+        <span class="text">Отзыв</span>
+    </a>
+            <div class="toolbar-item popup-wrapper top">
+            <div class="popup-trigger">
+                <span class="icon tb-person"></span>
+                <span class="text">Вход</span>
+            </div>
+            <ul class="popup">
+                <li><a href="/auth/" class="rs-in-dialog">Авторизация</a></li>
+                <li><a href="/register/" class="rs-in-dialog">Регистрация</a></li>
+            </ul>
+        </div>
+    </div>
     <script src="/js/jquery.min.js"></script>
 <script src="/js/materialize.min.js"></script>
 <script src="/js/jquery.hyphen.ru.min.js"></script>

@@ -10,6 +10,19 @@
         display: none;
     }
 
+    & .popup{
+
+        top: unset;
+        left: unset;
+        right: 0;
+        bottom: calc(100% - 40px);
+
+        &.open{
+            top: unset;
+            bottom: 100%;
+        }
+    }
+
     & > a, & > div{
         padding: 6px 0;
         width: 25%;

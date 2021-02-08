@@ -40,6 +40,37 @@
         }
     }
 
+    .image-link{
+        padding-top: 4px;
+        position: relative;
+
+        & .image{
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-size: auto 80%;
+            background-color: rgba(black, .7);
+            border-radius: 8px;
+            bottom: calc(100% - 10px);
+            z-index: 20;
+            pointer-events: none;
+            opacity: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity .2s, bottom .2s;
+        }
+
+        &:hover{
+            
+            text-decoration: underline;
+
+            & .image{
+                bottom: 100%;
+                opacity: 1;
+            }
+        }
+    }
 
     & .material-table{
         @include material_table();
