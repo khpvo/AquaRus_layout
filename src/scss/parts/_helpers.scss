@@ -293,8 +293,8 @@ ul{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    // opacity: 0;
-    // transition: opacity .5s;
+    opacity: 0;
+    transition: opacity .5s;
 
     &.quadro{
         padding-top: 100%;
@@ -312,9 +312,13 @@ ul{
         background-position: top;
     }
 
-    // &.complete{
-    //     opacity: 1;
-    // }
+    & img{
+        display: none;
+    }
+
+    &.complete{
+        opacity: 1;
+    }
 }
 
 .overline-wrapper{

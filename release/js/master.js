@@ -450,6 +450,9 @@ function openImages(){
 function loadImages(){
     $('.lazy-image').each((index, el) => {
 
+        if($(el).hasClass('complete'))
+            return;
+
         var url = $(el).data('src');
         // debugger
 

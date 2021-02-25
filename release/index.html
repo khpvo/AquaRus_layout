@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Акватория | Главная</title>
 <link rel="stylesheet" href="/css/master.css">
+<link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 </head>
 <body>
     <header>
@@ -155,23 +156,20 @@
     <div class="user-view lazy-image" data-src="/img/userview_bgr.svg">
         <div class="profile-wrapper" data-state="logged">
             <div class="profile-block">
-                <a class="lr-pair" href="/profile.html">
+                <div class="lr-pair">
                     <div class="left">
-                        <span class="avatar">MK</span>
+                        <span class="avatar"></span>
                     </div>
                     <div class="right">
-                        <span class="username">MasterKadaj</span>
-                        <span class="mail">masterkadaj@gmail.com</span>
+                        <a href="/profile.html" class="username">MasterKadaj</a>
+                        <a class="float-right logout-icon"><i class="mdi mdi-logout-variant"></i></a>
                     </div>
-                    <div class="logout-block">
-                        <a class="btn btn-flat float-right">Выйти из профиля</a>
-                    </div>
-                </a>
+                </div>
             </div>
             <div class="login-block">
                 <div class="buttons-wrapper">
-                    <a href="#login" class="btn light-blue waves-effect waves-light modal-trigger">Вход</a>
-                    <a href="#signin" class="btn light-blue waves-effect waves-light modal-trigger">Регистрация</a>
+                    <a href="#login" class="btn btn-flat waves-effect waves-light modal-trigger">Вход</a>
+                    <a href="#signin" class="btn btn-flat waves-effect waves-light modal-trigger">Регистрация</a>
                 </div>
             </div>
         </div>
@@ -209,10 +207,6 @@
         </ul>
     </div>
     <div class="more-data">
-        <div class="app-stores">
-            <a class="app-store gplay"></a>
-            <a class="app-store appstore"></a>
-        </div>
         <div class="lr-pair phones">
             <div class="left">204-44-44</div>
             <div class="separator"></div>
@@ -387,18 +381,22 @@
                             <div class="how-content">
                                 <div class="row">
                                     <div class="col l4 m6 s12">
-                                        <div class="how-icon lazy-image" data-src="/img/phone_white.svg"></div>
-                                        <div class="how-header">По телефону</div>
+                                        <a class="how-icon lazy-image" data-src="/img/phone_white.svg" href="tel:+79883334443"></a>
+                                        <div class="how-header">Телефон</div>
                                         <p>
                                             Ежедневно без праздничных и выходных дней: <br>
                                             с 08:00 до 20:00 заявку принимает менеджер <br>
                                             с 20:00 до 08:00 – автоответчик <br>
                                             Ночные заявки обрабатываются и подтверждаются менеджером утром следующего дня.
                                         </p>
+                                        <p>
+                                            <a class="underlined" href="tel:+78622044444">204-44-44</a>,
+                                            <a class="underlined" href="tel:+79883334443">8 (988) 333-444-3</a>
+                                        </p>
                                     </div>
                                     <div class="col l4 m6 s12">
-                                        <div class="how-icon lazy-image" data-src="/img/desktop_white.svg"></div>
-                                        <div class="how-header">Через сайт</div>
+                                        <a class="how-icon lazy-image" data-src="/img/desktop_white.svg" href="https://securepayments.sberbank.ru/shortlink/vdTwTEj7"></a>
+                                        <div class="how-header">Веб-сайт</div>
                                         <p>
                                             Заказывайте воду с доставкой на нашем сайте, с возможностью on-line оплаты. Воспользуйтесь всеми функциями нашего полноценного интернет-магазина.
                                         </p>
@@ -406,9 +404,13 @@
                                     </div>
                                     <div class="col l4 m6 s12">
                                         <div class="how-icon lazy-image" data-src="/img/mobile_white.svg"></div>
-                                        <div class="how-header">Через мобильное приложение</div>
+                                        <div class="how-header">Моб. приложение</div>
                                         <p>
                                             Мы не стоим на месте, а идем в ногу со временем и создали приложение для мобильных устройств с возможностью on-line оплаты заказов.
+                                            <div class="app-stores">
+                                                <a class="app-store gplay"></a>
+                                                <a class="app-store appstore"></a>
+                                            </div>
                                         </p>
                                     </div>
                                     <div class="col l4 m6 s12 hide-on-large-only">

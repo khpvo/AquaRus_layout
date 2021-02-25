@@ -2263,7 +2263,7 @@ small {
     margin: 0; }
   .sidenav li {
     float: none;
-    line-height: 48px; }
+    line-height: 36px; }
     .sidenav li.active {
       background-color: rgba(0, 0, 0, 0.05); }
   .sidenav li > a {
@@ -2271,8 +2271,8 @@ small {
     display: block;
     font-size: 14px;
     font-weight: 500;
-    height: 48px;
-    line-height: 48px;
+    height: 36px;
+    line-height: 36px;
     padding: 0 32px; }
     .sidenav li > a:hover {
       background-color: rgba(0, 0, 0, 0.05); }
@@ -2286,7 +2286,7 @@ small {
     color: rgba(0, 0, 0, 0.54);
     font-size: 14px;
     font-weight: 500;
-    line-height: 48px; }
+    line-height: 36px; }
     .sidenav .subheader:hover {
       background-color: transparent; }
   .sidenav .user-view {
@@ -2314,7 +2314,7 @@ small {
     .sidenav .user-view .name,
     .sidenav .user-view .email {
       font-size: 14px;
-      line-height: 24px; }
+      line-height: 18px; }
     .sidenav .user-view .name {
       margin-top: 16px;
       font-weight: 500; }
@@ -4463,7 +4463,9 @@ ul {
 .lazy-image {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity .5s; }
   .lazy-image.quadro {
     padding-top: 100%; }
   .lazy-image.lazy-loading {
@@ -4472,6 +4474,10 @@ ul {
     background-size: contain; }
   .lazy-image.top {
     background-position: top; }
+  .lazy-image img {
+    display: none; }
+  .lazy-image.complete {
+    opacity: 1; }
 
 .overline-wrapper {
   border-top: 1px dotted #888;
@@ -5216,9 +5222,6 @@ footer {
   footer .mobile-appstores {
     text-align: center;
     padding-top: 20px; }
-    @media (min-width: 600px) {
-      footer .mobile-appstores {
-        display: none; } }
 
 .single-price .table-header + .lr-pair {
   margin-bottom: 78px; }
@@ -5308,7 +5311,8 @@ footer {
   padding: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh; }
+  height: 100vh;
+  max-height: -webkit-fill-available; }
   .sidenav .user-view {
     position: sticky;
     left: 0;
@@ -5316,47 +5320,46 @@ footer {
     margin: 0;
     padding-bottom: 5px;
     z-index: 20;
-    height: 120px; }
-    .sidenav .user-view .logout-block {
-      border-top: 1px solid white;
-      margin: 20px 0; }
+    height: 46px; }
     .sidenav .user-view a {
       color: #fff; }
     .sidenav .user-view .lr-pair {
-      display: flex; }
+      display: flex;
+      width: 100%; }
+      .sidenav .user-view .lr-pair .icon {
+        border: 1px solid green;
+        display: inline-block;
+        width: 30px;
+        height: 30px; }
       .sidenav .user-view .lr-pair .left {
         padding-right: 10px;
         display: block; }
         .sidenav .user-view .lr-pair .left .avatar {
           display: block;
-          width: 64px;
-          line-height: 64px;
+          width: 26px;
+          height: 26px;
           text-align: center;
-          background-color: #fff;
+          background: url("../img/icons/Person.svg") top 35% center no-repeat;
+          background-size: auto 70%;
           border-radius: 50%;
-          background-size: contain;
           color: #414141;
           font-size: 20px;
-          font-weight: bold; }
+          font-weight: bold;
+          border: 1px solid #fff; }
       .sidenav .user-view .lr-pair .right {
-        display: flex;
-        flex-direction: column; }
+        width: 100%; }
         .sidenav .user-view .lr-pair .right:before, .sidenav .user-view .lr-pair .right:after {
           content: '';
           flex-grow: 1;
           display: block; }
         .sidenav .user-view .lr-pair .right .username {
           font-size: 16px;
-          font-weight: 500; }
-        .sidenav .user-view .lr-pair .right a {
-          line-height: 20px; }
-    .sidenav .user-view .login-block, .sidenav .user-view .profile-block {
-      height: 100px;
-      display: flex;
-      flex-direction: column; }
-      .sidenav .user-view .login-block:before, .sidenav .user-view .login-block:after, .sidenav .user-view .profile-block:before, .sidenav .user-view .profile-block:after {
-        content: '';
-        flex-grow: 1; }
+          font-weight: 500;
+          line-height: 30px;
+          display: inline-block;
+          flex-grow: 1; }
+        .sidenav .user-view .lr-pair .right .logout-icon {
+          font-size: 18px; }
     .sidenav .user-view [data-state=logged] .login-block {
       display: none; }
     .sidenav .user-view [data-state=logged] .profile-block {
@@ -5404,7 +5407,7 @@ footer {
       margin: 0;
       overflow-x: hidden;
       overflow-y: auto;
-      height: 100%; }
+      height: calc(100vh - 265px); }
       .sidenav .main-catalog > .main-catalog-scroller li {
         list-style: none; }
         .sidenav .main-catalog > .main-catalog-scroller li a {
@@ -5441,6 +5444,7 @@ footer {
       height: 30px;
       z-index: 2;
       background: linear-gradient(to bottom, transparent, #fff 80%);
+      mix-blend-mode: screen;
       pointer-events: none; }
   .sidenav .more-data {
     padding: 10px 0; }
@@ -6109,6 +6113,7 @@ input[type="number"] {
     #main #how-to .how-content .how-icon {
       width: 80px;
       height: 80px;
+      display: block;
       background-position: center;
       background-repeat: no-repeat;
       margin: auto;
