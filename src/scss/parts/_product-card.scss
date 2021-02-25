@@ -58,10 +58,10 @@
         
         & .product-image{
             width: 120px;
-            padding-top: 152%;
+            padding-top: 190%;
             background-color: #fff;
-            background-size: auto 90%;
-            background-position: left center;
+            background-size: auto 100%;
+            background-position: center top;
         }
 
         & > .lr-pair{
@@ -77,10 +77,13 @@
             }
 
             & > .right{
-
-                @media(min-width: 600px){
-                    padding-left: 20px;
-                }
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              padding-left: 20px;
+                //@media(min-width: 600px){
+                //    padding-left: 20px;
+                //}
 
                 & .sub-header{
                     font-size: 14px;

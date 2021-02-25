@@ -109,9 +109,10 @@ header{
 
     @media(max-width: 1200px){
         position: relative;
-        position: sticky;
+        position: fixed;
         top: 0;
-        z-index: 20;
+        z-index: 201;
+        width: 100%;
 
         &:after{
             content: '';
