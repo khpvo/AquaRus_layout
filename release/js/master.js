@@ -400,23 +400,41 @@ function initSliders(){
     }
 
     if($('#misc-products').length){
+        var slides = $('#misc-products .swiper-slide').length;
+        if(!slides){
+            return;
+        }
+        var bp1600_loop = slides > 4 ? true : false;
+        var bp1100_loop = slides > 3 ? true : false;
+        var bp800_loop = slides > 2 ? true : false;
+
         miscSlider = new Swiper('#misc-products', {
             autoplay: {
-               delay: 5000
+                delay: 5000
             },
             loop: true,
             breakpoints: {
                 1600: {
-                    slidesPerView: 4
+                    slidesPerView: 4,
+                    loop: bp1600_loop
                 },
                 1100: {
-                    slidesPerView: 3
+                    slidesPerView: 3,
+                    loop: bp1100_loop
                 },
                 800: {
-                    slidesPerView: 2
+                    slidesPerView: 2,
+                    loop: bp800_loop
+                },
+                400: {
+                    slidesPerView: 1,
+                    loop: true
                 }
             }
         })
+        miscSlider.on('slideChange', function () {
+            loadImages();
+        });
     }
 
 }
