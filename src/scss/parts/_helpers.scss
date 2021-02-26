@@ -366,10 +366,12 @@ ul{
         
         &.gplay{
             background: url(../img/gplay.png) center center no-repeat;
+            background-size: contain;
         }
         
         &.appstore{
             background: url(../img/appstore.png) center center no-repeat;
+            background-size: contain;
         }
     }
 }

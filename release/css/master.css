@@ -4508,9 +4508,11 @@ ul {
   width: 95px;
   height: 32px; }
   .app-stores .app-store.gplay {
-    background: url(../img/gplay.png) center center no-repeat; }
+    background: url(../img/gplay.png) center center no-repeat;
+    background-size: contain; }
   .app-stores .app-store.appstore {
-    background: url(../img/appstore.png) center center no-repeat; }
+    background: url(../img/appstore.png) center center no-repeat;
+    background-size: contain; }
 
 h1 {
   font-size: 36px;
