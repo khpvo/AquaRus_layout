@@ -4463,9 +4463,7 @@ ul {
 .lazy-image {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity .5s; }
+  background-repeat: no-repeat; }
   .lazy-image.quadro {
     padding-top: 100%; }
   .lazy-image.lazy-loading {
@@ -4476,8 +4474,6 @@ ul {
     background-position: top; }
   .lazy-image img {
     display: none; }
-  .lazy-image.complete {
-    opacity: 1; }
 
 .overline-wrapper {
   border-top: 1px dotted #888;
