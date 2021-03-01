@@ -384,6 +384,10 @@ function initSliders(){
         heroSlider = new Swiper('#hero-slider', {
             effect: "fade",
             loop: true,
+            pagination: {
+                el: '.pagination-desktop',
+                clickable: true
+            },
             autoplay: {
                 delay: 7000
             }
@@ -393,6 +397,10 @@ function initSliders(){
     if($('#hero-slider-mobile').length){
         heroSliderMobile = new Swiper('#hero-slider-mobile', {
             loop: true,
+            pagination: {
+                el: '.pagination-mobile',
+                clickable: true
+            },
             autoplay: {
                 delay: 7000
             }

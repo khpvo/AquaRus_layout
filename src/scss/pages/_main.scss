@@ -3,6 +3,7 @@
     & #hero-slider{
 
         width: 100%;
+        position: relative;
 
         @media(max-width: 600px){
             display: none;
@@ -11,6 +12,17 @@
         & .hero-slide{
             width: 100%;
             min-height: 34vw;
+        }
+
+        & .swiper-pagination{
+
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+
+            & .swiper-pagination-bullet{
+                margin: 10px;
+            }
         }
     }
 
@@ -24,6 +36,17 @@
 
             display: block;
             padding-top: 100%;
+        }
+
+        & .swiper-pagination{
+
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+
+            & .swiper-pagination-bullet{
+                margin: 10px;
+            }
         }
     }
 
@@ -213,6 +236,10 @@
                 font-size: 18px;
                 text-transform: uppercase;
             }
+        }
+
+        & a{
+            margin-right: 10px;
         }
     }
 

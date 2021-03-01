@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./html_parts/head.html', {title: "Партнеры"})
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="partners">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h1>Партнеры</h1>
+                    </div>
+                    <div class="col s12">
+                        <p class="partners-intro">
+                            Мы ценим многолетние партнерские отношения. В благодарность за плодотворное сотрудничество готовы предоставить рекламное место вашей компании на нашем сайте. Вы сможете разместить прямую ссылку на сайт или соц-сети в виде логотипа Вашей компании. Каждый день сайт посещает около 20 000 уникальных посетителей, а значит клиенты, которые доверяют нам, узнают и о Вас! Вместе надежнее! Актуальную форму для размещения информации сообщит персональный менеджер. 
+                        </p>
+                    </div>
+                </div>
+                <div class="row partners-wrapper">
+                    @@loop('./html_parts/partner.html', './data/partners.json')
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    @@include('./html_parts/scripts.html')
+</body>
+</html>
