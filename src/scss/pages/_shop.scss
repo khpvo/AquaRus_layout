@@ -1,0 +1,35 @@
+#shop{
+
+    & .lazy-image{
+
+        position: relative;
+        overflow: hidden;
+        height: 30vw;
+
+        & .info{
+
+            position: absolute;
+            top: 10%;
+            left: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #fff;
+
+            & .kv-pair{
+                display: flex;
+
+                & .key{
+                    margin-right: 10px;
+                }
+
+                & .value{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    & #shop-map{
+        height: 30vw;
+    }
+}

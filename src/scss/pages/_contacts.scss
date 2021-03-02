@@ -5,15 +5,6 @@
         flex-wrap: wrap;
     }
 
-    & #map{
-        min-height: 40vh;
-        height: 100%;
-
-        & .ol-overlaycontainer-stopevent{
-            display: none;
-        }
-    }
-
     & .contact-block{
 
         margin: 20px 0;
@@ -23,6 +14,19 @@
             font-size: 18px;
             color: $primary;
             border-bottom: 1px dotted $text;
+        }
+
+        & .map-marker{
+            
+            transition: color .3s, text-decoration-color .3s;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+
+            &.active{
+                color: $secondary;
+                text-decoration-color: $secondary;
+                font-weight: 500;
+            }
         }
 
         & .contact-list{

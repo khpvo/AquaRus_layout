@@ -5,6 +5,7 @@
 <title>Акватория | Контакты</title>
 <link rel="stylesheet" href="/css/master.css">
 <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 <body>
     <header>
     <div class="container">
@@ -220,7 +221,10 @@
                         <h1>Контакты</h1>
                     </div>
                     <div class="col s12 m6 l6">
-                        <div id="map"></div>
+                        <div class="map-wrapper">
+                            <div id="map"></div>
+                            <div class="address"></div>
+                        </div>
                     </div>
                     <div class="col s12 m6 l6">
                         <div class="contact-block">
@@ -242,12 +246,12 @@
                          <div class="contact-block">
                             <div class="contact-header">Адреса магазинов</div>
                             <ul class="contact-list col2">
-                                <li>ул. Ростовское Шоссе, 14</li>
-                                <li>ул. Красных Партизан, 123</li>
-                                <li>ул. Уральская, 144</li>
-                                <li>ул. Буденного, 73</li>
-                                <li>Тургеневское Шоссе, 27, ТЦ «Мега Адыгея»</li>
-                                <li>ул. Крылатая, 2, ТРЦ «OZ Молл»</li>
+                                <li class="map-marker" data-lon="38.987153" data-lat="45.071256" data-address="ул. Ростовское Шоссе, 12/26" >ул. Ростовское Шоссе, 12/16</li>
+                                <li class="map-marker" data-lon="38.919698" data-lat="45.062980" data-address="ул. Красных Партизан, 123" >ул. Красных Партизан, 123</li>
+                                <li class="map-marker" data-lon="39.081736" data-lat="45.037139" data-address="ул. Уральская, 144B" >ул. Уральская, 144B</li>
+                                <li class="map-marker" data-lon="38.961389" data-lat="45.037795" data-address="ул. Буденного, 73" >ул. Буденного, 73</li>
+                                <li class="map-marker" data-lon="38.927545" data-lat="45.013481" data-address="Тургеневское Шоссе, 27, ТЦ «Мега Адыгея»" >Тургеневское Шоссе, 27, ТЦ «Мега Адыгея»</li>
+                                <li class="map-marker" data-lon="39.124618" data-lat="45.010381" data-address="ул. Крылатая, 2, ТРЦ «OZ Молл»" >ул. Крылатая, 2, ТРЦ «OZ Молл»</li>
                             </ul>
                         </div>
                         <div class="contact-block">

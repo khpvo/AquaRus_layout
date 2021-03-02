@@ -1,0 +1,27 @@
+[
+    {
+        "image": "/img/shops/shop1.jpg",
+        "header": "ул. Ростовское шоссе, дом № 14",
+        "kv": "./data/shop1.json"
+    },
+    {
+        "image": "/img/shops/shop2.jpg",
+        "header": "ул. Красных Партизан, дом № 123",
+        "kv": "./data/shop2.json"
+    },
+    {
+        "image": "/img/shops/shop3.jpg",
+        "header": "ул. Уральская, дом № 144",
+        "kv": "./data/shop3.json"
+    },
+    {
+        "image": "/img/shops/shop4.jpg",
+        "header": "ул. Буденного, дом № 73",
+        "kv": "./data/shop4.json"
+    },
+    {
+        "image": "/img/shops/shop5.jpg",
+        "header": "Тургеневское шоссе, 27, ТЦ «Мега Адыгея» <br> (Вход со стороны АШАНА)",
+        "kv": "./data/shop5.json"
+    }
+]

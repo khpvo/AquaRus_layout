@@ -5,6 +5,7 @@ var observe;
 var modals;
 var materialboxes;
 var sidenav;
+var map;
 
 $(() => {
 
@@ -62,8 +63,39 @@ $(() => {
     }
 
     if($('#map').length){
-        loadScript("https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js", () => {
-            initMap();
+
+        var mapCenter = [38.9977062, 45.0326081];
+        var zoom = 11.25;
+
+        var coords = [];
+
+        $('.map-marker').each((index, marker) => {
+            var lon = $(marker).data('lon');
+            var lat = $(marker).data('lat');
+            var address = $(marker).data('address');
+            coords.push({
+                address: address,
+                lonlat: [lon, lat]
+            });
+        });
+
+        loadScript("https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js", () => {
+            initMap(coords, "map", mapCenter, zoom);
+        })
+    }
+
+    if($('#shop-map').length){
+
+        var shopCoord = [$('#shop-map').data('long'), $('#shop-map').data('lat')];
+        var shopAddress = $('#shop-map').data('address');
+        var coords = [
+            {
+                lonlat: shopCoord,
+                address: shopAddress
+            }
+        ];
+        loadScript("https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js", () => {
+            initMap(coords, 'shop-map', shopCoord, 14);
         })
     }
 
@@ -113,83 +145,52 @@ function toggleFav(e){
     $(this).toggleClass('rs-in-favorite');
 }
 
-function initMap(){
+function initMap(coords, id, mapCenter, zoom){
 
-
-    var addr1 = new ol.geom.Circle(
-		ol.proj.fromLonLat([38.9893695, 45.0652408]), 
-		30
-    );
-
-    var addr2 = new ol.geom.Circle(
-		ol.proj.fromLonLat([38.9175483, 45.0631758]), 
-		30
-    );
-
-    var addr3 = new ol.geom.Circle(
-		ol.proj.fromLonLat([39.0797486, 45.036217]), 
-		30
-    );
-
-    var addr4 = new ol.geom.Circle(
-		ol.proj.fromLonLat([38.9591635, 45.0377622]), 
-		30
-    );
-
-    var addr5 = new ol.geom.Circle(
-		ol.proj.fromLonLat([38.9246163, 45.0092283]), 
-		30
-    );
-
-        var addr6 = new ol.geom.Circle(
-		ol.proj.fromLonLat([39.119738, 45.0113455]), 
-		30
-    );
-
-    var addr1F = new ol.Feature(addr1);
-    var addr2F = new ol.Feature(addr2);
-    var addr3F = new ol.Feature(addr3);
-    var addr4F = new ol.Feature(addr4);
-    var addr5F = new ol.Feature(addr5);
-    var addr6F = new ol.Feature(addr6);
-
-    var vectorSource = new ol.source.Vector({
-		features: [addr1F, addr2F, addr3F, addr4F, addr5F, addr6F]
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VuZXN5cyIsImEiOiJja2xyejVqbTAwN3c2MnBwdjZvdHVhOHpiIn0.IrmmbUMTtmXBxZjv8mcH8Q';
+    var map = new mapboxgl.Map({
+        container: id,
+        style: 'mapbox://styles/genesys/ckls2dt0l12fj17qxtbz91bqg',
+        center: mapCenter,
+        zoom: zoom
     });
-    
-    var style = new ol.style.Style({
-		fill: new ol.style.Fill({
-			color: 'rgba(255, 139, 55, .6)'
-		}),
-		stroke: new ol.style.Stroke({
-			width: 10,
-			color: 'rgba(255, 139, 55, .6)'
-		})
-	});
 
-    var vectorLayer = new ol.layer.Vector({
-		source: vectorSource,
-		style: style
-	});
+    coords.forEach(marker => {
+        var el = document.createElement('div');
+        $(el).addClass('map-marker-icon');
 
-    var map = new ol.Map({
-		target: 'map',  // The DOM element that will contains the map
-		renderer: 'canvas', // Force the renderer to be used
-		layers: [
-			// Add a new Tile layer getting tiles from OpenStreetMap source
-			new ol.layer.Tile({
-				source: new ol.source.OSM({
-					url: "https://basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{r}.png"
-				})
-			}),
-			vectorLayer
-		],
-		// Create a view centered on the specified location and zoom level
-		view: new ol.View({
-			center: ol.proj.fromLonLat([38.9977062, 45.0326081]),
-			zoom: 11.25
-		})
-	});  
+        el.addEventListener('click', function(e){
+
+            var url = "https://yandex.ru/maps/?ll=39.020224%2C45.093786&mode=routes&rtext=~"+marker.lonlat[1]+"%2C"+marker.lonlat[0]+"&z=" + zoom;
+            var el = marker;
+            
+            var link = $('<a id="map-link" target="_blank" href="'+url+'"></a>');
+            $('.map-wrapper').append(link);
+
+            setTimeout(() => {
+                $('#map-link')[0].click();
+                setTimeout(() => {
+                    $('#map-link').remove();
+                }, 100)
+            }, 100)
+        });
+
+        el.addEventListener('mouseenter', function(e){
+            $('.address').text(marker.address).addClass('active');
+            $('.map-marker').removeClass('active');
+            $('.map-marker[data-lon="'+marker.lonlat[0]+'"]').addClass('active');
+        })
+
+        el.addEventListener('mouseleave', function(e){
+            $('.address').removeClass('active');
+            $('.map-marker').removeClass('active');
+        })
+
+        new mapboxgl.Marker(el)
+            .setLngLat(marker.lonlat)
+            .addTo(map);
+    })
+
 }
 
 loadScript = (url, callback) => {
@@ -324,22 +325,26 @@ function setCurrent(e){
 
 function hidePopups(e){
 
-    var path = e.originalEvent.path;
-    var dropdownIndex = path.filter(el => {
-        return $(el).hasClass('popup');
-    });
-
-    var popups = path.filter(el => {
-        return $(el).hasClass('popup-wrapper');
-    });
-
-    if(!dropdownIndex.length){
-        $('.dropdown-wrapper .popup').removeClass('open');
+    if(e.originalEvent){
+        
+        var path = e.originalEvent.path;
+        var dropdownIndex = path.filter(el => {
+            return $(el).hasClass('popup');
+        });
+    
+        var popups = path.filter(el => {
+            return $(el).hasClass('popup-wrapper');
+        });
+    
+        if(!dropdownIndex.length){
+            $('.dropdown-wrapper .popup').removeClass('open');
+        }
+    
+        if(!popups.length){
+            $('.popup-wrapper .popup').removeClass('open');
+        }
     }
-
-    if(!popups.length){
-        $('.popup-wrapper .popup').removeClass('open');
-    }
+        
 }
 
 function openDropdown(e){

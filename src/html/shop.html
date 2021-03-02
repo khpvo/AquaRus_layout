@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('./html_parts/head.html', {title: "Ростовское шоссе, 14"})
+<body>
+    @@include('./html_parts/header.html')
+    @@include('./html_parts/sidenav.html')
+    <main>
+        <div class="global-wrapper" id="shop">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h1>Ростовское шоссе, 14</h1>
+                    </div>
+                    <div class="col m6 s12">
+                        <div class="lazy-image" data-src="/img/shops/shop1.jpg">
+                            <div class="info">
+                                <div class="content">
+                                    @@loop('./html_parts/kv_pair.html', './data/shop1.json')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m6 s12">
+                        <div class="map-wrapper">
+                            <div id="shop-map" data-lat="45.071256" data-long="38.987153" data-address="Ростовское шоссе, 14" ></div>
+                            <div class="address"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('./html_parts/footer.html')
+    @@include('./html_parts/bottom_toolbar.html')
+    @@include('./html_parts/scripts.html')
+</body>
+</html>
