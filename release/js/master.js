@@ -102,13 +102,17 @@ $(() => {
 });
 
 function sliderPrev(e){
-    e?.preventDefault();
+    if(e !== undefined){
+        e.preventDefault();
+    }
     var slider = $(this).next().get(0).swiper;
     slider.slidePrev();
 }
 
 function sliderNext(e){
-    e?.preventDefault();
+        if(e !== undefined){
+        e.preventDefault();
+    }
     var slider = $(this).prev().get(0).swiper;
     slider.slideNext();
 }
@@ -141,7 +145,9 @@ function initImageToolTips(){
 }
 
 function toggleFav(e){
-    e?.preventDefault();
+        if(e !== undefined){
+        e.preventDefault();
+    }
     $(this).toggleClass('rs-in-favorite');
 }
 
@@ -161,7 +167,7 @@ function initMap(coords, id, mapCenter, zoom){
 
         el.addEventListener('click', function(e){
 
-            var url = "https://yandex.ru/maps/?ll=39.020224%2C45.093786&mode=routes&rtext=~"+marker.lonlat[1]+"%2C"+marker.lonlat[0]+"&z=" + zoom;
+            var url = "https://yandex.ru/maps/?ll="+marker.lonlat[0]+"%2C"+marker.lonlat[1]+"&mode=routes&rtext=~"+marker.lonlat[1]+"%2C"+marker.lonlat[0]+"&z=" + zoom;
             var el = marker;
             
             var link = $('<a id="map-link" target="_blank" href="'+url+'"></a>');
@@ -217,8 +223,10 @@ loadScript = (url, callback) => {
 }
 
 function togglePopup(e){
-    e?.preventDefault();
-    e?.stopPropagation();
+        if(e !== undefined){
+        e.preventDefault();
+        e.stopPropagation();
+    }
     var already = $(this).parent().find('.popup').hasClass('open');
     var newClass = already ? '' : 'open';
     $('.popup-wrapper .popup').removeClass('open');
@@ -265,7 +273,9 @@ function resumeMiscSlider(e){
 }
 
 function toggleSidebarContent(e){
-    e?.preventDefault();
+        if(e !== undefined){
+        e.preventDefault();
+    }
     $(this).parents('.products-sidebar').find('.products-sidebar-content').toggleClass('open');
 }
 
@@ -318,7 +328,9 @@ function closeDetails(e){
 }
 
 function setCurrent(e){
-    e?.preventDefault();
+        if(e !== undefined){
+        e.preventDefault();
+    }
     var newVal = $(this).text();
     $(this).parents('.dropdown-wrapper').find('.current').text(newVal);
 }
@@ -348,13 +360,17 @@ function hidePopups(e){
 }
 
 function openDropdown(e){
-    e?.preventDefault();
-    e?.stopPropagation();
+        if(e !== undefined){
+        e.preventDefault();
+        e.stopPropagation();
+    }
     $(this).find('.popup').toggleClass('open');
 }
 
 function prevLevel(e){
-    e?.preventDefault();
+        if(e !== undefined){
+        e.preventDefault();
+    }
     var oldSL = $('.main-catalog-scroller').scrollLeft();
     var sbW = $('.sidenav').outerWidth();
     var newSL = oldSL-sbW;
@@ -368,7 +384,9 @@ function prevLevel(e){
 }
 
 function nextLevel(e){
-    e?.preventDefault();
+        if(e !== undefined){
+        e.preventDefault();
+    }
 
     var oldSL = $('.main-catalog-scroller').scrollLeft();
     var sbW = $('.sidenav').outerWidth();
@@ -461,21 +479,22 @@ function openImages(){
 }
 
 function loadImages(){
-    $('.lazy-image').each((index, el) => {
-
-        if($(el).hasClass('complete'))
-            return;
-
-        var url = $(el).data('src');
-        // debugger
-
-        if(!url)
-            return;
-
-        var imgTag = $('<img src="'+url+'" class="lazy-loading" />')[0];
-        $(el).append(imgTag);
-        $('.lazy-image img').one('load', openImages);
-    })
+    $('.lazy-image').lazy();
+    // $('.lazy-image').each((index, el) => {
+    //
+    //     if($(el).hasClass('complete'))
+    //         return;
+    //
+    //     var url = $(el).data('src');
+    //     // debugger
+    //
+    //     if(!url)
+    //         return;
+    //
+    //     var imgTag = $('<img src="'+url+'" class="lazy-loading" />')[0];
+    //     $(el).append(imgTag);
+    //     $('.lazy-image img').one('load', openImages);
+    // })
 }
 
 (function($) {
