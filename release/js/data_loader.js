@@ -8,7 +8,7 @@ var product_card_tpl=`
                 <a href="/product.html" class="lazy-image product-image contain" data-src="/img/mirabelle.png"></a>
             </div>
             <div class="right grow">
-                <div class="sub-header">Вода питьевая</div>
+                <!-- <div class="sub-header">Вода питьевая</div> -->
                 <div class="lr-pair table-header">
                     <div class="left">Бутылок</div>
                     <div class="separator grow"></div>
@@ -69,12 +69,13 @@ var product_card_tpl2=`
                 <a href="/product.html" class="lazy-image product-image contain" data-src="/img/mirabelle.png"></a>
             </div>
             <div class="right grow">
-                <div class="sub-header">Вода питьевая</div>
+                <!-- <div class="sub-header">Вода питьевая</div> -->
                 <div class="lr-pair dotted">
                     <div class="left count">Цена</div>
                     <div class="separator grow"></div>
-                    <div class="right price">130₽ *</div>
+                    <div class="right price old-price">100₽ *</div>
                 </div>
+                <span class="new-price">100₽</span>
             </div>
         </div>
     </div>
