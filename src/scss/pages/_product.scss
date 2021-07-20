@@ -146,7 +146,6 @@
         width: 100%;
 
         & .lake-info{
-            border: 1px solid red;
             position: absolute;
             bottom: 4.5vw;
             right: 4.5vw;
@@ -211,10 +210,7 @@
     & .lake-info{
 
         cursor: pointer;
-
-        &:hover{
-            opacity: .7;
-        }
+        mix-blend-mode: darken;
     }
 
 }

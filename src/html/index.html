@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="aquatoria://com23.ru/ns/website#">
 <head>
     @@include('./html_parts/head.html', {title: "Главная"})
 </head>
@@ -36,7 +36,9 @@
                             <div class="swiper-container-wrapper">
                                 <a href="" class="prev">‹</a>
                                 <div id="misc-products" class="swiper-container">
-                                    <div class="swiper-wrapper" id="misc-products-container"></div>
+                                    <div class="swiper-wrapper" id="misc-products-container">
+                                        @@loop('./html_parts/product_card.html', './data/product_slides.json')
+                                    </div>
                                 </div>
                                 <a href="" class="next">›</a>
                             </div>
@@ -66,7 +68,9 @@
                             <div class="col xl4 l6 m6 s12">
                                 <div class="category">
                                     <div class="category-image-wrapper">
-                                        <div class="category-image lazy-image contain" data-src="/img/categories/pomp.png"></div>
+                                        <div class="category-image overlazy">
+                                            <img src="/img/categories/pomp.png" loading="lazy" alt="">
+                                        </div>
                                     </div>
                                     <div class="category-content">
                                         <div class="name">Аксессуары</div>
@@ -83,7 +87,9 @@
                             <div class="col xl4 l6 m6 s12">
                                 <div class="category">
                                     <div class="category-image-wrapper">
-                                        <div class="category-image lazy-image contain" data-src="/img/categories/coffee.png"></div>
+                                        <div class="category-image overlazy">
+                                            <img src="/img/categories/coffee.png" loading="lazy" alt="">
+                                        </div>
                                     </div>
                                     <div class="category-content">
                                         <div class="name">Чай, кофе</div>
@@ -114,7 +120,9 @@
                             <div class="col xl4 l6 m6 s12">
                                 <div class="category">
                                     <div class="category-image-wrapper">
-                                        <div class="category-image lazy-image contain" data-src="/img/categories/babies.png"></div>
+                                        <div class="category-image overlazy">
+                                            <img src="/img/categories/babies.png" loading="lazy" alt="">
+                                        </div>
                                     </div>
                                     <div class="category-content">
                                         <div class="name">Детские товары</div>
@@ -131,7 +139,9 @@
                             <div class="col xl4 l6 m6 s12">
                                 <div class="category">
                                     <div class="category-image-wrapper">
-                                        <div class="category-image lazy-image contain" data-src="/img/categories/soap.png"></div>
+                                        <div class="category-image overlazy">
+                                            <img src="/img/categories/soap.png" loading="lazy" alt="">
+                                        </div>
                                     </div>
                                     <div class="category-content">
                                         <div class="name">Средства гигиены</div>
@@ -149,7 +159,9 @@
                             <div class="col xl4 l6 m6 s12">
                                 <div class="category">
                                     <div class="category-image-wrapper">
-                                        <div class="category-image lazy-image contain" data-src="/img/categories/pet_food.png"></div>
+                                        <div class="category-image overlazy">
+                                            <img src="/img/categories/pet_food.png" alt="">
+                                        </div>
                                     </div>
                                     <div class="category-content">
                                         <div class="name">Товары для&nbsp;животных</div>

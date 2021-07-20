@@ -64,8 +64,10 @@ $(() => {
 
     if($('#map').length){
 
-        var mapCenter = [38.9977062, 45.0326081];
-        var zoom = 11.25;
+        var long = $('#map').data('long');
+        var lat = $('#map').data('lat');
+        var mapCenter = [long, lat];
+        var zoom = 11;
 
         var coords = [];
 

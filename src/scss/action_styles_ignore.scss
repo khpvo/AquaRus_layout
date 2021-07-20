@@ -1,0 +1,52 @@
+.product-card{
+    
+    & .card-content{
+               
+        & > .lr-pair{
+            
+            & .right{
+                
+                position: relative;
+                
+                & .old-price{
+                    text-decoration: line-through;
+                }
+                & .new-price{
+                    border: 2px dotted red;
+                    box-shadow: 0 0 0 2px red inset;
+                    padding: 8px;
+                    font-size: 32px;
+                    color: red;
+                    position: absolute;
+                    line-height: 1.2rem;
+                    top: 50%;
+                    left: 50%;
+                    font-weight: 500;
+                    transform: translate(-50%, -50%) rotate(-15deg);
+                }
+            }
+        }
+    }
+}
+
+.price{
+    
+    position: relative;
+        
+    & .old-price{
+        text-decoration: line-through;
+        font-size: 14px;
+        position: absolute;
+        top: -24px;
+    }
+    
+    & .new-price{
+        color: red;
+        padding: 8px;
+        border: 2px dotted red;
+        box-shadow: 0 0 0 2px inset red;
+        width: fit-content;
+        line-height: 1.2rem;
+        transform: rotate(-5deg);
+    }
+}

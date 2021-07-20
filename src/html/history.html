@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="aquatoria://com23.ru/ns/website#">
     @@include('./html_parts/head.html', {title: "История операций"})
 <body>
     @@include('./html_parts/header.html')
@@ -19,7 +19,9 @@
                                 <th>Описание</th>
                                 <th>Сумма</th>
                             </thead>
-                            <tbody id="history-wrapper"></tbody>
+                            <tbody id="history-wrapper">
+                                @@loop('./html_parts/history_row.html', './data/history.json')
+                            </tbody>
                         </table>
                     </div>
                 </div>

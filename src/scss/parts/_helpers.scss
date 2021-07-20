@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+@import './fonts';
 
 body{
     background: $paper;
@@ -344,6 +344,7 @@ ul{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
     // opacity: 0;
     // transition: opacity .5s;
 
@@ -364,12 +365,26 @@ ul{
     }
 
     & img{
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
     }
 
     // &.complete{
     //     opacity: 1;
     // }
+}
+
+.overlazy{
+
+    overflow: hidden;
+
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 }
 
 .overline-wrapper{
@@ -437,7 +452,7 @@ h1{
 }
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 .popup-wrapper{

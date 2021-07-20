@@ -4,7 +4,7 @@
   "description": "Aqua-rus website layout",
   "main": "index.html",
   "dependencies": {
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.27.4",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0"
   },
@@ -13,7 +13,8 @@
     "gulp-imagemin": "^7.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp watch"
   },
   "repository": {
     "type": "git",

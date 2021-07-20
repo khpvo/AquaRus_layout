@@ -67,7 +67,9 @@
                         </div>
                     </div>
                     <div class="col s12 m9 l10">
-                        <div class="row" id="products2"></div>
+                        <div class="row" id="products2">
+                            @@loop('./html_parts/product_card2.html', './data/product_cards.json')
+                        </div>
                     </div>
                 </div>
                 </div>

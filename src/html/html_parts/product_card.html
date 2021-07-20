@@ -1,33 +1,44 @@
-<div class="card-wrapper swiper-slide">
-    <div class="card product-card">
+@@if(wrapperClass!=''){
+    <div class="@@wrapperClass">
+}
+    <div class="card product-card" itemscope itemtype="https://schema.org/Product">
         <div class="card-content">
-            <div class="header">«Долина Джентау» в&nbsp;одноразовой таре</div>
+            <div class="header" itemprop="name">«Долина Джентау» в&nbsp;одноразовой таре</div>
             <div class="lr-pair">
                 <div class="left">
                     <a class="rs-favorite"></a>
-                    <a href="/product.html" class="lazy-image product-image contain" data-src="/img/mirabelle.png"></a>
+                    <!-- <a itemprop="url" href="/product.html" class="lazy-image product-image contain" data-src="/img/mirabelle.png"> -->
+                    <a href="/product.html" itemprop="url" class="product-image overlazy">
+                        <img itemprop="image" src="/img/mirabelle.png" alt="" loading="lazy">
+                    </a>
                 </div>
-                <div class="right grow">
-                    <div class="sub-header">Вода питьевая</div>
+                <div class="right grow" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                    
+                    <meta itemprop="priceCurrency" content="RUR">
+                    <meta itemprop="highPrice" content="130">
+                    <meta itemprop="price" content="120">
+                    <meta itemprop="lowPrice" content="100">
+
+                    <div itemprop="category" class="sub-header">Вода питьевая</div>
                     <div class="lr-pair table-header">
                         <div class="left">Бутылок</div>
                         <div class="separator grow"></div>
                         <div class="right">Цена</div>
                     </div>
-                    <div class="lr-pair dotted">
+                    <div class="lr-pair dotted" itemscope itemtype="http://schema.org/Offer">
                         <div class="left count">1</div>
                         <div class="separator grow"></div>
                         <div class="right price">130₽ *</div>
                     </div>
-                    <div class="lr-pair dotted not-first">
+                    <div class="lr-pair dotted not-first" itemscope itemtype="http://schema.org/Offer">
                         <div class="left count">от 2х</div>
                         <div class="separator grow"></div>
                         <div class="right price">120₽ *</div>
                     </div>
-                    <div class="lr-pair dotted not-first">
+                    <div class="lr-pair dotted not-first" itemscope itemtype="http://schema.org/Offer">
                         <div class="left count">от 4х</div>
                         <div class="separator grow"></div>
-                        <div class="right price">11 000₽ *</div>
+                        <div class="right price">100₽ *</div>
                     </div>
                     <p class="note">
                         * - при наличии оборотной тары. К обмену принимается тара только от воды из ассортимента нашего магазина.
@@ -58,5 +69,6 @@
             </div>
         </form>
     </div>
-
+@@if(wrapperClass!=''){
 </div>
+}
