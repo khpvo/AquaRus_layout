@@ -15,7 +15,7 @@
 #product{
 
     & .description{
-        @include product_description();
+        // @include product_description();
     }
 
     & .product-image{
@@ -135,7 +135,7 @@
 #product-water{
 
     & .description{
-        @include product_description();
+        // @include product_description();
     }
     
     & .page-product-image{
@@ -226,9 +226,18 @@
         width: 100%;
     }
 
+    & h3{
+        margin: 30px 0;
+        font-weight: 500;
+        font-size: 32px;
+    }
+
     & .modal-header{
-        height: 240px;
+        padding-bottom: 75%;
         background-size: cover;
+        margin-top: 16px;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(black, .4) inset;
     }
 
     & .modal-content{

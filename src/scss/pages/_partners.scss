@@ -1,14 +1,5 @@
 #partners{
 
-    & .partners-intro{
-        column-count: 2;
-        column-gap: 1.75rem;
-
-        @media(max-width: 500px){
-            column-count: 1;
-        }
-    }
-
     .partners-wrapper{
 
         display: flex;

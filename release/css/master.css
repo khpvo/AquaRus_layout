@@ -6372,15 +6372,6 @@ input[type="number"] {
   #main #news .news-footer .right {
     text-align: right; }
 
-#product .description {
-  column-count: 2;
-  column-gap: 1.5rem; }
-  #product .description p {
-    margin-top: 0; }
-  @media (max-width: 600px) {
-    #product .description {
-      column-count: 1; } }
-
 #product .product-image {
   margin-bottom: 50px;
   max-height: calc(100vh - 400px);
@@ -6451,15 +6442,6 @@ input[type="number"] {
     padding-right: 20px;
     margin-right: 20px; }
 
-#product-water .description {
-  column-count: 2;
-  column-gap: 1.5rem; }
-  #product-water .description p {
-    margin-top: 0; }
-  @media (max-width: 600px) {
-    #product-water .description {
-      column-count: 1; } }
-
 #product-water .page-product-image {
   padding-top: 70%;
   background-size: contain;
@@ -6519,9 +6501,16 @@ input[type="number"] {
   @media (max-width: 400px) {
     .modal#lake-info {
       width: 100%; } }
+  .modal#lake-info h3 {
+    margin: 30px 0;
+    font-weight: 500;
+    font-size: 32px; }
   .modal#lake-info .modal-header {
-    height: 240px;
-    background-size: cover; }
+    padding-bottom: 75%;
+    background-size: cover;
+    margin-top: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) inset; }
   .modal#lake-info .modal-content {
     box-sizing: border-box;
     padding: 0; }
@@ -7298,13 +7287,6 @@ input[type="number"] {
 @media (max-width: 1154px) {
   #about .more-text {
     width: 100%; } }
-
-#partners .partners-intro {
-  column-count: 2;
-  column-gap: 1.75rem; }
-  @media (max-width: 500px) {
-    #partners .partners-intro {
-      column-count: 1; } }
 
 #partners .partners-wrapper {
   display: flex;
