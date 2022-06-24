@@ -5,11 +5,11 @@
     @@include('./html_parts/header.html')
     @@include('./html_parts/sidenav.html')
     <main>
-        <div class="global-wrapper" id="product-water">
+        <div class="global-wrapper" id="product-water" itemscope itemtype="http://schema.org/Product">
             <div class="container">
                 <div class="row">
                     <div class="col s12">
-                        <h1>«Домбай»</h1>
+                        <h1 itemprop="name">«Домбай»</h1>
                         <div class="crumbs-wrapper">
                             <a href="/" class="crumb underlined">Главная</a>
                             <span class="crumb-separator">/</span>
@@ -23,10 +23,20 @@
                 </div>
                 <div class="row">
                     <div class="col l8 m7 s12">
-                        <a href="#lake-info" class="lazy-image page-product-image modal-trigger lake-info" data-src="/img/waters/dombai.png"></a>
+                        <a href="#lake-info" class="lazy-image page-product-image lake-info modal-trigger" data-src="/img/waters/dombai.png">
+                            <meta itemprop="image" content="/img/waters/dombai.png">
+                        </a>
                     </div>
                     <div class="col l4 m5 s12">
                         <div class="lr-pair chars">
+                            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                <meta itemprop="price" content="200">
+                                <meta itemprop="priceCurrency" content="RUB">
+                                <meta itemprop="price" content="180">
+                                <meta itemprop="priceCurrency" content="RUB">
+                                <meta itemprop="price" content="170">
+                                <meta itemprop="priceCurrency" content="RUB">
+                            </div>
                             <div class="left head">количество</div>
                             <div class="right right-align head small">Цена*</div>
                             <div class="left">1 бутыль</div>
@@ -87,7 +97,7 @@
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <div class="description">
+                        <div class="description" itemprop="description">
                             <p>Питьевая вода «Домбай» - это живая ледниковая подземная вода, добываемая на территории всемирно известного Тебердинского биосферного заповедника. Скважина ее добычи находится на высоте 1350 метров над уровнем моря. Отличает эту воду природная чистота и неповторимый состав. Ее качество не требует дополнительной обработки и единственная процедура, которую она проходит, это механическая очистка от микроскопических частиц горной породы. В остальном же, ее уникальные достоинства и индивидуальный вкус остаются в неприкосновенности. В воде «Домбай» содержатся 18 полезных природных макро- и микроминералов, необходимых растущему организму ребенка.</p>
                             <p>«Домбай» - это вода высшей категории, рекомендованная к ежедневному употреблению людьми всех возрастов без каких-либо ограничений. Регулярное ее употребление стимулирует процесс естественного самовосстановления организма. Жесткость воды минимальна - общее ее значение колеблется до 1,00 мг-экв/л (это при том, что по нормативам для питьевых вод централизованного водоснабжения допускается до 7,0 мг-экв/л).</p>
                         </div>

@@ -5,11 +5,11 @@
     @@include('./html_parts/header.html')
     @@include('./html_parts/sidenav.html')
     <main>
-        <div class="global-wrapper" id="product">
+        <div class="global-wrapper" id="product" itemscope itemtype="http://schema.org/Product">
             <div class="container">
                 <div class="row">
                     <div class="col s12">
-                        <h1>Сменная кассета «Барьер-4»</h1>
+                        <h1 itemprop="name">Сменная кассета «Барьер-4»</h1>
                         <div class="crumbs-wrapper">
                             <a href="/" class="crumb underlined">Главная</a>
                             <span class="crumb-separator">/</span>
@@ -26,12 +26,16 @@
                         <div class="row">
                             <div class="col m4 s12">
                                 <div class="carousel carousel-slider">
-                                    <a class="carousel-item"><img class="product-image" src="/img/coolers/cooler-2-1.webp" alt=""></a>
+                                    <a class="carousel-item"><img itemprop="image" class="product-image" src="/img/coolers/cooler-2-1.webp" alt=""></a>
                                     <a class="carousel-item"><img class="product-image" src="/img/coolers/cooler-2-2.webp" alt=""></a>
                                 </div>
                             </div>
                             <div class="col m8 s12">
                                 <div class="price-cooler">
+                                    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                        <meta itemprop="price" content="220">
+                                        <meta itemprop="priceCurrency" content="RUB">
+                                    </div>
                                     <div class="price-holder">
                                         <div class="key">Цена</div>
                                         <div class="value">220₽</div>
