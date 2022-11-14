@@ -14,6 +14,7 @@ $(() => {
     replaceLakeImage();
 
     $('body').on('click', '.sidenav .folder', nextLevel);
+    $('body').on('click', '.scroll-link', scrollToAnchor);
     $('body').on('click', '.sidenav .back', prevLevel);
     $('body').on('change', '#change-password-trigger', showChangePass);
     $('body').on('change', '.set-password-trigger', showSetPass);
@@ -103,6 +104,18 @@ $(() => {
 
 });
 
+function scrollToAnchor(e){
+    e.preventDefault();
+
+    let anchor = $(this).attr('href');
+    let position = $(anchor).offset().top;
+    
+    $('html, body').animate({
+        scrollTop: position - 60
+    }, 400);
+
+}
+
 function sliderPrev(e){
     if(e !== undefined){
         e.preventDefault();
@@ -155,7 +168,7 @@ function toggleFav(e){
 
 function initMap(coords, id, mapCenter, zoom){
 
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VuZXN5cyIsImEiOiJja2xyejVqbTAwN3c2MnBwdjZvdHVhOHpiIn0.IrmmbUMTtmXBxZjv8mcH8Q';
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VuZXN5cyIsImEiOiJjbDhlZGpnMXUxa2VoM3BuMzBocmljZmdiIn0.ips7qa_gfSr299RO_C27bQ';
     var map = new mapboxgl.Map({
         container: id,
         style: 'mapbox://styles/genesys/ckls2dt0l12fj17qxtbz91bqg',

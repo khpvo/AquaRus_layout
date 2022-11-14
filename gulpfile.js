@@ -1,7 +1,10 @@
 'use strict';
  
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var gulpSass = require('gulp-sass');
+var nodeSass = require('node-sass');
+var sass = gulpSass(nodeSass);
+
 var include = require('gulp-file-include');
 
 
